@@ -240,7 +240,7 @@ const infoFile = {
   shlinkJsonPayload: {
     // LOCAL()
     // "url": "http://localhost:5173/fixtures/" + shcId,
-    "url": "https://raw.githubusercontent.com/jmandel/cgm/main/src/fixtures/" + shcId,
+    "url": "https://joshuamandel.com/cgm/fixtures/" + shcId,
     "flag": "LU",
     key,
     "label": "Josh's CGM Data"
