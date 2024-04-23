@@ -85,6 +85,7 @@ const SHLinkComponent = () => {
         <input type="text" placeholder="Enter SHLink" />
         <button type="submit" onClick={() => {
           window.location.hash =  "shlink:/eyJ1cmwiOiJodHRwczovL2pvc2h1YW1hbmRlbC5jb20vY2dtL2ZpeHR1cmVzL0lvcTdGUXlFTXA4Q2NoU01CVEdMTjRrRzBLSTN5WHZfUUlhNGh3SVdrMDQiLCJmbGFnIjoiTFUiLCJrZXkiOiJ0UTgtTDBJYmx6dE14NlhqMmJMUW16b1BXcEQ2NXFhY2ZOVlJzMFN3ZGxBIiwibGFiZWwiOiJKb3NoJ3MgQ0dNIERhdGEifQ";
+          window.location.reload();
         }}>Try Sample</button></>
       }
       {shlLabel && <h3>{shlLabel}</h3>}
