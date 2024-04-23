@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import * as jose from 'jose';
-import AGP from './AGP';
+import React, { useEffect, useState } from "react";
+import * as jose from "jose";
+import AGP from "./AGP";
+import { set } from "lodash";
 
 function extractCGMData(bundle) {
   const cgmData = [];
 
   bundle.entry.forEach((entry) => {
-    if (entry.resource.resourceType === 'Observation') {
+    if (entry.resource.resourceType === "Observation") {
       const observation = entry.resource;
       const glucoseValue = observation.valueQuantity.value;
       const unit = observation.valueQuantity.unit;
       const timestamp = new Date(observation.effectiveDateTime);
       const deviceReference = observation.device.reference;
 
-      const deviceDetails = bundle.entry.find(
-        (entry) => entry.fullUrl === deviceReference
-      )?.resource?.deviceName?.[0]?.name || '';
+      const deviceDetails =
+        bundle.entry.find((entry) => entry.fullUrl === deviceReference)
+          ?.resource?.deviceName?.[0]?.name || "";
 
       cgmData.push({
         timestamp,
@@ -30,22 +31,29 @@ function extractCGMData(bundle) {
 }
 
 const SHLinkComponent = () => {
-  const [shcPayload, setDecryptedPayload] = useState(null);
+  const [shlPayload, setDecryptedPayload] = useState(null);
+  const [shlLabel, setShlLabel] = useState(null);
 
   useEffect(() => {
     const parseSHLink = async () => {
       const hash = window.location.hash;
-      const tag = '#shlink:/'
+      const tag = "#shlink:/";
       if (hash.startsWith(tag)) {
         const encodedPayload = hash.slice(tag.length);
         const decodedPayload = jose.base64url.decode(encodedPayload);
-        const shlinkPayload = JSON.parse(new TextDecoder().decode(decodedPayload));
+        const shlinkPayload = JSON.parse(
+          new TextDecoder().decode(decodedPayload)
+        );
+        setShlLabel(shlinkPayload.label);
 
-        if (shlinkPayload.flag && shlinkPayload.flag.includes('U')) {
+        if (shlinkPayload.flag && shlinkPayload.flag.includes("U")) {
           try {
-            const response = await fetch(shlinkPayload.url + "?recipient=cgm-viewer", {
-              method: 'GET',
-            });
+            const response = await fetch(
+              shlinkPayload.url + "?recipient=cgm-viewer",
+              {
+                method: "GET",
+              }
+            );
 
             if (response.ok) {
               const encryptedFile = await response.text();
@@ -53,12 +61,14 @@ const SHLinkComponent = () => {
                 encryptedFile,
                 jose.base64url.decode(shlinkPayload.key)
               );
-              setDecryptedPayload(JSON.parse(new TextDecoder().decode(decrypted.plaintext)));
+              setDecryptedPayload(
+                JSON.parse(new TextDecoder().decode(decrypted.plaintext))
+              );
             } else {
-              console.error('Error retrieving file:', response.status);
+              console.error("Error retrieving file:", response.status);
             }
           } catch (error) {
-            console.error('Error retrieving file:', error);
+            console.error("Error retrieving file:", error);
           }
         } else {
           console.log('SHLink does not have a "U" flag');
@@ -70,12 +80,16 @@ const SHLinkComponent = () => {
   }, []);
 
   return (
-    <div>
-
-      {shcPayload ? <AGP data={extractCGMData(shcPayload)}></AGP> : (
-        <p>No decrypted payload available</p>
-      )}
-    </div>
+    <>
+      <h3>{shlLabel}</h3>
+      <div>
+        {shlPayload ? (
+          <AGP data={extractCGMData(shlPayload)}></AGP>
+        ) : (
+          <p>No decrypted payload available</p>
+        )}
+      </div>
+    </>
   );
 };
 
