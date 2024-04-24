@@ -1,7 +1,9 @@
+import * as jose from "jose";
 import fs from 'fs';
 import { parse } from 'csv-parse';
 import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
+import { generateAGPReportBundle } from '../agp-calc';
 
 interface GlucoseReading {
   device: string;
@@ -77,7 +79,7 @@ interface FHIRObservation {
   }>;
 }
 
-const parseCSV = (filePath: string): Promise<FHIRBundle> => {
+const csvToFhir = (filePath: string): Promise<FHIRBundle> => {
   return new Promise((resolve, reject) => {
     const bundle: FHIRBundle = {
       resourceType: 'Bundle',
@@ -199,61 +201,64 @@ const parseCSV = (filePath: string): Promise<FHIRBundle> => {
   });
 };
 
-// Usage example
-const csvFilePath = './src/fixtures/JoshM_glucose_4-22-2024.libreview.csv';
 
-const glucoseData = await parseCSV(csvFilePath);
-
-import * as jose from 'jose';
-import pako from 'pako';
-
-async function createEncryptedHealthCard(payload, key, contentType) {
-  // Stringify the payload object
+async function createEncryptedHalthLinkPayload(payload: any, key: string, contentType: string) {
   const payloadString = JSON.stringify(payload);
-  const payloadUncompressed  = new TextEncoder().encode(payloadString)
-  // Deflate the payload using pako
-  const deflatedPayload = pako.deflateRaw(payloadString);
+  const payloadUncompressed = new TextEncoder().encode(payloadString);
 
-  // Create a Uint8Array from the deflated payload
-  const payloadCompressed = new Uint8Array(deflatedPayload);
-
-  // Encrypt the deflated payload
   const encrypted = await new jose.CompactEncrypt(payloadUncompressed)
     .setProtectedHeader({
-      alg: 'dir',
-      enc: 'A256GCM',
+      alg: "dir",
+      enc: "A256GCM",
       cty: contentType,
-      // zip: 'DEF',
     })
     .encrypt(jose.base64url.decode(key));
 
   return encrypted;
 }
-// Example usage
-const exampleContentType = 'application/fhir+json';
 
-const shcId =  "Ioq7FQyEMp8CchSMBTGLN4kG0KI3yXv_QIa4hwIWk04" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
-const key = "tQ8-L0IblztMx6Xj2bLQmzoPWpD65qacfNVRs0SwdlA" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
-const encrypted = await createEncryptedHealthCard(glucoseData, key, exampleContentType);
-fs.writeFileSync(`./src/fixtures/${shcId}`, encrypted);
-const infoFile = {
-  shlinkJsonPayload: {
-    // LOCAL()
-    // "url": "http://localhost:5173/fixtures/" + shcId,
-    "url": "https://joshuamandel.com/cgm/fixtures/" + shcId,
-    "flag": "LU",
-    key,
-    "label": "Josh's CGM Data"
-  }
+const hostingUrl = (Bun.env.NODE_ENV === 'dev') ? 'http://localhost:5173' : 'https://joshuamandel.com/cgm';
+async function createSHLink(payload: any, shlId: string, key: string, contentType: string) {
+  const encrypted = await createEncryptedHalthLinkPayload(payload, key, contentType);
+  fs.writeFileSync(`./src/example-generation/fixtures/shl/${shlId}`, encrypted);
+
+  const infoFile = {
+    shlinkJsonPayload: {
+      url: `${hostingUrl}/shl/${shlId}`,
+      flag: "LU",
+      key,
+      label: "Josh's CGM Data",
+    },
+    shlinkBare: "",
+    shlink: "",
+  };
+
+  const encodedPayload = jose.base64url.encode(JSON.stringify(infoFile.shlinkJsonPayload));
+  const shlinkBare = `shlink:/` + encodedPayload;
+  const shlink = hostingUrl + `#` + shlinkBare;
+
+  infoFile.shlinkBare = shlinkBare;
+  infoFile.shlink = shlink;
+
+  fs.writeFileSync(`./src/example-generation/fixtures/shl/${shlId}.decrypted.json`, JSON.stringify(payload, null, 2));
+  fs.writeFileSync(`./src/example-generation/fixtures/shl/${shlId}.details.json`, JSON.stringify(infoFile, null, 2));
 }
 
-const encodedPayload = jose.base64url.encode(JSON.stringify(infoFile.shlinkJsonPayload))
-const shlinkBare = `shlink:/` + encodedPayload;
-// LOCAL()
-// const shlink = `http://localhost:5173#` + shlinkBare
-const shlink = `https://joshuamandel.com/cgm#` + shlinkBare
+// Example usage
+const fhirContentType = "application/fhir+json";
 
-infoFile.shlinkBare = shlinkBare;
-infoFile.shlink = shlink;
+// Usage example
+const csvFilePath = './src/example-generation/fixtures/shl/JoshM_glucose.libreview.csv';
+const glucoseData = await csvToFhir(csvFilePath);
+const agpReport = generateAGPReportBundle({bundle: glucoseData});
 
-fs.writeFileSync(`./src/fixtures/${shcId}.details.json`, JSON.stringify(infoFile, null, 2));
+
+// Create SHLink for raw observations
+const rawObsShlId = "raw_obs_unguessable_shl_id" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
+const rawObsKey =  "raw_obs_unguessable_random_key0000000000000" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
+await createSHLink(glucoseData, rawObsShlId, rawObsKey, fhirContentType);
+
+// Create SHLink for AGP bundle
+const agpShlId = "agp_bundle_unguessable_shl_id" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
+const agpKey =  "agp_obs_unguessable_random_key0000000000000" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
+await createSHLink(agpReport, agpShlId, agpKey, fhirContentType);

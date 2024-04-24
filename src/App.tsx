@@ -1,32 +1,41 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as jose from "jose";
 import AGP from "./AGP";
-import { set } from "lodash";
+import { CGMData, FHIRBundle, } from "./agp-calc";
 
-function extractCGMData(bundle) {
-  const cgmData = [];
+
+function extractAnalysisPeriod(bundle: FHIRBundle, data: CGMData[]) {
+  const analysisEntry = bundle.entry.find((entry) => entry.resource.resourceType === "Observation" && entry.resource.code.coding.some((coding) => coding.code === "ambulatory-glucose-profile"));
+  if (analysisEntry) {
+    return (analysisEntry.resource as any).effectivePeriod
+  }
+
+  const firstMeasurementDate = (new Date(data.at(0)?.timestamp || "")).toISOString().slice(0, 10);
+  const lastMeasurementDate = (new Date(data.at(-1)?.timestamp || "")).toISOString().slice(0, 10);
+  return {
+    start: firstMeasurementDate,
+    end: lastMeasurementDate
+  }
+}
+function extractCGMData(bundle: FHIRBundle) {
+  const cgmData: CGMData[] = [];
 
   bundle.entry.forEach((entry) => {
-    if (entry.resource.resourceType === "Observation") {
+    if (entry.resource.resourceType === "Observation" && entry.resource.code.coding.some((coding) => coding.code === "99504-3")) {
       const observation = entry.resource;
       const glucoseValue = observation.valueQuantity.value;
       const unit = observation.valueQuantity.unit;
-      const timestamp = new Date(observation.effectiveDateTime);
-      const deviceReference = observation.device.reference;
-
-      const deviceDetails =
-        bundle.entry.find((entry) => entry.fullUrl === deviceReference)
-          ?.resource?.deviceName?.[0]?.name || "";
+      const timestamp = new Date(observation.effectiveDateTime!);
 
       cgmData.push({
         timestamp,
         glucoseValue,
-        unit,
-        deviceDetails,
+        unit: unit as "mg/dL" | "mmol/L",
       });
     }
   });
 
+  cgmData.sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
   return cgmData;
 }
 
@@ -61,9 +70,9 @@ const SHLinkComponent = () => {
                 encryptedFile,
                 jose.base64url.decode(shlinkPayload.key)
               );
-              setDecryptedPayload(
-                JSON.parse(new TextDecoder().decode(decrypted.plaintext))
-              );
+              const payload = JSON.parse(new TextDecoder().decode(decrypted.plaintext));
+              window.payload = payload;
+              setDecryptedPayload(payload);
             } else {
               console.error("Error retrieving file:", response.status);
             }
@@ -78,20 +87,24 @@ const SHLinkComponent = () => {
 
     parseSHLink();
   }, []);
+  
+  const cgmData = shlPayload ? extractCGMData(shlPayload) : null;
+  const analysisPeriod=  shlPayload ? extractAnalysisPeriod(shlPayload, cgmData!) : null;
 
   return (
     <>
       {(!shlLabel && !shlPayload) && <><h3>SHLink CGM Viewer</h3>
-        <input type="text" placeholder="Enter SHLink" />
+        {/* <input type="text" placeholder="Enter SHLink" /> */}
+        <a href="https://github.com/jmandel/cgm">Source: github.com/jmandel/cgm</a>
         <button type="submit" onClick={() => {
-          window.location.hash =  "shlink:/eyJ1cmwiOiJodHRwczovL2pvc2h1YW1hbmRlbC5jb20vY2dtL2ZpeHR1cmVzL0lvcTdGUXlFTXA4Q2NoU01CVEdMTjRrRzBLSTN5WHZfUUlhNGh3SVdrMDQiLCJmbGFnIjoiTFUiLCJrZXkiOiJ0UTgtTDBJYmx6dE14NlhqMmJMUW16b1BXcEQ2NXFhY2ZOVlJzMFN3ZGxBIiwibGFiZWwiOiJKb3NoJ3MgQ0dNIERhdGEifQ";
+          window.location.hash =  "shlink:/eyJ1cmwiOiJodHRwczovL2pvc2h1YW1hbmRlbC5jb20vY2dtL3NobC9hZ3BfYnVuZGxlX3VuZ3Vlc3NhYmxlX3NobF9pZCIsImZsYWciOiJMVSIsImtleSI6ImFncF9vYnNfdW5ndWVzc2FibGVfcmFuZG9tX2tleTAwMDAwMDAwMDAwMDAiLCJsYWJlbCI6Ikpvc2gncyBDR00gRGF0YSJ9";
           window.location.reload();
-        }}>Try Sample</button></>
+        }}>Try Sample Data</button></>
       }
       {shlLabel && <h3>{shlLabel}</h3>}
       <div>
         {shlPayload ? (
-          <AGP data={extractCGMData(shlPayload)}></AGP>
+          <AGP data={cgmData!} analysisPeriod={analysisPeriod!}></AGP>
         ) : (
           <p>No decrypted payload available</p>
         )}

@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/bun": "^1.1.0",
     "@types/csv-parse": "^1.2.2",
     "@types/d3": "^7.4.3",
     "@types/lodash": "^4.17.0",
     "@types/pako": "^2.0.3",
+    "@types/uuid": "^9.0.8",
+    "@types/yargs": "^17.0.32",
     "csv-parse": "^5.5.5",
     "d3": "^7.9.0",
     "jose": "^5.2.4",

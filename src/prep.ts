@@ -23,12 +23,6 @@ interface GlucoseReading {
   userChangeInsulin: number | null;
 }
 
-interface CGMData {
-  timestamp: Date;
-  glucoseValue: number;
-  deviceDetails: string;
-}
-
 const parseCSV = (filePath: string): Promise<{ readingsFull: GlucoseReading[], readingsGlucose: CGMData[] }> => {
   return new Promise((resolve, reject) => {
     const readingsFull: GlucoseReading[] = [];
@@ -90,10 +84,11 @@ const parseCSV = (filePath: string): Promise<{ readingsFull: GlucoseReading[], r
 
 import yargs from 'yargs';
 import {hideBin} from 'yargs/helpers';
+import { CGMData } from './agp-calc';
 // Usage example
 
 // const csvFilePath = './src/fixtures/JoshM_glucose_4-22-2024.libreview.csv';
-const argv = yargs(hideBin(process.argv))
+const argv: any = yargs(hideBin(process.argv))
     .usage('Usage: $0 -f [filename]')
     .default('csv', './src/fixtures/JoshM_glucose_4-22-2024.libreview.csv')
     .demandOption(['csv'])

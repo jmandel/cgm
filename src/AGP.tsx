@@ -1,118 +1,18 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import * as d3 from "d3";
-import _ from "lodash";
+import _  from "lodash";
+import type { AnalysisPeriod, CGMData } from "./agp-calc";
+import { calculateAGPMetrics, convertGlucoseValue, makeBreakpoints } from "./agp-calc";
 import moment from "moment-timezone";
-
-interface CGMData {
-  timestamp: Date;
-  glucoseValue: number;
-  unit: "mg/dL" | "mmol/L";
-  deviceDetails: string;
-}
 
 interface AGPChartProps {
   data: CGMData[];
   unit: "mg/dL" | "mmol/L";
-  percentiles: number[];
+  percentiles?: number[];
   chunkSizeMinutes?: number;
   chartWidth?: number;
 }
-
-interface Breakpoints {
-  unit: string;
-  veryLow: number;
-  low: number;
-  high: number;
-  veryHigh: number;
-}
-
-const convertGlucoseValue = (
-  value: number,
-  fromUnit: string,
-  toUnit: string
-): number => {
-  if (fromUnit === toUnit) return value;
-  if (fromUnit === "mg/dL" && toUnit === "mmol/L") return value / 18;
-  if (fromUnit === "mmol/L" && toUnit === "mg/dL") return value * 18;
-  throw new Error("Invalid units");
-};
-
-const getTimeInRange = (
-  data: CGMData[],
-  minValue: number,
-  maxValue: number,
-  unit: string
-) => {
-  const totalReadings = data.length;
-  const readingsInRange = data.filter((d) => {
-    const glucoseValue = convertGlucoseValue(d.glucoseValue, d.unit, unit);
-    return glucoseValue >= minValue && glucoseValue <= maxValue;
-  }).length;
-  const percentage = (readingsInRange / totalReadings) * 100;
-  const durationInMinutes = (readingsInRange / totalReadings) * 24 * 60;
-  const hours = Math.floor(durationInMinutes / 60);
-  const minutes = Math.round(durationInMinutes % 60);
-
-  return {
-    percentage,
-    duration: `${hours}h ${minutes}m`,
-  };
-};
-
-const calculateAGPMetrics = (data: CGMData[], breakpoints: Breakpoints) => {
-  const unit = breakpoints.unit;
-  const glucoseValues = data.map((d) =>
-    convertGlucoseValue(d.glucoseValue, d.unit, unit)
-  );
-  const percentiles = [5, 25, 50, 75, 95];
-  const percentileValues = percentiles.map(
-    (p) => d3.quantile(glucoseValues, p / 100) || 0
-  );
-  const median = percentileValues[2];
-
-  const timeInRanges = {
-    veryLow: getTimeInRange(data, 0, breakpoints.veryLow, unit),
-    low: getTimeInRange(data, breakpoints.veryLow, breakpoints.low, unit),
-    target: getTimeInRange(data, breakpoints.low, breakpoints.high, unit),
-    high: getTimeInRange(data, breakpoints.high, breakpoints.veryHigh, unit),
-    veryHigh: getTimeInRange(data, breakpoints.veryHigh, Infinity, unit),
-  };
-
-  const glucoseStatistics = {
-    mean: d3.mean(glucoseValues) || 0,
-    gmi: calculateGMI(glucoseValues),
-    cv: calculateCV(glucoseValues),
-  };
-
-  return {
-    percentiles: {
-      "5th": percentileValues[0],
-      "25th": percentileValues[1],
-      "50th": percentileValues[2],
-      "75th": percentileValues[3],
-      "95th": percentileValues[4],
-    },
-    median,
-    targetRange: {
-      low: breakpoints.low,
-      high: breakpoints.high,
-    },
-    timeInRanges,
-    glucoseStatistics,
-  };
-};
-
-const calculateGMI = (glucoseValues: number[]) => {
-  const mean = d3.mean(glucoseValues) || 0;
-  return 3.31 + 0.02392 * mean;
-};
-
-const calculateCV = (glucoseValues: number[]) => {
-  const mean = d3.mean(glucoseValues) || 0;
-  const sd = d3.deviation(glucoseValues) || 0;
-  return (sd / mean) * 100;
-};
 
 const renderAGPChart = (
   svg: d3.Selection<SVGSVGElement, unknown, null, undefined>,
@@ -184,12 +84,12 @@ const renderAGPChart = (
     .curve(d3.curveBasis);
 
   const areaGenerator = d3
-    .area()
+    .area<[number, number[]]>()
     .x(([minutesSinceMidnight]) =>
       xScale(new Date(0, 0, 0, 0, minutesSinceMidnight))
     )
-    .y0(([chunkIndex, d]) => yScale(d[0])) // 5th percentile for the upper area
-    .y1(([chunkIndex, d]) => yScale(d[4])) // 95th percentile for the upper area
+    .y0(([_chunkIndex, d]) => yScale(d[0])) // 5th percentile for the upper area
+    .y1(([_chunkIndex, d]) => yScale(d[4])) // 95th percentile for the upper area
     .curve(d3.curveBasis);
 
   // Create the upper shaded area (5th to 95th percentile)
@@ -199,11 +99,11 @@ const renderAGPChart = (
       percentileData.map((d, chunkIndex) => [chunkIndex * chunkSizeMinutes, d])
     ) // Bind percentile data
     .attr("fill", "#0F9D5822")
-    .attr("d", areaGenerator);
+    .attr("d", areaGenerator as any);
 
   areaGenerator
-    .y0(([chunkIndex, d]) => yScale(d[1])) // 25th percentile for the lower area
-    .y1(([chunkIndex, d]) => yScale(d[3])); // 75th percentile for the lower area
+    .y0(([_chunkIndex, d]) => yScale(d[1])) // 25th percentile for the lower area
+    .y1(([_chunkIndex, d]) => yScale(d[3])); // 75th percentile for the lower area
 
   chartGroup
     .append("path")
@@ -211,9 +111,9 @@ const renderAGPChart = (
       percentileData.map((d, chunkIndex) => [chunkIndex * chunkSizeMinutes, d])
     ) // Bind percentile data
     .attr("fill", "#0F9D5866")
-    .attr("d", areaGenerator);
+    .attr("d", areaGenerator as any);
 
-  percentiles.forEach((p, i) => {
+  percentiles.forEach((_p, i) => {
     const line = chartGroup
       .append("path")
       .attr("fill", "none")
@@ -252,7 +152,7 @@ const renderAGPChart = (
   chartGroup
     .append("g")
     .attr("transform", `translate(0,${height})`)
-    .call(d3.axisBottom(xScale).ticks(12).tickFormat(d3.timeFormat("%H:%M")));
+    .call(ctx => d3.axisBottom<Date>(xScale).ticks(12).tickFormat(d3.timeFormat("%H:%M"))(ctx));
 
   chartGroup.append("g").call(d3.axisLeft(yScale));
 
@@ -350,26 +250,15 @@ const AGPChart: React.FC<AGPChartProps> = ({
   return <svg ref={chartRef} />;
 };
 
-function makeBreakpoints(toUnit: "mg/dL" | "mmol/L") {
-  return {
-    unit: toUnit,
-    veryLow: convertGlucoseValue(54, "mg/dL", toUnit),
-    low: convertGlucoseValue(70, "mg/dL", toUnit),
-    high: convertGlucoseValue(180, "mg/dL", toUnit),
-    veryHigh: convertGlucoseValue(250, "mg/dL", toUnit),
-    // testing ranges for more variability in normal data
-    // veryLow: convertGlucoseValue(100, "mg/dL", toUnit),
-    // low: convertGlucoseValue(110, "mg/dL", toUnit),
-    // high: convertGlucoseValue(120, "mg/dL", toUnit),
-    // veryHigh: convertGlucoseValue(140, "mg/dL", toUnit),
-  };
-}
 const GlucoseStatistics: React.FC<{
   data: CGMData[];
   unit: "mg/dL" | "mmol/L";
-}> = ({ data, unit }) => {
-  const { glucoseStatistics } = calculateAGPMetrics(
+  analysisPeriod: AnalysisPeriod;
+}> = ({ data, unit, analysisPeriod }) => {
+
+  const { glucoseStatistics, sensorActivePercentage, totalDays } = calculateAGPMetrics(
     data,
+    analysisPeriod,
     makeBreakpoints(unit)
   );
 
@@ -400,6 +289,19 @@ const GlucoseStatistics: React.FC<{
         </thead>
         <tbody>
           <tr>
+            <td style={{ padding: "8px" }}>Days Worn</td>
+            <td style={{ padding: "8px" }}>
+              {totalDays} days
+            </td>
+          </tr>
+          <tr>
+            <td style={{ padding: "8px" }}>Sensor Active Time</td>
+            <td style={{ padding: "8px" }}>
+              {sensorActivePercentage.toFixed(0)}%
+            </td>
+          </tr>
+  
+          <tr>
             <td style={{ padding: "8px" }}>Average Glucose (mean)</td>
             <td style={{ padding: "8px" }}>
               {glucoseStatistics.mean.toFixed(1)} {unit}
@@ -428,9 +330,10 @@ const GlucoseStatistics: React.FC<{
 const TimeInRangesVisualization: React.FC<{
   data: CGMData[];
   unit: "mg/dL" | "mmol/L";
-}> = ({ data, unit }) => {
+  analysisPeriod: AnalysisPeriod;
+}> = ({ data, unit, analysisPeriod }) => {
   const svgRef = useRef(null);
-  const { timeInRanges } = calculateAGPMetrics(data, makeBreakpoints(unit));
+  const { timeInRanges } = calculateAGPMetrics(data, analysisPeriod, makeBreakpoints(unit));
 
   useEffect(() => {
     if (!data || data.length === 0) return;
@@ -460,39 +363,53 @@ const TimeInRangesVisualization: React.FC<{
     // Define the data for each band
     const bandsData = [
       {
+        index: 0,
         label: "Very Low",
-        value: timeInRanges.veryLow.percentage,
+        value: timeInRanges.veryLow,
         color: "rgba(139, 0, 0, 0.5)", // darkred, but lighter and more transparent
+        startPercentage: 0,
+        endPercentage: 0,
       },
       {
+        index: 1,
         label: "Low",
-        value: timeInRanges.low.percentage,
+        value: timeInRanges.low,
         color: "rgba(255, 0, 0, 0.5)", // red, but lighter and more transparent
+        startPercentage: 0,
+        endPercentage: 0,
       },
       {
+        index: 2,
         label: "Target",
-        value: timeInRanges.target.percentage,
+        value: timeInRanges.target,
         color: "rgba(0, 128, 0, 0.5)", // green, but lighter and more transparent
+        startPercentage: 0,
+        endPercentage: 0,
       },
       {
+        index: 3,
         label: "High",
-        value: timeInRanges.high.percentage,
+        value: timeInRanges.high,
         color: "rgba(255, 255, 0, 0.5)", // yellow, but lighter and more transparent
+        startPercentage: 0,
+        endPercentage: 0,
       },
       {
+        index: 4,
         label: "Very High",
-        value: timeInRanges.veryHigh.percentage,
+        value: timeInRanges.veryHigh,
         color: "rgba(255, 165, 0, 0.5)", // orange, but lighter and more transparent
+        startPercentage: 0,
+        endPercentage: 0,
       },
     ];
 
     // Calculate cumulative percentages for stacked layout
     let cumulativePercentage = 0;
-    bandsData.forEach((band, index) => {
+    bandsData.forEach((band) => {
       band.startPercentage = cumulativePercentage;
       cumulativePercentage += band.value;
       band.endPercentage = cumulativePercentage;
-      band.index = index; // Keep track of the index
     });
 
     // Draw bars
@@ -652,8 +569,8 @@ const renderAGPDailyChart = (
   const areaAboveNormal = d3
     .area<CGMData>()
     .x((d) => xScale(d.timestamp))
-    .y0((d) => yScale(convertGlucoseValue(d.glucoseValue, d.unit, unit)))
-    .y1((d) => yScale(normalRange[1]))
+    .y0((_d) => yScale(normalRange[1]))
+    .y1((d) => yScale(convertGlucoseValue(d.glucoseValue, d.unit, unit)))
     .defined(
       (d) => convertGlucoseValue(d.glucoseValue, d.unit, unit) > normalRange[1]
     )
@@ -715,7 +632,7 @@ const AGPDailyChart: React.FC<{
   continuous?: boolean;
   unit: "mg/dL" | "mmol/L";
 }> = ({ data, date, chartWidth = 300, continuous = false, unit }) => {
-  const chartRef = React.useRef(null);
+  const chartRef = React.useRef<SVGSVGElement>(null);
 
   React.useEffect(() => {
     if (!chartRef.current) return;
@@ -758,7 +675,7 @@ const WeeklyGlucoseProfileStrip: React.FC<{
   return (
     <div style={{ width: stripWidth, display: "flex" }}>
       {days.map((date) => {
-        const dailyData = weeklyData.get(date);
+        const dailyData = weeklyData.get(date)!;
         return (
           <AGPDailyChart
             key={date}
@@ -796,15 +713,14 @@ const DailyGlucoseProfiles: React.FC<{
     if (!weeklyData.has(weekKey)) {
       weeklyData.set(weekKey, new Map<string, CGMData[]>());
     }
-    const weekData = weeklyData.get(weekKey);
+    const weekData = weeklyData.get(weekKey)!;
     if (!weekData.has(dayKey)) {
       weekData.set(dayKey, []);
     }
-    weekData.get(dayKey).push(d);
+    weekData.get(dayKey)!.push(d);
   });
 
-  // Convert the map into an array of weeks, with each week containing a map of day data
-  const weeksArray = Array.from(weeklyData, ([weekStart, weekData]) => [
+  const weeksArray: [string, Map<string,CGMData[]>][] = Array.from(weeklyData, ([weekStart, weekData]) => [
     weekStart,
     weekData,
   ]);
@@ -823,19 +739,24 @@ const DailyGlucoseProfiles: React.FC<{
   );
 };
 
-const AGPReport: React.FC<{ data: CGMData[]; unit: "mg/dL" | "mmol/L" }> = ({
+const AGPReport: React.FC<{ data: CGMData[]; unit?: "mg/dL" | "mmol/L", analysisPeriod: AnalysisPeriod }> = ({
   data,
+  analysisPeriod,
   unit = "mg/dL",
 }) => {
+  const [startDate, _setStartDate] = React.useState<string>(analysisPeriod.start);
+  const [endDate, _setEndDate] = React.useState<string>(analysisPeriod.end);
+  const [selectedUnit, _setSelectedUnit] = React.useState<"mg/dL" | "mmol/L">(unit);
+
   return (
     <div>
-      <h1>Glucose Profile</h1>
-      <AGPChart data={data} unit={unit} />
+      <h1>Glucose Profile {startDate} to {endDate}</h1>
+      <AGPChart data={data} unit={selectedUnit} />
       <div style={{ display: "flex" }}>
-        <GlucoseStatistics data={data} unit={unit} />
-        <TimeInRangesVisualization data={data} unit={unit} />
+        <GlucoseStatistics analysisPeriod={{start: startDate, end: endDate}} data={data} unit={selectedUnit} />
+        <TimeInRangesVisualization analysisPeriod={{start: startDate, end: endDate}} data={data} unit={selectedUnit} />
       </div>
-      <DailyGlucoseProfiles data={data} unit={unit} />
+      <DailyGlucoseProfiles data={data} unit={selectedUnit} />
     </div>
   );
 };
