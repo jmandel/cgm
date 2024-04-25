@@ -44,7 +44,7 @@ export function getValue(key) {
     return new Promise((resolve, reject) => {
       const request = store.get(key);
       request.onsuccess = () => {
-        resolve(request.result);
+        resolve(request.result ?? "");
       };
       request.onerror = () => {
         reject(new Error('Failed to retrieve value'));
