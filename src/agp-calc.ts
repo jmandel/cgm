@@ -165,6 +165,7 @@ export const calculateAGPMetrics = (
   };
 
   console.log("glucoseStatistics", glucoseStatistics);
+  // This assumes the data hae already been filtered for the analysis period.
   const totalDays = new Set(data.map((d) => d.timestamp.toISOString().slice(0, 10))).size;
 
   const sensorActivePercentage = calculateSensorActivePercentage(data, analysisPeriod);

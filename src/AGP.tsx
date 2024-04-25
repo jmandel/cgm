@@ -68,6 +68,7 @@ const renderAGPChart = (
 
     percentileData[bucketIndex] = percentiles.map((p) => d3.quantile(glucoseValues, p / 100) || 0);
   }
+
   console.log(percentileData)
 
   const lineGenerator = d3
@@ -228,6 +229,9 @@ const AGPChart: React.FC<AGPChartProps> = ({
     if (!chartRef.current) return;
 
     const svg = d3.select(chartRef.current);
+
+      svg.selectAll("*").remove();
+
     const width = chartWidth;
     const height = chartWidth / 3;
     const margin = { top: 20, right: 20, bottom: 40, left: 40 };
@@ -639,6 +643,9 @@ const AGPDailyChart: React.FC<{
     if (!chartRef.current) return;
 
     const svg = d3.select(chartRef.current);
+
+    // clear SVG contents entirely
+    svg.selectAll("*").remove();
     const width = chartWidth;
     const height = chartWidth / 2;
     const margin = continuous
@@ -745,19 +752,28 @@ const AGPReport: React.FC<{ data: CGMData[]; unit?: "mg/dL" | "mmol/L", analysis
   analysisPeriod,
   unit = "mg/dL",
 }) => {
-  const [startDate, _setStartDate] = React.useState<string>(analysisPeriod.start);
-  const [endDate, _setEndDate] = React.useState<string>(analysisPeriod.end);
+  const [startDate, setStartDate] = React.useState<string>(analysisPeriod.start);
+  const [endDate, setEndDate] = React.useState<string>(analysisPeriod.end);
   const [selectedUnit, _setSelectedUnit] = React.useState<"mg/dL" | "mmol/L">(unit);
 
+  const dataInAnalysisPeriod = data.filter(t => moment(t.timestamp).isBetween(startDate, endDate, 'day', '[]'));
+  console.log("in AP", dataInAnalysisPeriod.length);
   return (
     <div>
-      <h1>Glucose Profile {startDate} to {endDate}</h1>
-      <AGPChart data={data} unit={selectedUnit} />
-      <div style={{ display: "flex" }}>
-        <GlucoseStatistics analysisPeriod={{start: startDate, end: endDate}} data={data} unit={selectedUnit} />
-        <TimeInRangesVisualization analysisPeriod={{start: startDate, end: endDate}} data={data} unit={selectedUnit} />
+      <div style={{}}>
+      <h1>Glucose Profile from&nbsp;
+      <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} /> through&nbsp;
+      <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+      </h1>
       </div>
-      <DailyGlucoseProfiles data={data} unit={selectedUnit} />
+      {dataInAnalysisPeriod?.length && <>
+      <AGPChart data={dataInAnalysisPeriod} unit={selectedUnit} />
+      <div style={{ display: "flex" }}>
+        <GlucoseStatistics analysisPeriod={{start: startDate, end: endDate}} data={dataInAnalysisPeriod} unit={selectedUnit} />
+        <TimeInRangesVisualization analysisPeriod={{start: startDate, end: endDate}} data={dataInAnalysisPeriod} unit={selectedUnit} />
+      </div>
+      <DailyGlucoseProfiles data={dataInAnalysisPeriod} unit={selectedUnit} />
+      </> ||  "No data in the selected period"}
     </div>
   );
 };
