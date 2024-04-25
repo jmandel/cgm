@@ -29,7 +29,7 @@ import { KEYS, storeValue, getValue } from "./idb";
 })();
 
 navigator.serviceWorker
-  .register(`${import.meta.env.BASE_URL}sw.js`, { type: "module" })
+  .register(`${import.meta.env.BASE_URL}/sw.js`, { type: "module" })
   .then(function (registration) {
     console.log("Service Worker registered with scope:", registration.scope);
     window.reg = registration;
