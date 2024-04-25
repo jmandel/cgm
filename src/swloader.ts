@@ -17,19 +17,22 @@ import { KEYS, storeValue, getValue } from "./idb";
     const sw = await navigator.serviceWorker.getRegistration();
     await storeValue(KEYS.syncURL, jugglucoSourceUrl.value);
     await storeValue(KEYS.accessToken, githubPAT.value);
-
     await sw.periodicSync.unregister("glucose-sync");
     const r = await sw.periodicSync.register("glucose-sync", { minInterval: 10 });
     console.log("made", r);
     window.r = r;
     sw?.active?.postMessage("sync");
-    console.log("POsted", sw?.active)
+    console.log("POsted a sync request", sw?.active)
   };
   document.body.appendChild(button);
 })();
 
+let base = import.meta.env.BASE_URL;
+if (!base.endsWith("/")) {
+    base = base + "/";
+}
 navigator.serviceWorker
-  .register(`${import.meta.env.BASE_URL}/sw.js`, { type: "module" })
+  .register(`${base}sw.js`, { type: "module" })
   .then(function (registration) {
     console.log("Service Worker registered with scope:", registration.scope);
     window.reg = registration;
