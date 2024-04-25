@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@octokit/core": "^6.1.2",
     "@types/bun": "^1.1.0",
     "@types/csv-parse": "^1.2.2",
     "@types/d3": "^7.4.3",
@@ -21,11 +22,13 @@
     "d3": "^7.9.0",
     "jose": "^5.2.4",
     "lodash": "^4.17.21",
+    "marked": "^12.0.2",
     "moment-timezone": "^0.5.45",
     "pako": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^9.0.1",
+    "vite-plugin-node-polyfills": "^0.21.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

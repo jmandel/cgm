@@ -1,28 +1,21 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import * as d3 from "d3";
-import _  from "lodash";
+import _ from "lodash";
 import type { AnalysisPeriod, CGMData } from "./agp-calc";
 import { calculateAGPMetrics, convertGlucoseValue, makeBreakpoints } from "./agp-calc";
 import moment from "moment-timezone";
 
-interface AGPChartProps {
-  data: CGMData[];
-  unit: "mg/dL" | "mmol/L";
-  percentiles?: number[];
-  chunkSizeMinutes?: number;
-  chartWidth?: number;
-}
-
 const renderAGPChart = (
   svg: d3.Selection<SVGSVGElement, unknown, null, undefined>,
   data: CGMData[],
+  unit: "mg/dL" | "mmol/L",
   width: number,
   height: number,
   margin: { top: number; right: number; bottom: number; left: number },
   percentiles: number[] = [5, 25, 50, 75, 95],
-  chunkSizeMinutes: number = 15, // Chunk size of 15 minutes
-  unit: "mg/dL" | "mmol/L"
+  xAxisBucketSizeMinutes: number | undefined = 5, // X-axis bucket size of 1 minute
+  windowSizeMinutes: number | undefined= 5, // Window size of 5 minutes
 ) => {
   const tooltip = svg
     .append("g")
@@ -38,7 +31,6 @@ const renderAGPChart = (
   };
 
   const targetBreakpoints = makeBreakpoints(unit);
-  console.log("Target Breakpoints: ", targetBreakpoints, unit);
   const targetRanges = [
     targetBreakpoints.veryLow,
     targetBreakpoints.low,
@@ -58,22 +50,25 @@ const renderAGPChart = (
     targetBreakpoints.veryHigh * 1.1,
   ]);
 
-  const chunkCount = Math.ceil((24 * 60) / chunkSizeMinutes);
-  const buckets: CGMData[][] = Array.from({ length: chunkCount }, () => []);
+  const bucketCount = Math.ceil((24 * 60) / xAxisBucketSizeMinutes);
+  const percentileData: number[][] = Array.from({ length: bucketCount }, () => []);
 
-  data.forEach((d) => {
-    const minutesSinceMidnight =
-      d.timestamp.getHours() * 60 + d.timestamp.getMinutes();
-    const chunkIndex = Math.floor(minutesSinceMidnight / chunkSizeMinutes);
-    buckets[chunkIndex].push(d);
-  });
+  for (let bucketIndex = 0; bucketIndex < bucketCount; bucketIndex++) {
+    const bucketStartMinutes = bucketIndex * xAxisBucketSizeMinutes;
+    const bucketEndMinutes = bucketStartMinutes + xAxisBucketSizeMinutes;
+    const windowStartMinutes = Math.max((bucketStartMinutes + bucketEndMinutes) / 2 - windowSizeMinutes / 2, 0);
+    const windowEndMinutes = Math.min((bucketStartMinutes + bucketEndMinutes) / 2 + windowSizeMinutes / 2, 24 * 60);
 
-  const percentileData = buckets.map((bucket) => {
-    const glucoseValues = bucket.map((d) =>
-      convertGlucoseValue(d.glucoseValue, d.unit, unit)
-    );
-    return percentiles.map((p) => d3.quantile(glucoseValues, p / 100) || 0);
-  });
+    const bucketData = data.filter((d) => {
+      const minutesSinceMidnight = d.timestamp.getHours() * 60 + d.timestamp.getMinutes();
+      return minutesSinceMidnight >= windowStartMinutes && minutesSinceMidnight < windowEndMinutes;
+    });
+
+    const glucoseValues = bucketData.map((d) => convertGlucoseValue(d.glucoseValue, d.unit, unit));
+
+    percentileData[bucketIndex] = percentiles.map((p) => d3.quantile(glucoseValues, p / 100) || 0);
+  }
+  console.log(percentileData)
 
   const lineGenerator = d3
     .line<[number, number]>()
@@ -88,28 +83,25 @@ const renderAGPChart = (
     .x(([minutesSinceMidnight]) =>
       xScale(new Date(0, 0, 0, 0, minutesSinceMidnight))
     )
-    .y0(([_chunkIndex, d]) => yScale(d[0])) // 5th percentile for the upper area
-    .y1(([_chunkIndex, d]) => yScale(d[4])) // 95th percentile for the upper area
+    .y0(([_bucketIndex, d]) => yScale(d[0])) // 5th percentile for the upper area
+    .y1(([_bucketIndex, d]) => yScale(d[4])) // 95th percentile for the upper area
     .curve(d3.curveBasis);
 
   // Create the upper shaded area (5th to 95th percentile)
   chartGroup
     .append("path")
-    .datum(
-      percentileData.map((d, chunkIndex) => [chunkIndex * chunkSizeMinutes, d])
-    ) // Bind percentile data
+    .datum(percentileData.map((d, bucketIndex) => [bucketIndex * xAxisBucketSizeMinutes, d]))
     .attr("fill", "#0F9D5822")
     .attr("d", areaGenerator as any);
 
+  // Create the middle shaded area (25th to 75th percentile)
   areaGenerator
-    .y0(([_chunkIndex, d]) => yScale(d[1])) // 25th percentile for the lower area
-    .y1(([_chunkIndex, d]) => yScale(d[3])); // 75th percentile for the lower area
+    .y0(([_bucketIndex, d]) => yScale(d[1])) // 25th percentile for the lower area
+    .y1(([_bucketIndex, d]) => yScale(d[3])); // 75th percentile for the lower area
 
   chartGroup
     .append("path")
-    .datum(
-      percentileData.map((d, chunkIndex) => [chunkIndex * chunkSizeMinutes, d])
-    ) // Bind percentile data
+    .datum(percentileData.map((d, bucketIndex) => [bucketIndex * xAxisBucketSizeMinutes, d]))
     .attr("fill", "#0F9D5866")
     .attr("d", areaGenerator as any);
 
@@ -121,8 +113,8 @@ const renderAGPChart = (
       .attr(
         "d",
         lineGenerator(
-          percentileData.map((d, chunkIndex) => [
-            chunkIndex * chunkSizeMinutes,
+          percentileData.map((d, bucketIndex) => [
+            bucketIndex * xAxisBucketSizeMinutes,
             d[i],
           ])
         )
@@ -133,7 +125,6 @@ const renderAGPChart = (
     } else {
       line.attr("stroke-width", 0);
     }
-    // Create the middle shaded area (25th to 75th percentile)
   });
 
   // Horizontal lines for target ranges
@@ -175,18 +166,19 @@ const renderAGPChart = (
       const [x, y] = d3.pointer(event);
       const xTime = xScale.invert(x);
       const minutesSinceMidnight = xTime.getHours() * 60 + xTime.getMinutes();
-      const chunkIndex = Math.floor(minutesSinceMidnight / chunkSizeMinutes);
-      const chunkData = percentileData[chunkIndex];
+      const bucketIndex = Math.floor(minutesSinceMidnight / xAxisBucketSizeMinutes);
+      const bucketData = percentileData[bucketIndex];
 
-      if (chunkData) {
+      if (bucketData) {
         tooltipText.text("").attr("y", 0);
 
-        const mean = d3.mean(chunkData) || 0;
-        addTooltipText(`95th Percentile: ${chunkData[4].toFixed(1)} ${unit}`);
-        addTooltipText(`75th Percentile: ${chunkData[3].toFixed(1)} ${unit}`);
-        addTooltipText(`50th Percentile: ${chunkData[2].toFixed(1)} ${unit}`);
-        addTooltipText(`25th Percentile: ${chunkData[1].toFixed(1)} ${unit}`);
-        addTooltipText(`5th Percentile: ${chunkData[0].toFixed(1)} ${unit}`);
+        const mean = d3.mean(bucketData) || 0;
+        addTooltipText(`Time: ${d3.timeFormat("%H:%M")(xTime)}`);
+        addTooltipText(`95th Percentile: ${bucketData[4].toFixed(1)} ${unit}`);
+        addTooltipText(`75th Percentile: ${bucketData[3].toFixed(1)} ${unit}`);
+        addTooltipText(`50th Percentile: ${bucketData[2].toFixed(1)} ${unit}`);
+        addTooltipText(`25th Percentile: ${bucketData[1].toFixed(1)} ${unit}`);
+        addTooltipText(`5th Percentile: ${bucketData[0].toFixed(1)} ${unit}`);
         addTooltipText(`Mean: ${mean.toFixed(1)} ${unit}`);
 
         const tooltipWidth = tooltip.node()?.getBoundingClientRect().width || 0;
@@ -214,10 +206,19 @@ const renderAGPChart = (
     });
 };
 
+interface AGPChartProps {
+  data: CGMData[];
+  unit: "mg/dL" | "mmol/L";
+  percentiles?: number[];
+  xAxisBucketSizeMinutes?: number;
+  windowSizeMinutes?: number;
+  chartWidth?: number;
+}
+
+
 const AGPChart: React.FC<AGPChartProps> = ({
   data,
   percentiles,
-  chunkSizeMinutes,
   chartWidth = 800,
   unit,
 }) => {
@@ -238,17 +239,17 @@ const AGPChart: React.FC<AGPChartProps> = ({
     renderAGPChart(
       svg,
       data,
+      unit,
       widthOfPlot,
       heightOfPlot,
       margin,
       percentiles,
-      chunkSizeMinutes,
-      unit
     );
   }, [data, unit]);
 
   return <svg ref={chartRef} />;
 };
+
 
 const GlucoseStatistics: React.FC<{
   data: CGMData[];
