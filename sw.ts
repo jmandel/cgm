@@ -59,7 +59,7 @@ async function syncGlucose(event) {
   });
   console.log("Made octokit", octokit);
   let sha;
-  const {owner, repo, path} = {owner: "jmandel", repo: "cgm", path: "public/shl/past-120-days.fhir.json"}
+  const {owner, repo, path} = {owner: "jmandel", repo: "cgm", path: "src/example-generation/fixtures/past-120-days.fhir.json"}
   try {
     const response = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}`);
     // Extracting the SHA from the response
