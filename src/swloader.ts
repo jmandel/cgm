@@ -13,6 +13,7 @@ import { KEYS, storeValue, getValue } from "./idb";
 
 
   const button = document.createElement("button");
+  button.innerText = "Sync and schedule";
   button.onclick = async () => {
     const sw = await navigator.serviceWorker.getRegistration();
     await storeValue(KEYS.syncURL, jugglucoSourceUrl.value);
