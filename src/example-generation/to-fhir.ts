@@ -261,7 +261,7 @@ const sampleFilePath = './src/example-generation/fixtures/' + sampleFileName;
 const outputDir = './public/shl';
 fs.copyFileSync(sampleFilePath, `${outputDir}/${sampleFileName}`);
 const glucoseData = JSON.parse(fs.readFileSync(sampleFilePath, 'utf8'));
-const agpReport = generateAGPReportBundle({bundle: glucoseData, analysisPeriod: [{trailingDays: 14}, {trailingDays: 120}]});
+const agpReport = generateAGPReportBundle({bundle: glucoseData, analysisPeriod: [{trailingDays: 90}, {trailingDays: 14}]});
 
 // Create SHLink for raw observations
 const rawObsShlId = "120day_raw_obs_unguessable_shl_id0000000000" // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
