@@ -140,7 +140,7 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
           },
         ],
       },
-      effectiveDateTime: moment.unix(UnixTime).utcOffset(TZ).toISOString(),
+      effectiveDateTime: moment.unix(UnixTime).utcOffset(TZ).toISOString(true),
       valueQuantity: {
         value: glucoseValue,
         unit: 'mg/dL',
