@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as jose from "jose";
 import AGP from "./AGP";
 import { CGMData, FHIRBundle } from "./agp-calc";
+import * as shlink from "shlinker";
 
 function extractAnalysisPeriod(bundle: FHIRBundle, data: CGMData[]) {
   const analysisEntry = bundle.entry.find(
@@ -46,54 +47,44 @@ function extractCGMData(bundle: FHIRBundle) {
 }
 
 const SHLinkComponent = () => {
-  const [shlPayload, setDecryptedPayload] = useState(null);
-  const [shlLabel, setShlLabel] = useState(null);
-  const [currentShlink, setCurrentShlink] = useState<string | null>(null);
+  const [currentShlink, setCurrentShlink] = useState<shlink.SHLinkData | null>(null);
+  const [currentShlinkReady, setCurrentShlinkReady] = useState(false);
 
   useEffect(() => {
     const parseSHLink = async () => {
-      const hash = window.location.hash;
-      const tag = "#shlink:/";
-      if (hash.startsWith(tag)) {
-        setCurrentShlink(hash.slice(1));
-        const encodedPayload = hash.slice(tag.length);
-        const decodedPayload = jose.base64url.decode(encodedPayload);
-        const shlinkPayload = JSON.parse(new TextDecoder().decode(decodedPayload));
-        setShlLabel(shlinkPayload.label);
-
-        if (shlinkPayload.flag && shlinkPayload.flag.includes("U")) {
-          try {
-            const response = await fetch(shlinkPayload.url + "?recipient=cgm-viewer", {
-              method: "GET",
-            });
-
-            if (response.ok) {
-              const encryptedFile = await response.text();
-              const decrypted = await jose.compactDecrypt(encryptedFile, jose.base64url.decode(shlinkPayload.key));
-              const payload = JSON.parse(new TextDecoder().decode(decrypted.plaintext));
-              window.payload = payload;
-              setDecryptedPayload(payload);
-            } else {
-              console.error("Error retrieving file:", response.status);
-            }
-          } catch (error) {
-            console.error("Error retrieving file:", error);
-          }
-        } else {
-          console.log('SHLink does not have a "U" flag');
-        }
+      let parsed;
+      try {
+        parsed = shlink.parse();
+        setCurrentShlink(parsed);
+      } catch (e) {
+        return;
       }
+      console.log("Parsed", parsed)
+      const retrieved = await shlink.retrieve(parsed);
+      console.log("Retrieved", retrieved)
+      setCurrentShlink(retrieved);
+      setCurrentShlinkReady(true);
     };
-
     parseSHLink();
   }, []);
 
-  const cgmData = shlPayload ? extractCGMData(shlPayload) : null;
-  const analysisPeriod = shlPayload ? extractAnalysisPeriod(shlPayload, cgmData!) : null;
+  const payload = currentShlink?.files?.[0]?.contentJson
+  const cgmData = payload ? extractCGMData(payload) : null;
+  const analysisPeriod = payload ? extractAnalysisPeriod(payload, cgmData!) : null;
+
+  const widget = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    console.log("Widget", widget.current, currentShlinkReady)
+    if (!widget || !currentShlinkReady) {
+      return;
+    }
+
+    shlink.render(currentShlink, widget.current!, {showDetails: true});
+  }, [currentShlinkReady, widget.current]);
 
   return (
     <>
-      {!shlLabel && !shlPayload && (
+      {!currentShlink &&  (
         <>
           <h3>SHLink CGM Viewer</h3>
           {/* <input type="text" placeholder="Enter SHLink" /> */}
@@ -119,13 +110,14 @@ const SHLinkComponent = () => {
       )}
       {currentShlink && (
         <>
-          {shlLabel && <h3>{shlLabel}</h3>}
+          {currentShlink.label && <h3>{currentShlink.label}</h3>}
           <div>
-            {shlPayload ? (
+            {payload ? (
               <AGP data={cgmData!} analysisPeriod={analysisPeriod!}></AGP>
             ) : (
               <p>No decrypted payload available</p>
             )}
+            <div className="shl-widget" ref={widget}></div>
           </div>
         </>
       )}

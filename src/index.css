@@ -83,3 +83,27 @@ button:focus-visible {
   font-size: 12px;
   fill: #483d8b99;
 }
+
+@media (min-width: 1200px) {
+  .shl-widget {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px dashed #64aed0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .shl-widget {
+    padding: 1em;
+    background-color: white;
+    border: 1px dashed #64aed0;
+    display: inline-block;
+    margin: 1em;
+  }
+}
