@@ -3,9 +3,12 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #213547;
+  background-color: #ffffff;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,13 +18,19 @@
  
 }
 
+h1 input {
+  margin-left: .2em;
+  margin-right: .2em;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  /* color: #535bf2; */
+  color: #747bff;
 }
 
 body {
@@ -43,29 +52,17 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background-color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:focus, button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .tooltip rect {
@@ -86,6 +83,7 @@ div.sidebar-holder {
   height: 100%;
   overflow-y: scroll;
 }
+
 @media (min-width: 1200px) {
   .shl-widget {
     background-color: white;
@@ -121,4 +119,3 @@ div.sidebar-holder {
     box-sizing: border-box;
   }
 }
-

@@ -765,7 +765,7 @@ const AGPReport: React.FC<{ data: CGMData[]; unit?: "mg/dL" | "mmol/L", analysis
   return (
     <div className="agp">
       <div style={{}}>
-      <h1 style={{display: "flex", alignItems: "self-end"}}>Glucose Profile from&nbsp;
+      <h1 style={{display: "flex", alignItems: "self-end", whiteSpace: "nowrap"}}>Glucose Profile from&nbsp;
       <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} /> through&nbsp;
       <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
       </h1>

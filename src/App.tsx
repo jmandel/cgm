@@ -86,6 +86,7 @@ const SHLinkComponent = () => {
     <div className="sidebar-holder">
       {!currentShlink && (
         <>
+        <div className="agp">
           <h3>SHLink CGM Viewer</h3>
           {/* <input type="text" placeholder="Enter SHLink" /> */}
           <ul>
@@ -106,6 +107,8 @@ const SHLinkComponent = () => {
               </a>
             </li>
           </ul>
+        </div>
+        <div></div>
         </>
       )}
       {currentShlink && (
