@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import * as jose from "jose";
 import AGP from "./AGP";
 import { CGMData, FHIRBundle } from "./agp-calc";
 import * as shlink from "shlinker";
