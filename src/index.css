@@ -11,9 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 900px;
-  overflow-y: scroll;
-  margin: 0 auto;
+  /* margin: 0 auto; */
  
 }
 
@@ -29,9 +27,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -84,18 +81,28 @@ button:focus-visible {
   fill: #483d8b99;
 }
 
+div.sidebar-holder {
+  width: 100vw;
+  height: 100%;
+}
 @media (min-width: 1200px) {
   .shl-widget {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-top: 2em;
-    padding-right: 1em;
-    padding-left: 1em;
-    height: 100vh;
     background-color: white;
-    border-left: 1px dashed #64aed0;
+    border-right: 1px dashed #64aed0;
+    padding: 1em; 
   }
+  .sidebar-holder {
+    display: flex;
+    gap: 1em;
+    flex-direction: row-reverse
+  }
+
+  .agp {
+    max-height: 100vh;
+    overflow-y: scroll;
+    flex-grow: 1;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -107,3 +114,4 @@ button:focus-visible {
     margin: 1em;
   }
 }
+

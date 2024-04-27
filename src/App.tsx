@@ -58,32 +58,33 @@ const SHLinkComponent = () => {
       } catch (e) {
         return;
       }
-      console.log("Parsed", parsed)
+      console.log("Parsed", parsed);
       const retrieved = await shlink.retrieve(parsed);
-      console.log("Retrieved", retrieved)
+      console.log("Retrieved", retrieved);
       setCurrentShlink(retrieved);
       setCurrentShlinkReady(true);
     };
     parseSHLink();
   }, []);
 
-  const payload = currentShlink?.files?.[0]?.contentJson
+  const payload = currentShlink?.files?.[0]?.contentJson;
   const cgmData = payload ? extractCGMData(payload) : null;
   const analysisPeriod = payload ? extractAnalysisPeriod(payload, cgmData!) : null;
 
   const widget = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    console.log("Widget", widget.current, currentShlinkReady)
+    console.log("Widget", widget.current, currentShlinkReady);
     if (!widget || !currentShlinkReady) {
       return;
     }
 
-    shlink.render(currentShlink, widget.current!, {showDetails: true});
+    shlink.render(currentShlink!, widget.current!, { showDetails: true });
   }, [currentShlinkReady, widget.current]);
 
   return (
     <>
-      {!currentShlink &&  (
+    <div className="sidebar-holder">
+      {!currentShlink && (
         <>
           <h3>SHLink CGM Viewer</h3>
           {/* <input type="text" placeholder="Enter SHLink" /> */}
@@ -108,18 +109,18 @@ const SHLinkComponent = () => {
         </>
       )}
       {currentShlink && (
-        <>
-          {currentShlink.label && <h3>{currentShlink.label}</h3>}
-          <div>
+          // {currentShlink.label && <h3>{currentShlink.label}</h3>}
+          <>
             {payload ? (
               <AGP data={cgmData!} analysisPeriod={analysisPeriod!}></AGP>
             ) : (
               <p>No decrypted payload available</p>
             )}
-            <div className="shl-widget" ref={widget}></div>
-          </div>
-        </>
+          <div className="shl-widget" ref={widget} style={{position: "sticky"}}></div>
+            </>
       )}
+
+    </div>
     </>
   );
 };

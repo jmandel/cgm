@@ -719,19 +719,23 @@ const DailyGlucoseProfiles: React.FC<{
     const dayKey = day.format("YYYY-MM-DD");
 
     if (!weeklyData.has(weekKey)) {
-      weeklyData.set(weekKey, new Map<string, CGMData[]>());
+      // Initialize the week with empty arrays for each day
+      const emptyWeek = new Map<string, CGMData[]>();
+      for (let i = 0; i < 7; i++) {
+        const emptyDay = weekStart.clone().add(i, "days").format("YYYY-MM-DD");
+        emptyWeek.set(emptyDay, []);
+      }
+      weeklyData.set(weekKey, emptyWeek);
     }
+
     const weekData = weeklyData.get(weekKey)!;
-    if (!weekData.has(dayKey)) {
-      weekData.set(dayKey, []);
-    }
     weekData.get(dayKey)!.push(d);
   });
 
-  const weeksArray: [string, Map<string,CGMData[]>][] = Array.from(weeklyData, ([weekStart, weekData]) => [
-    weekStart,
-    weekData,
-  ]);
+  const weeksArray: [string, Map<string, CGMData[]>][] = Array.from(
+    weeklyData,
+    ([weekStart, weekData]) => [weekStart, weekData]
+  );
 
   return (
     <div>
@@ -759,9 +763,9 @@ const AGPReport: React.FC<{ data: CGMData[]; unit?: "mg/dL" | "mmol/L", analysis
   const dataInAnalysisPeriod = data.filter(t => moment(t.timestamp).isBetween(startDate, endDate, 'day', '[]'));
   console.log("in AP", dataInAnalysisPeriod.length);
   return (
-    <div>
+    <div className="agp">
       <div style={{}}>
-      <h1>Glucose Profile from&nbsp;
+      <h1 style={{display: "flex", alignItems: "self-end"}}>Glucose Profile from&nbsp;
       <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} /> through&nbsp;
       <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
       </h1>
