@@ -78,7 +78,7 @@ const SHLinkComponent = () => {
       return;
     }
 
-    shlink.render(currentShlink!, widget.current!, { showDetails: true });
+    shlink.render(currentShlink!, widget.current!, { showDetails: true, qrStartsOpen: true });
   }, [currentShlinkReady, widget.current]);
 
   return (

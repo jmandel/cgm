@@ -84,12 +84,15 @@ button:focus-visible {
 div.sidebar-holder {
   width: 100vw;
   height: 100%;
+  overflow-y: scroll;
 }
 @media (min-width: 1200px) {
   .shl-widget {
     background-color: white;
     border-right: 1px dashed #64aed0;
     padding: 1em; 
+    position: sticky !important;
+    top: 0px;
   }
   .sidebar-holder {
     display: flex;
@@ -99,7 +102,6 @@ div.sidebar-holder {
 
   .agp {
     max-height: 100vh;
-    overflow-y: scroll;
     flex-grow: 1;
   }
 
@@ -112,6 +114,11 @@ div.sidebar-holder {
     border: 1px dashed #64aed0;
     display: inline-block;
     margin: 1em;
+    margin-left: 0px;
+  }
+  .sidebar-holder {
+    padding-left: 1em;
+    box-sizing: border-box;
   }
 }
 
