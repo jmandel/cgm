@@ -19,8 +19,11 @@
 }
 
 h1 input {
-  margin-left: .2em;
-  margin-right: .2em;
+  margin-left: .6em;
+  margin-right: .6em;
+  height: 2em;
+  min-width: 8em;
+  text-align: center;
 }
 
 a {

@@ -151,9 +151,9 @@ const renderAGPChart = (
   chartGroup
     .append("text")
     .attr("x", width / 2)
-    .attr("y", height + margin.bottom - 5)
+    .attr("y", 0)
     .attr("text-anchor", "middle")
-    .text(`Glucose (${unit})`);
+    .text(`Glucose Percentiles (${unit})`);
 
   chartGroup
     .append("rect")
@@ -674,14 +674,14 @@ const WeeklyGlucoseProfileStrip: React.FC<{
   weeklyData: Map<string, CGMData[]>;
   unit: "mg/dL" | "mmol/L";
 }> = ({ weeklyData, unit }) => {
-  const singleDayWidth = 125;
+  const singleDayWidth = 111;
   const days = Array.from(weeklyData.keys()).sort(
     (a, b) => new Date(a).getTime() - new Date(b).getTime()
   );
   const stripWidth = days.length * singleDayWidth; // Width for one day's chart
 
   return (
-    <div style={{ width: stripWidth, display: "flex" }}>
+    <div style={{ width: stripWidth, display: "flex", gap: "2px" }}>
       {days.map((date) => {
         const dailyData = weeklyData.get(date)!;
         return (
@@ -690,6 +690,7 @@ const WeeklyGlucoseProfileStrip: React.FC<{
             data={dailyData}
             date={date}
             chartWidth={singleDayWidth}
+            continuous={true}
             unit={unit}
           />
         );
@@ -765,8 +766,8 @@ const AGPReport: React.FC<{ data: CGMData[]; unit?: "mg/dL" | "mmol/L", analysis
   return (
     <div className="agp">
       <div style={{}}>
-      <h1 style={{display: "flex", alignItems: "self-end", whiteSpace: "nowrap"}}>Glucose Profile from&nbsp;
-      <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} /> through&nbsp;
+      <h1 style={{display: "flex", alignItems: "center", whiteSpace: "nowrap"}}>Glucose Profile from
+      <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} /> through
       <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
       </h1>
       </div>
