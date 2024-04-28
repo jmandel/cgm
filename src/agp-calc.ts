@@ -382,7 +382,9 @@ export const generateAGPReportBundle = ({
           "Time in Target Range",
           agpMetrics.timeInRanges.target,
           "%",
-          "%"
+          "%",
+          "97510-2",
+          "Glucose measurements in range out of Total glucose measurements during reporting period"
         ),
         createComponent(
           "https://tx.argo.run",
@@ -436,8 +438,6 @@ export const generateAGPReportBundle = ({
           agpMetrics.sensorActivePercentage,
           "%",
           "%",
-          "97510-2",
-          "Glucose measurements in range out of Total glucose measurements during reporting period"
         ),
       ],
     };
