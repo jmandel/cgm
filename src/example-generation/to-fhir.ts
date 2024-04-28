@@ -1,4 +1,5 @@
 import * as jose from "jose";
+import * as pako from 'pako';
 import fs from 'fs';
 import { parse } from 'csv-parse';
 import { v4 as uuidv4 } from 'uuid';
@@ -218,8 +219,11 @@ async function createEncryptedHalthLinkPayload(payload: any, key: string, conten
       alg: "dir",
       enc: "A256GCM",
       cty: contentType,
+      zip: "DEF",
     })
-    .encrypt(jose.base64url.decode(key));
+    .encrypt(jose.base64url.decode(key), {
+      deflateRaw: async (inArray: Uint8Array) =>  pako.deflateRaw(inArray)
+    });
 
   return encrypted;
 }
