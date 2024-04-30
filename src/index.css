@@ -122,3 +122,10 @@ div.sidebar-holder {
     box-sizing: border-box;
   }
 }
+
+@media print {
+  .sidebar-holder {
+    height: auto !important;
+    overflow-y: unset !important;
+  }
+}

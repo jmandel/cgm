@@ -51,6 +51,15 @@ const SHLinkComponent = () => {
 
   useEffect(() => {
     const parseSHLink = async () => {
+      window.inject = (data) => {
+        console.log("Injecting", data);
+        window.injectedData = data;
+        setCurrentShlink(data);
+        setCurrentShlinkReady(true);
+      }
+      // if (currentShlink) {
+
+      // }
       let parsed;
       try {
         parsed = shlink.parse();
@@ -78,7 +87,9 @@ const SHLinkComponent = () => {
       return;
     }
 
-    shlink.render(currentShlink!, widget.current!, { showDetails: true, qrStartsOpen: true });
+    if (currentShlink?.url) {
+      shlink.render(currentShlink!, widget.current!, { showDetails: true, qrStartsOpen: true });
+    }
   }, [currentShlinkReady, widget.current]);
 
   return (
@@ -112,14 +123,13 @@ const SHLinkComponent = () => {
         </>
       )}
       {currentShlink && (
-          // {currentShlink.label && <h3>{currentShlink.label}</h3>}
           <>
             {payload ? (
               <AGP data={cgmData!} analysisPeriod={analysisPeriod!}></AGP>
             ) : (
               <p>No decrypted payload available</p>
             )}
-          <div className="shl-widget" ref={widget} style={{position: "sticky"}}></div>
+            {currentShlink?.url && <div className="shl-widget" ref={widget} style={{position: "sticky"}}></div> }
             </>
       )}
 

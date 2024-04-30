@@ -20,6 +20,9 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
 
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+
       - name: Install dependencies
         run: bun install --frozen-lockfile
 

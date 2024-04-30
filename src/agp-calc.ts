@@ -34,15 +34,6 @@ export interface Breakpoints {
   veryHigh: number;
 }
 
-export interface FHIRBundle {
-  resourceType: "Bundle";
-  type: "collection";
-  entry: Array<{
-    fullUrl: string;
-    resource: FHIRDevice | FHIRObservation;
-  }>;
-}
-
 export interface FHIRDevice {
   resourceType: "Device";
   id: string;
@@ -56,7 +47,7 @@ export interface FHIRDevice {
   }>;
 }
 
-interface FHIRObservation {
+export interface FHIRObservation {
   resourceType: "Observation";
   id: string;
   status: "final";
@@ -87,6 +78,42 @@ interface FHIRObservation {
   }>;
   component?: Array<Partial<FHIRObservation>>;
 }
+
+export interface FHIRDiagnosticReport {
+  resourceType: "DiagnosticReport";
+  id: string;
+  status: "final";
+  code: {
+    coding: Array<{
+      system: string;
+      code: string;
+      display: string;
+    }>;
+  };
+  effectivePeriod: {
+    start: string;
+    end: string;
+  };
+  result: Array<{
+    reference: string;
+  }>;
+  presentedForm: Array<{
+    contentType: "application/pdf";
+    data: string;
+    title: string;
+  }>;
+}
+
+export interface FHIRBundle {
+  resourceType: "Bundle";
+  type: "collection";
+  entry: Array<{
+    fullUrl: string;
+    resource: FHIRDevice | FHIRObservation | FHIRDiagnosticReport;
+  }>;
+}
+
+
 
 export const convertGlucoseValue = (value: number, fromUnit: string, toUnit: string): number => {
   if (fromUnit === toUnit) return value;
