@@ -171,7 +171,7 @@ async function createEncryptedHalthLinkPayload(payload: any, key: string, conten
   return encrypted;
 }
 
-const hostingUrl = Bun.env.NODE_ENV === "dev" ? "http://localhost:5173" : "https://joshuamandel.com/cgm";
+const hostingUrl = Bun.env.NODE_ENV === "dev" ? "http://localhost:5174" : "https://joshuamandel.com/cgm";
 async function createSHLink(payload: any, shlId: string, key: string, contentType: string) {
   const encrypted = await createEncryptedHalthLinkPayload(payload, key, contentType);
   fs.writeFileSync(`${outputDir}/${shlId}`, encrypted);

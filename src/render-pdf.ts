@@ -13,6 +13,12 @@ const PORT = 3030;
 const baseUrl = "http:/localhost:" + PORT;
 
 app.use(serveStatic("dist", { index: ["index.html"] }));
+
+let injectedJson = null;
+app.get("/bundle.json", (req, res) => {
+  // respond in json with injectedJson
+  res.json(injectedJson);
+});
 let server;
 
 
@@ -49,7 +55,7 @@ async function renderPDF(url, outputFile) {
 
   console.log("Open browser");
   const browser = await chromium.launch({
-    // : false
+    // headless: false
   });
 
   console.log("NEw page");
@@ -61,12 +67,17 @@ async function renderPDF(url, outputFile) {
   console.log("Navigated");
   if (!url?.includes?.("shlink:/")) {
     const glucoseData = typeof url === 'object'  ? url : JSON.parse(fs.readFileSync(url, "utf8"));
-    await page.evaluate((data) => {
-      window.inject({ label: "Glucose Data", files: [{ contentJson: data, size: JSON.stringify(data).length }] });
-    }, glucoseData);
+    console.log("Inject", Object.keys(glucoseData), glucoseData.entry.length)
+    injectedJson = { label: "Glucose Data", files: [{ contentJson: glucoseData, size: JSON.stringify(glucoseData).length }] }
+    const jsonUrl = `${baseUrl}/bundle.json`;
+    await page.evaluate((jsonUrl) => {
+      window.inject(jsonUrl);
+    }, jsonUrl);
+    console.log("Waiting for svg")
     await page.waitForSelector(".agp > svg");
   }
 
+  await page.waitForLoadState("networkidle");
   console.log("Printing");
   await page.pdf({
     path: outputFile,

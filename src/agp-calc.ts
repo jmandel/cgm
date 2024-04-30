@@ -58,6 +58,7 @@ export interface FHIRObservation {
       display?: string;
     }>;
   };
+  hasMember?: Array<{ reference: string }>;
   effectiveDateTime?: string;
   effectivePeriod?: { start: string; end: string };
   valueQuantity: {
@@ -98,7 +99,7 @@ export interface FHIRDiagnosticReport {
     reference: string;
   }>;
   presentedForm: Array<{
-    contentType: "application/pdf";
+    contentType: string;
     data: string;
     title: string;
   }>;
@@ -232,20 +233,48 @@ export function makeBreakpoints(toUnit: "mg/dL" | "mmol/L"): Breakpoints {
   };
 }
 
-const createComponent = (
-  system: string,
+export interface AnalysisPeriod {
+  start: string;
+  end: string;
+  trailingDays?: number;
+}
+interface GenerateAGPReportArgs {
+  bundle: FHIRBundle;
+  analysisPeriod?: Partial<AnalysisPeriod>[];
+  includeSourceData?: boolean;
+  targetUnit?: "mg/dL" | "mmol/L";
+  breakpoints?: Breakpoints;
+}
+
+const createComponentObservation = (
   code: string,
   display: string,
   value: number,
   unit: string,
-  unitCode: string,
+  startDate: moment.Moment,
+  endDate: moment.Moment,
   loincCode?: string,
   loincDisplay?: string
-): Exclude<FHIRObservation["component"], undefined>[number] => ({
+): FHIRObservation => ({
+  resourceType: "Observation",
+  id: uuidv4(),
+  status: "final",
+      category: [
+        {
+          coding: [
+            {
+              system: "http://terminology.hl7.org/CodeSystem/observation-category",
+              code: "laboratory",
+              display: "Laboratory",
+            },
+          ],
+        },
+      ],
+ 
   code: {
     coding: [
       {
-        system,
+        system: "https://tx.argo.run",
         code,
         display,
       },
@@ -260,26 +289,14 @@ const createComponent = (
         : []),
     ],
   },
+  effectivePeriod: { start: startDate.toISOString().slice(0, 10), end: endDate.toISOString().slice(0, 10) },
   valueQuantity: {
-    value: Math.round((value + Number.EPSILON) * 100) / 100,
+    value,
     unit,
     system: "http://unitsofmeasure.org",
-    code: unitCode || unit,
+    code: unit,
   },
 });
-
-export interface AnalysisPeriod {
-  start: string;
-  end: string;
-  trailingDays?: number;
-}
-interface GenerateAGPReportArgs {
-  bundle: FHIRBundle;
-  analysisPeriod?: Partial<AnalysisPeriod>[];
-  includeSourceData?: boolean;
-  targetUnit?: "mg/dL" | "mmol/L";
-  breakpoints?: Breakpoints;
-}
 
 export const generateAGPReportBundle = ({
   bundle,
@@ -332,9 +349,6 @@ export const generateAGPReportBundle = ({
       latestAnalysisDate = endDate;
     }
 
-    console.log("startDate", startDate);
-    console.log("endDate", endDate);
-
     const filteredObservations: { fullUrl: string; resource: FHIRObservation }[] = observationsBetween(
       startDate,
       endDate
@@ -348,14 +362,13 @@ export const generateAGPReportBundle = ({
         deviceDetails: observation.device?.reference || "",
       }));
 
-    console.log("glucoseObservations", glucoseObservations);
     const agpMetrics = calculateAGPMetrics(
       glucoseObservations,
       { start: startDate.toISOString(), end: endDate.toISOString() },
       breakpoints || makeBreakpoints(targetUnit)
     );
 
-    const agpObservation: FHIRObservation = {
+    const rootObservation: FHIRObservation = {
       resourceType: "Observation",
       id: uuidv4(),
       status: "final",
@@ -369,12 +382,6 @@ export const generateAGPReportBundle = ({
         ],
       },
       effectivePeriod: { start: startDate.toISOString().slice(0, 10), end: endDate.toISOString().slice(0, 10) },
-      valueQuantity: {
-        value: agpMetrics.median,
-        unit: targetUnit,
-        system: "http://unitsofmeasure.org",
-        code: targetUnit,
-      },
       category: [
         {
           coding: [
@@ -386,93 +393,116 @@ export const generateAGPReportBundle = ({
           ],
         },
       ],
-      component: [
-        createComponent(
-          "https://tx.argo.run",
-          "time-in-very-low",
-          "Time in Very Low Range",
-          agpMetrics.timeInRanges.veryLow,
-          "%",
-          "%"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "time-in-low",
-          "Time in Low Range",
-          agpMetrics.timeInRanges.low,
-          "%",
-          "%"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "time-in-target",
-          "Time in Target Range",
-          agpMetrics.timeInRanges.target,
-          "%",
-          "%",
-          "97510-2",
-          "Glucose measurements in range out of Total glucose measurements during reporting period"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "time-in-high",
-          "Time in High Range",
-          agpMetrics.timeInRanges.high,
-          "%",
-          "%"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "time-in-very-high",
-          "Time in Very High Range",
-          agpMetrics.timeInRanges.veryHigh,
-          "%",
-          "%"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "mean-glucose",
-          "Mean Glucose",
-          agpMetrics.glucoseStatistics.mean,
-          targetUnit,
-          targetUnit,
-          "97507-8",
-          "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "gmi",
-          "Glucose Management Indicator (GMI)",
-          agpMetrics.glucoseStatistics.gmi,
-          "%",
-          "%",
-          "97506-0",
-          "Glucose management indicator"
-        ),
-        createComponent(
-          "https://tx.argo.run",
-          "cv",
-          "Coefficient of Variation (CV)",
-          agpMetrics.glucoseStatistics.cv,
-          "%",
-          "%"
-        ),
-        createComponent("https://tx.argo.run", "total-days", "Days", agpMetrics.totalDays, "days", "d"),
-        createComponent(
-          "https://tx.argo.run",
-          "sensor-active-percentage",
-          "Sensor Active Percentage",
-          agpMetrics.sensorActivePercentage,
-          "%",
-          "%",
-        ),
-      ],
+      hasMember: [],
     };
 
-    outputBundle.entry.push({
-      fullUrl: "urn:uuid:" + agpObservation.id,
-      resource: agpObservation,
+    const meanObservation: FHIRObservation = createComponentObservation(
+      "mean-glucose",
+      "Mean Glucose",
+      agpMetrics.glucoseStatistics.mean,
+      targetUnit,
+      startDate,
+      endDate,
+      "97507-8",
+      "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
+    );
+
+    rootObservation.hasMember.push({
+      reference: "urn:uuid:" + meanObservation.id,
     });
+
+    const componentObservations: FHIRObservation[] = [
+      createComponentObservation(
+        "time-in-very-low",
+        "Time in Very Low Range",
+        agpMetrics.timeInRanges.veryLow,
+        "%",
+        startDate,
+        endDate
+      ),
+      createComponentObservation(
+        "time-in-low",
+        "Time in Low Range",
+        agpMetrics.timeInRanges.low,
+        "%",
+        startDate,
+        endDate
+      ),
+      createComponentObservation(
+        "time-in-target",
+        "Time in Target Range",
+        agpMetrics.timeInRanges.target,
+        "%",
+        startDate,
+        endDate,
+        "97510-2",
+        "Glucose measurements in range out of Total glucose measurements during reporting period"
+      ),
+      createComponentObservation(
+        "time-in-high",
+        "Time in High Range",
+        agpMetrics.timeInRanges.high,
+        "%",
+        startDate,
+        endDate
+      ),
+      createComponentObservation(
+        "time-in-very-high",
+        "Time in Very High Range",
+        agpMetrics.timeInRanges.veryHigh,
+        "%",
+        startDate,
+        endDate
+      ),
+      createComponentObservation(
+        "gmi",
+        "Glucose Management Indicator (GMI)",
+        agpMetrics.glucoseStatistics.gmi,
+        "%",
+        startDate,
+        endDate,
+        "97506-0",
+        "Glucose management indicator"
+      ),
+      createComponentObservation(
+        "cv",
+        "Coefficient of Variation (CV)",
+        agpMetrics.glucoseStatistics.cv,
+        "%",
+        startDate,
+        endDate
+      ),
+      createComponentObservation("total-days", "Days", agpMetrics.totalDays, "days", startDate, endDate),
+      createComponentObservation(
+        "sensor-active-percentage",
+        "Sensor Active Percentage",
+        agpMetrics.sensorActivePercentage,
+        "%",
+        startDate,
+        endDate
+      ),
+    ];
+
+    componentObservations.forEach((obs) => {
+      rootObservation.hasMember.push({
+        reference: "urn:uuid:" + obs.id,
+      });
+    });
+
+    outputBundle.entry.push(
+      {
+        fullUrl: "urn:uuid:" + rootObservation.id,
+        resource: rootObservation,
+      },
+      {
+        fullUrl: "urn:uuid:" + meanObservation.id,
+        resource: meanObservation,
+      },
+      ...componentObservations.map((obs) => ({
+        fullUrl: "urn:uuid:" + obs.id,
+        resource: obs,
+      }))
+    );
   }
 
   const filteredObservations = observationsBetween(earliestAnalysisDate!, latestAnalysisDate!);

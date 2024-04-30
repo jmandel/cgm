@@ -3,23 +3,28 @@ import AGP from "./AGP";
 import { CGMData, FHIRBundle } from "./agp-calc";
 import * as shlink from "shlinker";
 
+import moment from 'moment';
+
 function extractAnalysisPeriod(bundle: FHIRBundle, data: CGMData[]) {
   const analysisEntry = bundle.entry.find(
     (entry) =>
       entry.resource.resourceType === "Observation" &&
       entry.resource.code.coding.some((coding) => coding.code === "ambulatory-glucose-profile")
   );
+
   if (analysisEntry) {
     return (analysisEntry.resource as any).effectivePeriod;
   }
 
-  const firstMeasurementDate = new Date(data.at(0)?.timestamp || "").toISOString().slice(0, 10);
-  const lastMeasurementDate = new Date(data.at(-1)?.timestamp || "").toISOString().slice(0, 10);
+  const firstMeasurementDate = moment(data.at(0)?.timestamp || "");
+  const lastMeasurementDate = moment(data.at(-1)?.timestamp || "");
+
   return {
-    start: firstMeasurementDate,
-    end: lastMeasurementDate,
+    start: firstMeasurementDate.format('YYYY-MM-DD'),
+    end: lastMeasurementDate.format('YYYY-MM-DD'),
   };
 }
+
 function extractCGMData(bundle: FHIRBundle) {
   const cgmData: CGMData[] = [];
 
@@ -51,7 +56,9 @@ const SHLinkComponent = () => {
 
   useEffect(() => {
     const parseSHLink = async () => {
-      window.inject = (data) => {
+      window.inject = async () => {
+
+        const data = await ( await fetch("http://localhost:3030/bundle.json")).json()
         console.log("Injecting", data);
         window.injectedData = data;
         setCurrentShlink(data);
