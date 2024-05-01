@@ -232,8 +232,8 @@ const markdown = `
 ## SHLink with AGP Bundle
 
 - SHL: <a target="_blank" href="${agpObsShlInfo.shlink}">${agpObsShlInfo.shlink}</a>
-- Description: This SHL provides access to AGP (Ambulatory Glucose Profile) for 120 days,  AGP for 14 days, and all the raw glucose observations.
-- Decrypted Content: [${agpShlId}.decrypted.json](${agpShlId}.decrypted.json)
+- Description: This SHL provides access to the past 120 days of raw glucose history, as well as AGP (Ambulatory Glucose Profile) reports covering the most recent 2-week and 3-month periods.
+- Decrypted Content: [${agpShlId}.decrypted.json](${agpShlId}.decrypted.json
 - Details: [${agpShlId}.details.json](${agpShlId}.details.json)
 \`\`\`json
 ${JSON.stringify(agpObsShlInfo, null, 2)}
@@ -255,7 +255,7 @@ ${JSON.stringify(entry.resource, null, 2)}
 ## SHLink with Raw Observations
 
 - SHL: <a target="_blank" href="${rawObsShlInfo.shlink}">${rawObsShlInfo.shlink}</a>
-- Description: This SHL provides access to raw glucose observations for the past 120 days.
+- Description: This SHL provides access to the past 120 days of raw glucose history.
 - Decrypted Content: [${rawObsShlId}.decrypted.json](${rawObsShlId}.decrypted.json)
 - Details: [${rawObsShlId}.details.json](${rawObsShlId}.details.json)
 \`\`\`json
