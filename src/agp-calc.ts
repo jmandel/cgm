@@ -138,9 +138,8 @@ const getTimeInRange = (data: CGMData[], minValue: number, maxValue: number, uni
 };
 
 const calculateSensorActivePercentage = (data: CGMData[], analysisPeriod: AnalysisPeriod): number => {
-  const start = new Date(analysisPeriod.start);
-  const end = new Date(analysisPeriod.end);
-
+  const start = moment(analysisPeriod.start).startOf("day").toDate();
+  const end = moment(analysisPeriod.end).endOf("day").toDate();
   const totalHours = Math.ceil((end.getTime() - start.getTime()) / (1000 * 3600));
 
   // Create an array to store the count of measurements for each hour
