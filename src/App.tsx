@@ -34,8 +34,8 @@ function extractCGMData(bundle: FHIRBundle) {
       entry.resource.code.coding.some((coding) => coding.code === "99504-3")
     ) {
       const observation = entry.resource;
-      const glucoseValue = observation.valueQuantity.value;
-      const unit = observation.valueQuantity.unit;
+      const glucoseValue = observation.valueQuantity!.value;
+      const unit = observation.valueQuantity!.unit;
       const timestamp = new Date(observation.effectiveDateTime!);
 
       cgmData.push({
@@ -50,17 +50,20 @@ function extractCGMData(bundle: FHIRBundle) {
   return cgmData;
 }
 
+declare global {
+  interface Window {
+    inject: (url: string) => Promise<void>;
+  }
+}
+
 const SHLinkComponent = () => {
   const [currentShlink, setCurrentShlink] = useState<shlink.SHLinkData | null>(null);
   const [currentShlinkReady, setCurrentShlinkReady] = useState(false);
 
   useEffect(() => {
     const parseSHLink = async () => {
-      window.inject = async () => {
-
-        const data = await ( await fetch("http://localhost:3030/bundle.json")).json()
-        console.log("Injecting", data);
-        window.injectedData = data;
+      window.inject = async (url: string) => {
+        const data = await ( await fetch(url)).json()
         setCurrentShlink(data);
         setCurrentShlinkReady(true);
       }
@@ -103,7 +106,6 @@ const SHLinkComponent = () => {
     <>
     <div className="sidebar-holder">
       {!currentShlink && (
-        <>
         <div className="agp">
           <h3>SHLink CGM Viewer</h3>
           {/* <input type="text" placeholder="Enter SHLink" /> */}
@@ -126,15 +128,15 @@ const SHLinkComponent = () => {
             </li>
           </ul>
         </div>
-        <div></div>
-        </>
       )}
       {currentShlink && (
           <>
             {payload ? (
               <AGP data={cgmData!} analysisPeriod={analysisPeriod!}></AGP>
             ) : (
-              <p>No decrypted payload available</p>
+              <>
+              <div className="agp"><p>Loading and decrypting </p></div>
+              </>
             )}
             {currentShlink?.url && <div className="shl-widget" ref={widget} style={{position: "sticky"}}></div> }
             </>

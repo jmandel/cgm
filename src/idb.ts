@@ -2,7 +2,7 @@ const DB_NAME = 'sync-db';
 const STORE_NAME = 'sync-store';
 export const KEYS = {"syncURL": "syncURL", "accessToken": "accessToken"};
 
-function openDatabase() {
+function openDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, 1);
     
@@ -15,14 +15,14 @@ function openDatabase() {
     };
     
     request.onupgradeneeded = (event) => {
-      const db = event.target.result;
+      const db = event.target!.result!;
       db.createObjectStore(STORE_NAME);
     };
   });
 }
 
-export function storeValue(key, value) {
-  return openDatabase().then(db => {
+export function storeValue(key: any, value: any): Promise<void> {
+  return openDatabase().then((db: IDBDatabase) => {
     const transaction = db.transaction(STORE_NAME, 'readwrite');
     const store = transaction.objectStore(STORE_NAME);
     store.put(value, key);
@@ -37,7 +37,7 @@ export function storeValue(key, value) {
   });
 }
 
-export function getValue(key) {
+export function getValue(key: string) {
   return openDatabase().then(db => {
     const transaction = db.transaction(STORE_NAME, 'readonly');
     const store = transaction.objectStore(STORE_NAME);

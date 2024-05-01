@@ -1,5 +1,6 @@
 import { parse } from 'csv-parse/sync';
 import moment from 'moment';
+import { FHIRBundle, FHIRDevice, FHIRObservation } from './agp-calc';
 
 interface GlucoseReading {
   Sensorid: string;
@@ -9,62 +10,6 @@ interface GlucoseReading {
   TZ: string;
   Min: number;
   'mg/dL': number;
-}
-
-interface FHIRBundle {
-  resourceType: 'Bundle';
-  type: 'collection';
-  entry: Array<{
-    fullUrl: string;
-    resource: FHIRDevice | FHIRObservation;
-  }>;
-}
-
-interface FHIRDevice {
-  resourceType: 'Device';
-  id: string;
-  identifier: Array<{
-    system: string;
-    value: string;
-  }>;
-  deviceName: Array<{
-    name: string;
-    type: 'user-friendly-name';
-  }>;
-}
-
-interface FHIRObservation {
-  resourceType: 'Observation';
-  id: string;
-  status: 'final';
-  identifier: Array<{
-    system: string;
-    value: string;
-  }>;
-  code: {
-    coding: Array<{
-      system: 'http://loinc.org';
-      code: '99504-3';
-      display: 'Glucose [Mass/volume] in Interstitial fluid';
-    }>;
-  };
-  effectiveDateTime: string;
-  valueQuantity: {
-    value: number;
-    unit: string;
-    system: 'http://unitsofmeasure.org';
-    code: string;
-  };
-  device: {
-    reference: string;
-  };
-  category: Array<{
-    coding: Array<{
-      system: 'http://terminology.hl7.org/CodeSystem/observation-category';
-      code: 'laboratory';
-      display: 'Laboratory';
-    }>;
-  }>;
 }
 
 export const fetchAndConvertData = async (serverBase?: string) => {
@@ -88,7 +33,7 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
   const deviceMap: Record<string, string> = {};
 
   records.forEach((reading: GlucoseReading) => {
-    let { Sensorid, nr, UnixTime, 'YYYY-mm-dd-HH:MM:SS': dateTimeString, TZ, 'mg/dL': glucoseValue } = reading;
+    let { Sensorid, nr, UnixTime, TZ, 'mg/dL': glucoseValue } = reading;
     if (Sensorid.startsWith("XX")){
          Sensorid = Sensorid.slice(2);
     }

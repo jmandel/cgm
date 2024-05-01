@@ -4,7 +4,7 @@ import fs from "fs";
 import { parse } from "csv-parse";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
-import { generateAGPReportBundle} from "../agp-calc";
+import { FHIRBundle, FHIRDevice, FHIRObservation, generateAGPReportBundle} from "../agp-calc";
 import { generateDiagnosticReport } from "./add-diagnostic-report";
 import path from "path";
 import { marked } from "marked";
@@ -31,7 +31,7 @@ interface GlucoseReading {
   userChangeInsulin: number | null;
 }
 
-const csvToFhir = (filePath: string): Promise<FHIRBundle> => {
+export const csvToFhir = (filePath: string): Promise<FHIRBundle> => {
   return new Promise((resolve, reject) => {
     const bundle: FHIRBundle = {
       resourceType: "Bundle",

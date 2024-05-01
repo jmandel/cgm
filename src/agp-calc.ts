@@ -51,6 +51,10 @@ export interface FHIRObservation {
   resourceType: "Observation";
   id: string;
   status: "final";
+  identifier?: Array<{
+    system: string;
+    value: string;
+  }>;
   code: {
     coding: Array<{
       system: string;
@@ -61,7 +65,7 @@ export interface FHIRObservation {
   hasMember?: Array<{ reference: string }>;
   effectiveDateTime?: string;
   effectivePeriod?: { start: string; end: string };
-  valueQuantity: {
+  valueQuantity?: {
     value: number;
     unit: string;
     system: "http://unitsofmeasure.org";
@@ -246,7 +250,7 @@ interface GenerateAGPReportArgs {
   breakpoints?: Breakpoints;
 }
 
-const createComponentObservation = (
+const createMemberObservation = (
   code: string,
   display: string,
   value: number,
@@ -313,7 +317,7 @@ export const generateAGPReportBundle = ({
 
   let earliestAnalysisDate;
   let latestAnalysisDate;
-  const observationsBetween = (startDate: moment.Moment, endDate: moment.Moment) =>
+  const glucoseObservationsBetween = (startDate: moment.Moment, endDate: moment.Moment) =>
     bundle.entry
       .filter((entry) => entry.resource.resourceType === "Observation")
       .filter(({ resource: observation }) => {
@@ -349,7 +353,7 @@ export const generateAGPReportBundle = ({
       latestAnalysisDate = endDate;
     }
 
-    const filteredObservations: { fullUrl: string; resource: FHIRObservation }[] = observationsBetween(
+    const filteredObservations: { fullUrl: string; resource: FHIRObservation }[] = glucoseObservationsBetween(
       startDate,
       endDate
     );
@@ -357,8 +361,8 @@ export const generateAGPReportBundle = ({
       .map((e) => e.resource)
       .map((observation) => ({
         timestamp: moment(observation.effectiveDateTime).toDate(),
-        glucoseValue: observation.valueQuantity.value,
-        unit: observation.valueQuantity.code as "mg/dL" | "mmol/L",
+        glucoseValue: observation.valueQuantity!.value,
+        unit: observation.valueQuantity!.code as "mg/dL" | "mmol/L",
         deviceDetails: observation.device?.reference || "",
       }));
 
@@ -396,23 +400,18 @@ export const generateAGPReportBundle = ({
       hasMember: [],
     };
 
-    const meanObservation: FHIRObservation = createComponentObservation(
-      "mean-glucose",
-      "Mean Glucose",
-      agpMetrics.glucoseStatistics.mean,
-      targetUnit,
-      startDate,
-      endDate,
-      "97507-8",
-      "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
-    );
-
-    rootObservation.hasMember.push({
-      reference: "urn:uuid:" + meanObservation.id,
-    });
-
-    const componentObservations: FHIRObservation[] = [
-      createComponentObservation(
+    const memberObservations: FHIRObservation[] = [
+      createMemberObservation(
+            "mean-glucose",
+            "Mean Glucose",
+            agpMetrics.glucoseStatistics.mean,
+            targetUnit,
+            startDate,
+            endDate,
+            "97507-8",
+            "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
+      ),
+      createMemberObservation(
         "time-in-very-low",
         "Time in Very Low Range",
         agpMetrics.timeInRanges.veryLow,
@@ -420,7 +419,7 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createComponentObservation(
+      createMemberObservation(
         "time-in-low",
         "Time in Low Range",
         agpMetrics.timeInRanges.low,
@@ -428,7 +427,7 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createComponentObservation(
+      createMemberObservation(
         "time-in-target",
         "Time in Target Range",
         agpMetrics.timeInRanges.target,
@@ -438,7 +437,7 @@ export const generateAGPReportBundle = ({
         "97510-2",
         "Glucose measurements in range out of Total glucose measurements during reporting period"
       ),
-      createComponentObservation(
+      createMemberObservation(
         "time-in-high",
         "Time in High Range",
         agpMetrics.timeInRanges.high,
@@ -446,7 +445,7 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createComponentObservation(
+      createMemberObservation(
         "time-in-very-high",
         "Time in Very High Range",
         agpMetrics.timeInRanges.veryHigh,
@@ -454,7 +453,7 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createComponentObservation(
+      createMemberObservation(
         "gmi",
         "Glucose Management Indicator (GMI)",
         agpMetrics.glucoseStatistics.gmi,
@@ -464,7 +463,7 @@ export const generateAGPReportBundle = ({
         "97506-0",
         "Glucose management indicator"
       ),
-      createComponentObservation(
+      createMemberObservation(
         "cv",
         "Coefficient of Variation (CV)",
         agpMetrics.glucoseStatistics.cv,
@@ -472,8 +471,8 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createComponentObservation("total-days", "Days", agpMetrics.totalDays, "days", startDate, endDate),
-      createComponentObservation(
+      createMemberObservation("total-days", "Days", agpMetrics.totalDays, "days", startDate, endDate),
+      createMemberObservation(
         "sensor-active-percentage",
         "Sensor Active Percentage",
         agpMetrics.sensorActivePercentage,
@@ -483,29 +482,21 @@ export const generateAGPReportBundle = ({
       ),
     ];
 
-    componentObservations.forEach((obs) => {
-      rootObservation.hasMember.push({
-        reference: "urn:uuid:" + obs.id,
-      });
-    });
+    rootObservation.hasMember = memberObservations.map((obs) => ({ reference: "urn:uuid:" + obs.id }))
 
     outputBundle.entry.push(
       {
         fullUrl: "urn:uuid:" + rootObservation.id,
         resource: rootObservation,
       },
-      {
-        fullUrl: "urn:uuid:" + meanObservation.id,
-        resource: meanObservation,
-      },
-      ...componentObservations.map((obs) => ({
+      ...memberObservations.map((obs) => ({
         fullUrl: "urn:uuid:" + obs.id,
         resource: obs,
       }))
     );
   }
 
-  const filteredObservations = observationsBetween(earliestAnalysisDate!, latestAnalysisDate!);
+  const filteredObservations = glucoseObservationsBetween(earliestAnalysisDate!, latestAnalysisDate!);
 
   if (includeSourceData) {
     const uniqueDeviceReferences = new Set(filteredObservations.map((obs) => obs.resource.device?.reference));

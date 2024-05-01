@@ -1,28 +1,24 @@
-import { chromium } from "playwright";
 import { spawn } from "child_process";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
 import express from "express";
-import serveStatic from "serve-static";
 import fs from "fs";
-import { reject } from "lodash";
-import { type } from "os";
+import { chromium } from "playwright";
+import serveStatic from "serve-static";
 
 var app = express();
 const PORT = 3030;
-const baseUrl = "http:/localhost:" + PORT;
+const baseUrl = "http://localhost:" + PORT;
 
 app.use(serveStatic("dist", { index: ["index.html"] }));
 
-let injectedJson = null;
-app.get("/bundle.json", (req, res) => {
+let injectedJson: any = null;
+app.get("/bundle.json", (_req, res) => {
   // respond in json with injectedJson
   res.json(injectedJson);
 });
-let server;
 
+let server: any;
 
-async function buildApp() {
+async function buildApp():Promise<void> {
   return new Promise((resolve, reject) => {
     const buildProcess = spawn("bun", ["run", "build"], {
       stdio: "inherit",
@@ -39,7 +35,7 @@ async function buildApp() {
   });
 }
 
-async function renderPDF(url, outputFile) {
+async function renderPDF(url: any) {
 
   if (!url?.startsWith?.("shlink:/") && !url?.startsWith?.("./") && typeof url !== "object") {
     throw new Error("Invalid URL. Please provide a shlink:/ or a relative path to a JSON file.");
@@ -79,8 +75,7 @@ async function renderPDF(url, outputFile) {
 
   await page.waitForLoadState("networkidle");
   console.log("Printing");
-  await page.pdf({
-    path: outputFile,
+  const pdfBytes = await page.pdf({
     format: "Letter",
     margin: {
       top: "20px",
@@ -94,30 +89,29 @@ async function renderPDF(url, outputFile) {
   });
 
   await browser.close();
+  return pdfBytes.toString("base64");
 }
 
-export default async function renderToAttachment(bundle, outputFile="temp-output.pdf") {
+export default async function renderToAttachment(bundle: any) {
   server = app.listen(PORT);
   await buildApp();
-  await renderPDF(bundle, outputFile);
-  await new Promise((resolve, reject) => {
+  let data = await renderPDF(bundle);
+  await new Promise((resolve) => {
     server.close(resolve)
   })
-  const data = fs.readFileSync(outputFile).toString("base64");
-  const ret = {
+  return {
     contentType: "application/pdf",
     data,
     title: "Ambulatory Glucose Profile Report",
     creation: new Date().toISOString(),
   };
-  return ret;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const [, , relativeUrl, outputFile] = process.argv;
+  const [, , relativeUrl] = process.argv;
 
-  if (!relativeUrl || !outputFile) {
-    console.error("Please provide the relative URL and output file name.");
+  if (!relativeUrl) {
+    console.error("Please provide the relative URL.");
     process.exit(1);
   }
 
@@ -125,10 +119,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   buildApp()
     .then((_) => {
       const url = `${relativeUrl}`;
-      return renderPDF(url, outputFile);
+      return renderPDF(url);
     })
     .then(() => {
-      console.log(`PDF generated successfully: ${outputFile}`);
+      console.log(`PDF generated successfully`);
       process.exit(0);
     })
     .catch((error) => {
