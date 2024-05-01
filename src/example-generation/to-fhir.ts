@@ -239,11 +239,18 @@ const markdown = `
 ${JSON.stringify(agpObsShlInfo, null, 2)}
 \`\`\`
 
-### Exmaple AGP Observation
+### Exmaple AGP Observations
+
+${agpReport.entry.slice(0, 11).map((entry) => 
+
+`
+#### ${(entry.resource as FHIRObservation).code.coding[0].display}
 
 \`\`\`json
-${JSON.stringify(agpReport.entry[0].resource, null, 2)}
+${JSON.stringify(entry.resource, null, 2)}
 \`\`\`
+`
+).join("")}
 
 ## SHLink with Raw Observations
 

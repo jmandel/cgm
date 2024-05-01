@@ -471,7 +471,7 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createMemberObservation("total-days", "Days", agpMetrics.totalDays, "days", startDate, endDate),
+      createMemberObservation("days-of-wear", "Days of Wear", agpMetrics.totalDays, "days", startDate, endDate),
       createMemberObservation(
         "sensor-active-percentage",
         "Sensor Active Percentage",
