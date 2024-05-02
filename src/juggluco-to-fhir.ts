@@ -55,6 +55,7 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
             type: 'user-friendly-name',
           },
         ],
+        serialNumber: Sensorid
       };
 
       bundle.entry.push({

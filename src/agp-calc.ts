@@ -45,6 +45,7 @@ export interface FHIRDevice {
     name: string;
     type: "user-friendly-name";
   }>;
+  serialNumber?: string;
 }
 
 export interface FHIRObservation {
