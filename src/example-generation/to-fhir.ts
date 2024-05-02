@@ -233,7 +233,7 @@ const markdown = `
 
 - SHL: <a target="_blank" href="${agpObsShlInfo.shlink}">${agpObsShlInfo.shlink}</a>
 - Description: This SHL provides access to the past 120 days of raw glucose history, as well as AGP (Ambulatory Glucose Profile) reports covering the most recent 2-week and 3-month periods.
-- Decrypted Content: [${agpShlId}.decrypted.json](${agpShlId}.decrypted.json
+- Decrypted Content: [${agpShlId}.decrypted.json](${agpShlId}.decrypted.json)
 - Details: [${agpShlId}.details.json](${agpShlId}.details.json)
 \`\`\`json
 ${JSON.stringify(agpObsShlInfo, null, 2)}
