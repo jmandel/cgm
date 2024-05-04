@@ -4,7 +4,7 @@ import fs from "fs";
 import { parse } from "csv-parse";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
-import { FHIRBundle, FHIRDevice, FHIRObservation, generateAGPReportBundle} from "../agp-calc";
+import { FHIRBundle, FHIRDevice, FHIRObservation, generateCGMSummaryBundle} from "../agp-calc";
 import { generateDiagnosticReport } from "./add-diagnostic-report";
 import path from "path";
 import { marked } from "marked";
@@ -208,7 +208,7 @@ const sampleFilePath = "./src/example-generation/fixtures/" + sampleFileName;
 const outputDir = "./public/shl";
 fs.copyFileSync(sampleFilePath, `${outputDir}/${sampleFileName}`);
 const glucoseData = JSON.parse(fs.readFileSync(sampleFilePath, "utf8"));
-const agpReport = generateAGPReportBundle({
+const agpReport = generateCGMSummaryBundle({
   bundle: glucoseData,
   analysisPeriod: [{ trailingDays: 90 }, { trailingDays: 14 }],
 });
@@ -220,7 +220,7 @@ const rawObsShlId = "120day_raw_obs_unguessable_shl_id0000000000"; // jose.base6
 const rawObsKey = "raw_obs_unguessable_random_key0000000000000"; // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
 const rawObsShlInfo = await createSHLink(glucoseData, rawObsShlId, rawObsKey, fhirContentType);
 
-// Create SHLink for AGP bundle
+// Create SHLink for CGM Summary bundle
 const agpShlId = "120day_agp_bundle_unguessable_shl_id0000000"; // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
 const agpKey = "agp_obs_unguessable_random_key0000000000000"; // jose.base64url.encode(crypto.getRandomValues(new Uint8Array(32)));
 const agpObsShlInfo = await createSHLink(agpReportWithPdf, agpShlId, agpKey, fhirContentType);
@@ -229,19 +229,19 @@ const markdown = `
 # CGM: Sharing with SHLinks
 
 
-## SHLink with AGP Bundle
+## SHLink with CGM Summary
 
 - SHL: <a target="_blank" href="${agpObsShlInfo.shlink}">${agpObsShlInfo.shlink}</a>
-- Description: This SHL provides access to the past 120 days of raw glucose history, as well as AGP (Ambulatory Glucose Profile) reports covering the most recent 2-week and 3-month periods.
+- Description: This SHL provides access to the past 120 days of raw glucose history, as well as CGM Summary reports covering the most recent 2-week and 3-month periods.
 - Decrypted Content: [${agpShlId}.decrypted.json](${agpShlId}.decrypted.json)
-- Details: [${agpShlId}.details.json](${agpShlId}.details.json)
+CGM Summary- Details: [${agpShlId}.details.json](${agpShlId}.details.json)
 \`\`\`json
 ${JSON.stringify(agpObsShlInfo, null, 2)}
 \`\`\`
 
-### Exmaple AGP Observations
+### Example CGM Summary Observations
 
-${agpReport.entry.slice(0, 11).map((entry) => 
+${agpReport.entry.slice(0, 7).map((entry) => 
 
 `
 #### ${(entry.resource as FHIRObservation).code.coding[0].display}

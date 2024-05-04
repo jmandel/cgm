@@ -112,7 +112,12 @@ export interface FHIRDiagnosticReport {
 
 export interface FHIRBundle {
   resourceType: "Bundle";
-  type: "collection";
+  id?: string;
+  type: "collection" | "batch";
+  timestamp?: string;
+  meta?: {
+    tag?: Array<{system?: string, code: string}>
+  };
   entry: Array<{
     fullUrl: string;
     resource: FHIRDevice | FHIRObservation | FHIRDiagnosticReport;
@@ -242,7 +247,7 @@ export interface AnalysisPeriod {
   end: string;
   trailingDays?: number;
 }
-interface GenerateAGPReportArgs {
+interface GenerateCGMSummaryArgs {
   bundle: FHIRBundle;
   analysisPeriod?: Partial<AnalysisPeriod>[];
   includeSourceData?: boolean;
@@ -263,22 +268,21 @@ const createMemberObservation = (
   resourceType: "Observation",
   id: uuidv4(),
   status: "final",
-      category: [
+  category: [
+    {
+      coding: [
         {
-          coding: [
-            {
-              system: "http://terminology.hl7.org/CodeSystem/observation-category",
-              code: "laboratory",
-              display: "Laboratory",
-            },
-          ],
+          system: "http://terminology.hl7.org/CodeSystem/observation-category",
+          code: "laboratory",
+          display: "Laboratory",
         },
       ],
- 
+    },
+  ],
   code: {
     coding: [
       {
-        system: "https://tx.argo.run",
+        system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
         code,
         display,
       },
@@ -293,7 +297,10 @@ const createMemberObservation = (
         : []),
     ],
   },
-  effectivePeriod: { start: startDate.toISOString().slice(0, 10), end: endDate.toISOString().slice(0, 10) },
+  effectivePeriod: {
+    start: startDate.toISOString().slice(0, 10),
+    end: endDate.toISOString().slice(0, 10),
+  },
   valueQuantity: {
     value,
     unit,
@@ -302,16 +309,25 @@ const createMemberObservation = (
   },
 });
 
-export const generateAGPReportBundle = ({
+export const generateCGMSummaryBundle = ({
   bundle,
   analysisPeriod = [{ trailingDays: 120 }],
   includeSourceData = true,
   targetUnit = "mg/dL",
   breakpoints = undefined,
-}: GenerateAGPReportArgs): FHIRBundle => {
+}: GenerateCGMSummaryArgs): FHIRBundle => {
   const outputBundle: FHIRBundle = {
     resourceType: "Bundle",
+    meta: {
+      tag: [
+        {
+          system: "http://argo.run/cgm/CodeSystem/cgm",
+          code: "cgm-data-submission-bundle",
+        }
+      ]
+    },
     type: "collection",
+    timestamp: new Date().toISOString(),
     entry: [],
   };
 
@@ -376,16 +392,6 @@ export const generateAGPReportBundle = ({
       resourceType: "Observation",
       id: uuidv4(),
       status: "final",
-      code: {
-        coding: [
-          {
-            system: "https://tx.argo.run",
-            code: "ambulatory-glucose-profile",
-            display: "Ambulatory Glucose Profile",
-          },
-        ],
-      },
-      effectivePeriod: { start: startDate.toISOString().slice(0, 10), end: endDate.toISOString().slice(0, 10) },
       category: [
         {
           coding: [
@@ -397,62 +403,157 @@ export const generateAGPReportBundle = ({
           ],
         },
       ],
+      code: {
+        coding: [
+          {
+            system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+            code: "cgm-summary",
+            display: "CGM Summary",
+          },
+        ],
+      },
+      effectivePeriod: {
+        start: startDate.toISOString().slice(0, 10),
+        end: endDate.toISOString().slice(0, 10),
+      },
       hasMember: [],
     };
 
-    const memberObservations: FHIRObservation[] = [
-      createMemberObservation(
-            "mean-glucose",
-            "Mean Glucose",
-            agpMetrics.glucoseStatistics.mean,
-            targetUnit,
-            startDate,
-            endDate,
-            "97507-8",
-            "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
-      ),
-      createMemberObservation(
-        "time-in-very-low",
-        "Time in Very Low Range",
-        agpMetrics.timeInRanges.veryLow,
-        "%",
-        startDate,
-        endDate
-      ),
-      createMemberObservation(
-        "time-in-low",
-        "Time in Low Range",
-        agpMetrics.timeInRanges.low,
-        "%",
-        startDate,
-        endDate
-      ),
-      createMemberObservation(
-        "time-in-target",
-        "Time in Target Range",
-        agpMetrics.timeInRanges.target,
-        "%",
-        startDate,
-        endDate,
-        "97510-2",
-        "Glucose measurements in range out of Total glucose measurements during reporting period"
-      ),
-      createMemberObservation(
-        "time-in-high",
-        "Time in High Range",
-        agpMetrics.timeInRanges.high,
-        "%",
-        startDate,
-        endDate
-      ),
-      createMemberObservation(
-        "time-in-very-high",
-        "Time in Very High Range",
-        agpMetrics.timeInRanges.veryHigh,
-        "%",
-        startDate,
-        endDate
-      ),
+    const meanGlucoseObservation = createMemberObservation(
+      "mean-glucose-mass",
+      "Mean Glucose (Mass)",
+      agpMetrics.glucoseStatistics.mean,
+      targetUnit,
+      startDate,
+      endDate,
+      "97507-8",
+      "Average glucose [Mass/volume] in Interstitial fluid during Reporting Period"
+    );
+
+    const timesInRangesObservation: FHIRObservation = {
+      resourceType: "Observation",
+      id: uuidv4(),
+      status: "final",
+      category: [
+        {
+          coding: [
+            {
+              system: "http://terminology.hl7.org/CodeSystem/observation-category",
+              code: "laboratory",
+              display: "Laboratory",
+            },
+          ],
+        },
+      ],
+      code: {
+        coding: [
+          {
+            system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+            code: "times-in-ranges",
+            display: "Times in Ranges",
+          },
+        ],
+      },
+      effectivePeriod: {
+        start: startDate.toISOString().slice(0, 10),
+        end: endDate.toISOString().slice(0, 10),
+      },
+      component: [
+        {
+          code: {
+            coding: [
+              {
+                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                code: "time-in-very-low",
+                display: "Time in Very Low Range",
+              },
+            ],
+          },
+          valueQuantity: {
+            value: agpMetrics.timeInRanges.veryLow,
+            unit: "%",
+            system: "http://unitsofmeasure.org",
+            code: "%",
+          },
+        },
+        {
+          code: {
+            coding: [
+              {
+                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                code: "time-in-low",
+                display: "Time in Low Range",
+              },
+            ],
+          },
+          valueQuantity: {
+            value: agpMetrics.timeInRanges.low,
+            unit: "%",
+            system: "http://unitsofmeasure.org",
+            code: "%",
+          },
+        },
+        {
+          code: {
+            coding: [
+              {
+                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                code: "time-in-target",
+                display: "Time in Target Range",
+              },
+              {
+                system: "http://loinc.org",
+                code: "97510-2",
+                display:
+                  "Glucose measurements in range out of Total glucose measurements during reporting period",
+              },
+            ],
+          },
+          valueQuantity: {
+            value: agpMetrics.timeInRanges.target,
+            unit: "%",
+            system: "http://unitsofmeasure.org",
+            code: "%",
+          },
+        },
+        {
+          code: {
+            coding: [
+              {
+                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                code: "time-in-high",
+                display: "Time in High Range",
+              },
+            ],
+          },
+          valueQuantity: {
+            value: agpMetrics.timeInRanges.high,
+            unit: "%",
+            system: "http://unitsofmeasure.org",
+            code: "%",
+          },
+        },
+        {
+          code: {
+            coding: [
+              {
+                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                code: "time-in-very-high",
+                display: "Time in Very High Range",
+              },
+            ],
+          },
+          valueQuantity: {
+            value: agpMetrics.timeInRanges.veryHigh,
+            unit: "%",
+            system: "http://unitsofmeasure.org",
+            code: "%",
+          },
+        },
+      ],
+    };
+
+    const otherMemberObservations: FHIRObservation[] = [
       createMemberObservation(
         "gmi",
         "Glucose Management Indicator (GMI)",
@@ -471,7 +572,14 @@ export const generateAGPReportBundle = ({
         startDate,
         endDate
       ),
-      createMemberObservation("days-of-wear", "Days of Wear", agpMetrics.totalDays, "days", startDate, endDate),
+      createMemberObservation(
+        "days-of-wear",
+        "Days of Wear",
+        agpMetrics.totalDays,
+        "days",
+        startDate,
+        endDate
+      ),
       createMemberObservation(
         "sensor-active-percentage",
         "Sensor Active Percentage",
@@ -482,38 +590,53 @@ export const generateAGPReportBundle = ({
       ),
     ];
 
-    rootObservation.hasMember = memberObservations.map((obs) => ({ reference: "urn:uuid:" + obs.id }))
+    rootObservation.hasMember = [
+      { reference: "urn:uuid:" + meanGlucoseObservation.id },
+      { reference: "urn:uuid:" + timesInRangesObservation.id },
+      ...otherMemberObservations.map((obs) => ({
+        reference: "urn:uuid:" + obs.id,
+      })),
+    ];
 
     outputBundle.entry.push(
       {
         fullUrl: "urn:uuid:" + rootObservation.id,
         resource: rootObservation,
       },
-      ...memberObservations.map((obs) => ({
+      {
+        fullUrl: "urn:uuid:" + meanGlucoseObservation.id,
+        resource: meanGlucoseObservation,
+      },
+      {
+        fullUrl: "urn:uuid:" + timesInRangesObservation.id,
+        resource: timesInRangesObservation,
+      },
+      ...otherMemberObservations.map((obs) => ({
         fullUrl: "urn:uuid:" + obs.id,
         resource: obs,
       }))
     );
+
+    if (includeSourceData) {
+      const uniqueDeviceReferences = new Set(
+        filteredObservations.map((obs) => obs.resource.device?.reference)
+      );
+      bundle.entry
+        .filter(
+          (entry) =>
+            uniqueDeviceReferences.has(entry.fullUrl) ||
+            (entry.resource.resourceType === "Device" &&
+              uniqueDeviceReferences.has(`Device/${entry.resource.id}`))
+        )
+        .forEach((entry) => {
+          outputBundle.entry.push(entry);
+        });
+    }
+
+    filteredObservations.forEach((obs: any) => {
+      outputBundle.entry.push(obs);
+    });
   }
-
-  const filteredObservations = glucoseObservationsBetween(earliestAnalysisDate!, latestAnalysisDate!);
-
-  if (includeSourceData) {
-    const uniqueDeviceReferences = new Set(filteredObservations.map((obs) => obs.resource.device?.reference));
-    bundle.entry
-      .filter(
-        (entry) =>
-          uniqueDeviceReferences.has(entry.fullUrl) ||
-          (entry.resource.resourceType === "Device" && uniqueDeviceReferences.has(`Device/${entry.resource.id}`))
-      )
-      .forEach((entry) => {
-        outputBundle.entry.push(entry);
-      });
-  }
-
-  filteredObservations.forEach((obs: any) => {
-    outputBundle.entry.push(obs);
-  });
 
   return outputBundle;
 };
