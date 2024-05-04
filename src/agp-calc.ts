@@ -89,6 +89,14 @@ export interface FHIRDiagnosticReport {
   resourceType: "DiagnosticReport";
   id: string;
   status: "final";
+  issued: string;
+  category: Array<{
+    coding: Array<{
+      system: string;
+      code: string;
+      display?: string;
+    }>;
+  }>;
   code: {
     coding: Array<{
       system: string;

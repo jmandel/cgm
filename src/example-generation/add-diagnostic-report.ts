@@ -1,4 +1,4 @@
-import { FHIRBundle, FHIRDiagnosticReport, FHIRObservation } from './types';
+import { FHIRBundle, FHIRDiagnosticReport, FHIRObservation} from '../agp-calc';
 import { v4 as uuidv4 } from 'uuid';
 import renderToAttachment from '../render-pdf';
 
@@ -9,7 +9,7 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
       entry.resource.code.coding.some((coding) => coding.code === 'cgm-summary')
   ) as { fullUrl: string; resource: FHIRObservation }[];
 
-  let newEntries: (FHIRDiagnosticReport & { fullUrl: string })[] = [];
+  let newEntries: FHIRBundle["entry"]  = [];
 
   for (const cgmSummaryObs of cgmSummaryObservations) {
     const effectivePeriod = {
@@ -18,13 +18,9 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
     };
 
     console.log('For', cgmSummaryObs);
-
-    newEntries.push({
+    const dr: FHIRDiagnosticReport = {
       resourceType: 'DiagnosticReport',
       id: uuidv4(),
-      meta: {
-        profile: ['http://argo.run/cgm/StructureDefinition/cgm-summary-pdf'],
-      },
       status: 'final',
       category: [
         {
@@ -41,11 +37,9 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
           {
             system: 'http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary',
             code: 'cgm-summary',
+            display: "CGM Summary"
           },
         ],
-      },
-      subject: {
-        reference: 'Patient/patientExample',
       },
       effectivePeriod,
       issued: new Date().toISOString(),
@@ -58,8 +52,10 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
           entry: [cgmSummaryObs, ...bundle.entry],
         }),
       ],
-      fullUrl: `urn:uuid:${uuidv4()}`,
-    });
+    }
+    newEntries.push({
+      fullUrl: `urn:uuid:${dr.id}`,
+      resource: dr});
   }
 
   return {
