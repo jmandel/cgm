@@ -49,32 +49,34 @@ async function renderPDF(url: any) {
   }
 
 
-  console.log("Open browser");
+  console.error("Open browser");
   const browser = await chromium.launch({
     // headless: false
   });
 
-  console.log("NEw page");
+  console.error("NEw page");
   const page = await browser.newPage();
-  console.log("Navigating");
+  console.error("Navigating");
 
   await page.goto(targetUrl);
 
-  console.log("Navigated");
+  console.error("Navigated");
   if (!url?.includes?.("shlink:/")) {
     const glucoseData = typeof url === 'object'  ? url : JSON.parse(fs.readFileSync(url, "utf8"));
-    console.log("Inject", Object.keys(glucoseData), glucoseData.entry.length)
-    injectedJson = { label: "Glucose Data", files: [{ contentJson: glucoseData, size: JSON.stringify(glucoseData).length }] }
+    console.error("Inject", Object.keys(glucoseData), glucoseData?.entry?.length)
+    injectedJson = { label: "Glucose Data", totalFileSize: 0,  files: [{ contentJson: glucoseData, size: JSON.stringify(glucoseData).length }] }
     const jsonUrl = `${baseUrl}/bundle.json`;
     await page.evaluate((jsonUrl) => {
       window.inject(jsonUrl);
     }, jsonUrl);
-    console.log("Waiting for svg")
+    console.error("Waiting for svg")
     await page.waitForSelector(".agp > svg");
+    injectedJson = {}
   }
 
+  console.error("waiting for network idle");
   await page.waitForLoadState("networkidle");
-  console.log("Printing");
+  console.error("Printing");
   const pdfBytes = await page.pdf({
     format: "Letter",
     margin: {
@@ -92,41 +94,71 @@ async function renderPDF(url: any) {
   return pdfBytes.toString("base64");
 }
 
+async function renderPDFInChildProcess(bundle: any): Promise<string> {
+  return new Promise((resolve, reject) => {
+    console.error("Spawn bun")
+    const child = spawn("bun", ["run", __filename], {
+      stdio: ['pipe', 'pipe', 'inherit'],
+    });
+
+    child.stdin.write(JSON.stringify(bundle));
+    console.error("Wrote to child")
+    child.stdin.end();
+
+    let base64Data = '';
+    child.stdout.on('data', (data) => {
+      base64Data += data.toString();
+    });
+
+    child.on('close', (code) => {
+      if (code === 0) {
+        resolve(base64Data);
+      } else {
+        reject(new Error(`Child process exited with code ${code}`));
+      }
+    });
+  });
+}
+
 export default async function renderToAttachment(bundle: any) {
-  server = app.listen(PORT);
   await buildApp();
-  let data = await renderPDF(bundle);
-  await new Promise((resolve) => {
-    server.close(resolve)
-  })
-  return {
-    contentType: "application/pdf",
-    data,
-    title: "Ambulatory Glucose Profile Report",
-    creation: new Date().toISOString(),
-  };
+
+  try {
+    const data = await renderPDFInChildProcess(bundle);
+    return {
+      contentType: 'application/pdf',
+      data: data.trim(),
+      title: 'Ambulatory Glucose Profile Report',
+      creation: new Date().toISOString(),
+    };
+  } catch (error) {
+    console.error('Error generating PDF:', error);
+    throw error;
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const [, , relativeUrl] = process.argv;
-
-  if (!relativeUrl) {
-    console.error("Please provide the relative URL.");
-    process.exit(1);
-  }
-
   server = app.listen(PORT);
-  buildApp()
-    .then((_) => {
-      const url = `${relativeUrl}`;
-      return renderPDF(url);
-    })
-    .then(() => {
-      console.log(`PDF generated successfully`);
-      process.exit(0);
-    })
-    .catch((error) => {
-      console.error("Error generating PDF:", error);
-      process.exit(1);
+
+  let arg = await new Promise((resolve, reject) => {
+    if (process.argv.length > 2) {
+      resolve(process.argv[2]);
+    }
+    let bundleJson = '';
+    process.stdin.on('data', (data) => {
+      bundleJson += data.toString();
     });
+    process.stdin.on('end', () => {
+      console.error("Data gathered through stdin")
+      resolve(JSON.parse(bundleJson));
+    })
+  });
+
+  console.error("rendrein with,", typeof arg)
+  const res = await renderPDF(arg); 
+
+  await new Promise((resolve) => {
+    server.close(resolve)
+  })
+  console.log(res);
 }
