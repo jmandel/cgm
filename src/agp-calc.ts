@@ -428,8 +428,8 @@ export const generateCGMSummaryBundle = ({
     };
 
     const meanGlucoseObservation = createMemberObservation(
-      "mean-glucose-mass",
-      "Mean Glucose (Mass)",
+      "mean-glucose-mass-per-volume",
+      "Mean Glucose (Mass Per Volume)",
       agpMetrics.glucoseStatistics.mean,
       targetUnit,
       startDate,
