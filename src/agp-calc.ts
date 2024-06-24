@@ -359,6 +359,8 @@ export const generateCGMSummaryBundle = ({
     throw new Error("At least one analysis period must be provided");
   }
 
+  const addedEntries = new Set();
+
   for (const oneAnalysisPeriod of analysisPeriod) {
     let startDate: moment.Moment;
     let endDate: moment.Moment;
@@ -660,10 +662,12 @@ export const generateCGMSummaryBundle = ({
         }))
       );
     }
+
     if (includeSourceData) {
       const uniqueDeviceReferences = new Set(
         filteredObservations.map((obs) => obs.resource.device?.reference)
       );
+
       bundle.entry
         .filter(
           (entry) =>
@@ -672,13 +676,20 @@ export const generateCGMSummaryBundle = ({
               uniqueDeviceReferences.has(`Device/${entry.resource.id}`))
         )
         .forEach((entry) => {
-          outputBundle.entry.push(entry);
+          if (!addedEntries.has(entry.fullUrl)) {
+            outputBundle.entry.push(entry);
+            addedEntries.add(entry.fullUrl);
+          }
         });
+
+      filteredObservations.forEach((obs: any) => {
+        if (!addedEntries.has(obs.fullUrl)) {
+          outputBundle.entry.push(obs);
+          addedEntries.add(obs.fullUrl);
+        }
+      });
     }
 
-    filteredObservations.forEach((obs: any) => {
-      outputBundle.entry.push(obs);
-    });
   }
 
   return outputBundle;
