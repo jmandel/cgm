@@ -45,7 +45,7 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
         id: deviceId,
         identifier: [
           {
-            system: 'https://freestylelibre.us/',
+            system: 'https://freestylelibre.us',
             value: Sensorid,
           },
         ],
