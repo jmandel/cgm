@@ -299,7 +299,7 @@ const createMemberObservation = (
             {
               system: "http://loinc.org",
               code: loincCode,
-              display: loincDisplay,
+              ...(loincDisplay ? {display: loincDisplay} : {}),
             },
           ]
         : []),
@@ -417,6 +417,9 @@ export const generateCGMSummaryBundle = ({
             system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
             code: "cgm-summary",
             display: "CGM Summary",
+          }, {
+            system: "http://loinc.org",
+            code: "104643-2"
           },
         ],
       },
@@ -475,6 +478,10 @@ export const generateCGMSummaryBundle = ({
                 code: "time-in-very-low",
                 display: "Time in Very Low Range",
               },
+              {
+                system: "http://loinc.org",
+                code: "104642-4"
+              }
             ],
           },
           valueQuantity: {
@@ -492,6 +499,10 @@ export const generateCGMSummaryBundle = ({
                 code: "time-in-low",
                 display: "Time in Low Range",
               },
+              {
+                system: "http://loinc.org",
+                code: "104641-6"
+              }
             ],
           },
           valueQuantity: {
@@ -532,6 +543,10 @@ export const generateCGMSummaryBundle = ({
                 code: "time-in-high",
                 display: "Time in High Range",
               },
+              {
+                system: "http://loinc.org",
+                code: "104640-8"
+              }
             ],
           },
           valueQuantity: {
@@ -549,6 +564,10 @@ export const generateCGMSummaryBundle = ({
                 code: "time-in-very-high",
                 display: "Time in Very High Range",
               },
+              {
+                system: "http://loinc.org",
+                code: "104639-0"
+              }
             ],
           },
           valueQuantity: {
@@ -578,7 +597,8 @@ export const generateCGMSummaryBundle = ({
         agpMetrics.glucoseStatistics.cv,
         "%",
         startDate,
-        endDate
+        endDate,
+        "104638-2"
       ),
       createMemberObservation(
         "days-of-wear",
@@ -586,7 +606,8 @@ export const generateCGMSummaryBundle = ({
         agpMetrics.totalDays,
         "days",
         startDate,
-        endDate
+        endDate,
+        "104636-6"
       ),
       createMemberObservation(
         "sensor-active-percentage",
@@ -594,7 +615,8 @@ export const generateCGMSummaryBundle = ({
         agpMetrics.sensorActivePercentage,
         "%",
         startDate,
-        endDate
+        endDate,
+        "104637-4"
       ),
     ];
 
