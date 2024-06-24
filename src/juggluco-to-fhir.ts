@@ -66,7 +66,7 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
       deviceMap[Sensorid] = deviceId;
     }
 
-    const observationId = `${Sensorid}_${nr}`;
+    const observationId = `${Sensorid}-${nr}`;
     const observationResource: FHIRObservation = {
       resourceType: 'Observation',
       id: observationId,
