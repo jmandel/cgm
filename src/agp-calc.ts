@@ -378,7 +378,7 @@ export const generateCGMSummaryBundle = ({
           .sort((a, b) => moment(b).valueOf() - moment(a).valueOf())[0]
       );
       endDate = latestGlucoseMeasurementDate;
-      startDate = moment(endDate).subtract(oneAnalysisPeriod.trailingDays, "days");
+      startDate = moment(endDate).subtract(oneAnalysisPeriod.trailingDaysFromLast, "days");
     } else {
       throw new Error("Invalid analysis period");
     }
