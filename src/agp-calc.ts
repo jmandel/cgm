@@ -254,6 +254,7 @@ export interface AnalysisPeriod {
   start: string;
   end: string;
   trailingDays?: number;
+  trailingDaysFromLast?: number;
 }
 interface GenerateCGMSummaryArgs {
   bundle: FHIRBundle;
@@ -357,6 +358,7 @@ export const generateCGMSummaryBundle = ({
   if (analysisPeriod.length === 0) {
     throw new Error("At least one analysis period must be provided");
   }
+
   for (const oneAnalysisPeriod of analysisPeriod) {
     let startDate: moment.Moment;
     let endDate: moment.Moment;
@@ -365,7 +367,16 @@ export const generateCGMSummaryBundle = ({
       endDate = moment(oneAnalysisPeriod.end);
     } else if (oneAnalysisPeriod.trailingDays) {
       endDate = moment();
-      startDate = moment().subtract(oneAnalysisPeriod.trailingDays, "days");
+      startDate = moment(endDate).subtract(oneAnalysisPeriod.trailingDays, "days");
+    } else if (oneAnalysisPeriod.trailingDaysFromLast) {
+      const latestGlucoseMeasurementDate = moment(
+        bundle.entry
+          .filter((entry) => entry.resource.resourceType === "Observation" && entry.resource?.effectiveDateTime)
+          .map(({ resource: observation }) => (observation as FHIRObservation).effectiveDateTime)
+          .sort((a, b) => moment(b).valueOf() - moment(a).valueOf())[0]
+      );
+      endDate = latestGlucoseMeasurementDate;
+      startDate = moment(endDate).subtract(oneAnalysisPeriod.trailingDays, "days");
     } else {
       throw new Error("Invalid analysis period");
     }
@@ -628,25 +639,27 @@ export const generateCGMSummaryBundle = ({
       })),
     ];
 
-    outputBundle.entry.push(
-      {
+    outputBundle.entry.push({
         fullUrl: "urn:uuid:" + rootObservation.id,
         resource: rootObservation,
-      },
-      {
-        fullUrl: "urn:uuid:" + meanGlucoseObservation.id,
-        resource: meanGlucoseObservation,
-      },
-      {
-        fullUrl: "urn:uuid:" + timesInRangesObservation.id,
-        resource: timesInRangesObservation,
-      },
-      ...otherMemberObservations.map((obs) => ({
-        fullUrl: "urn:uuid:" + obs.id,
-        resource: obs,
-      }))
-    );
+    });
 
+    if (filteredObservations.length) {
+      outputBundle.entry.push(
+        {
+          fullUrl: "urn:uuid:" + meanGlucoseObservation.id,
+          resource: meanGlucoseObservation,
+        },
+        {
+          fullUrl: "urn:uuid:" + timesInRangesObservation.id,
+          resource: timesInRangesObservation,
+        },
+        ...otherMemberObservations.map((obs) => ({
+          fullUrl: "urn:uuid:" + obs.id,
+          resource: obs,
+        }))
+      );
+    }
     if (includeSourceData) {
       const uniqueDeviceReferences = new Set(
         filteredObservations.map((obs) => obs.resource.device?.reference)

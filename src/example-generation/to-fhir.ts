@@ -210,7 +210,7 @@ fs.copyFileSync(sampleFilePath, `${outputDir}/${sampleFileName}`);
 const glucoseData = JSON.parse(fs.readFileSync(sampleFilePath, "utf8"));
 const agpReport = generateCGMSummaryBundle({
   bundle: glucoseData,
-  analysisPeriod: [{ trailingDays: 90 }, { trailingDays: 14 }],
+  analysisPeriod: [{ trailingDaysFromLast: 90 }, { trailingDaysFromLast: 14 }],
 });
 
 const agpReportWithPdf = await generateDiagnosticReport(agpReport as any);
