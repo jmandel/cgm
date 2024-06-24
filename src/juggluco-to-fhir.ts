@@ -22,7 +22,12 @@ export const convertData = async (csvData: string): Promise<FHIRBundle> => {
   const records = parse(csvData, {
     columns: true,
     delimiter: "\t"
-  });
+  }).map((record: any) => ({
+    ...record,
+    ['mg/dL']: +record['mg/dL'],
+    ['Min']: +record['Min'],
+    ['UnixTime']: +record['UnixTime'],
+  }));
 
   const bundle: FHIRBundle = {
     resourceType: 'Bundle',
