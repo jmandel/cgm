@@ -13,12 +13,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1707600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1707600"
   }, {
     "recordId" : "e2095c3a-ec66-570e-ae20-e33008b43144",
     "systemTime" : "2024-01-01T23:51:47Z",
@@ -30,12 +25,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1707300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1707300"
   }, {
     "recordId" : "60981a4e-3894-539f-8e7c-8a7d21c1745c",
     "systemTime" : "2024-01-01T23:46:48Z",
@@ -47,12 +37,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1707000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1707000"
   }, {
     "recordId" : "9f8c4664-c8ca-5d9a-9a76-aff231d76d59",
     "systemTime" : "2024-01-01T23:41:48Z",
@@ -64,12 +49,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1706700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1706700"
   }, {
     "recordId" : "f0592c65-7048-5663-948e-036e44269bf5",
     "systemTime" : "2024-01-01T23:36:47Z",
@@ -81,12 +61,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1706400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1706400"
   }, {
     "recordId" : "511e7092-5c3b-551d-8735-147f6c4a55f8",
     "systemTime" : "2024-01-01T23:31:47Z",
@@ -98,12 +73,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1706100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1706100"
   }, {
     "recordId" : "f4b48892-7117-5472-8ba3-84a95e11fa44",
     "systemTime" : "2024-01-01T23:26:47Z",
@@ -115,12 +85,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1705800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1705800"
   }, {
     "recordId" : "26bf754a-d59a-5309-a300-3e85d02b961b",
     "systemTime" : "2024-01-01T23:21:48Z",
@@ -132,12 +97,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1705500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1705500"
   }, {
     "recordId" : "7e754e81-515d-500f-ace9-a2353e441d2a",
     "systemTime" : "2024-01-01T23:16:48Z",
@@ -149,12 +109,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1705200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1705200"
   }, {
     "recordId" : "7c9d1d65-44e8-5c71-8634-eaabd077a538",
     "systemTime" : "2024-01-01T23:11:48Z",
@@ -166,12 +121,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1704900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1704900"
   }, {
     "recordId" : "26d87851-8a8a-535c-86be-42b3954e92b7",
     "systemTime" : "2024-01-01T23:06:47Z",
@@ -183,12 +133,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1704600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1704600"
   }, {
     "recordId" : "cad39a10-acb1-5c40-92b9-3d6499407650",
     "systemTime" : "2024-01-01T23:01:48Z",
@@ -200,12 +145,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1704300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1704300"
   }, {
     "recordId" : "75673aa3-4a71-5ae1-ad50-4783700aa036",
     "systemTime" : "2024-01-01T22:56:47Z",
@@ -217,12 +157,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1704000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1704000"
   }, {
     "recordId" : "f7df3482-4229-571e-98d0-c0c90372114c",
     "systemTime" : "2024-01-01T22:51:48Z",
@@ -234,12 +169,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1703700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1703700"
   }, {
     "recordId" : "747dae8d-8fce-580d-a7d5-061e7336f1b3",
     "systemTime" : "2024-01-01T22:46:47Z",
@@ -251,12 +181,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1703400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1703400"
   }, {
     "recordId" : "a154db96-0f7d-59de-8310-418a5bf1896a",
     "systemTime" : "2024-01-01T22:41:47Z",
@@ -268,12 +193,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1703100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1703100"
   }, {
     "recordId" : "4cb3393b-58ec-5f4e-a727-3b7237854039",
     "systemTime" : "2024-01-01T22:36:48Z",
@@ -285,12 +205,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1702800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1702800"
   }, {
     "recordId" : "d1ae3a7d-0e74-526e-b650-e7aa58ffd590",
     "systemTime" : "2024-01-01T22:31:47Z",
@@ -302,12 +217,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1702500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1702500"
   }, {
     "recordId" : "fb57f179-c3c4-5c3e-bc60-618f9764b13e",
     "systemTime" : "2024-01-01T22:26:48Z",
@@ -319,12 +229,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1702200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1702200"
   }, {
     "recordId" : "8352f240-14c0-57bc-a8da-07e9eb247a7d",
     "systemTime" : "2024-01-01T22:21:47Z",
@@ -336,12 +241,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1701900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1701900"
   }, {
     "recordId" : "58e75372-6ba2-5182-a4ed-2ff1dc8d982f",
     "systemTime" : "2024-01-01T22:16:48Z",
@@ -353,12 +253,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1701600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1701600"
   }, {
     "recordId" : "fc3837b8-0ad2-5eaf-9e8e-a8af365b34da",
     "systemTime" : "2024-01-01T22:11:47Z",
@@ -370,12 +265,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1701300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1701300"
   }, {
     "recordId" : "eb872291-964f-5df0-887e-3c8996862c21",
     "systemTime" : "2024-01-01T22:06:48Z",
@@ -387,12 +277,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1701000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1701000"
   }, {
     "recordId" : "c01c0228-b14e-5c22-9cc4-842d1a074e1b",
     "systemTime" : "2024-01-01T22:01:47Z",
@@ -404,12 +289,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1700700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1700700"
   }, {
     "recordId" : "28273e90-ee84-5033-9ffc-571767ecf027",
     "systemTime" : "2024-01-01T21:56:47Z",
@@ -421,12 +301,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1700400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1700400"
   }, {
     "recordId" : "00c598b5-8f6a-50eb-9c1e-0ff15ddb6d3f",
     "systemTime" : "2024-01-01T21:51:47Z",
@@ -438,12 +313,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1700100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1700100"
   }, {
     "recordId" : "4bb09e30-a254-578e-aa91-67634bc8ca77",
     "systemTime" : "2024-01-01T21:46:48Z",
@@ -455,12 +325,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1699800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1699800"
   }, {
     "recordId" : "b5f9b2f5-162a-5ebd-aaff-576c6a4710e8",
     "systemTime" : "2024-01-01T21:41:48Z",
@@ -472,12 +337,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1699500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1699500"
   }, {
     "recordId" : "afd85194-8c88-546a-82c4-2334e2924fb6",
     "systemTime" : "2024-01-01T21:36:48Z",
@@ -489,12 +349,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1699200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1699200"
   }, {
     "recordId" : "73ccb427-8078-5263-9a92-bae1ef4b6c20",
     "systemTime" : "2024-01-01T21:31:48Z",
@@ -506,12 +361,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1698900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1698900"
   }, {
     "recordId" : "2aac4b62-661e-5138-9284-84b249ccd9ef",
     "systemTime" : "2024-01-01T21:26:48Z",
@@ -523,12 +373,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1698600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1698600"
   }, {
     "recordId" : "9e2a73dc-a11c-54d6-a04b-7879eefc2fb2",
     "systemTime" : "2024-01-01T21:21:48Z",
@@ -540,12 +385,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1698300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1698300"
   }, {
     "recordId" : "7f961ace-2fb8-5c8e-8e0f-b4146dedf77e",
     "systemTime" : "2024-01-01T21:16:47Z",
@@ -557,12 +397,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1698000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1698000"
   }, {
     "recordId" : "de323030-ebc4-5ab4-bd6c-cc489001bc45",
     "systemTime" : "2024-01-01T21:11:47Z",
@@ -574,12 +409,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1697700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1697700"
   }, {
     "recordId" : "fd80139d-3d87-57d9-9808-02d009cfb18e",
     "systemTime" : "2024-01-01T21:06:47Z",
@@ -591,12 +421,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1697400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1697400"
   }, {
     "recordId" : "654e3a4c-2689-57a7-9113-860a5cb8647b",
     "systemTime" : "2024-01-01T21:01:48Z",
@@ -608,12 +433,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1697100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1697100"
   }, {
     "recordId" : "bbdb14f8-5c71-507e-8246-90fbfeb28872",
     "systemTime" : "2024-01-01T20:56:47Z",
@@ -625,12 +445,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1696800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1696800"
   }, {
     "recordId" : "9d37cdaf-f575-5806-9945-aff32ca96ec1",
     "systemTime" : "2024-01-01T20:51:47Z",
@@ -642,12 +457,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1696500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1696500"
   }, {
     "recordId" : "e4203ad5-4379-5085-b914-bf6db65fb848",
     "systemTime" : "2024-01-01T20:46:48Z",
@@ -659,12 +469,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1696200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1696200"
   }, {
     "recordId" : "e5f6c7dd-4087-521f-8472-1fe7c9728ab8",
     "systemTime" : "2024-01-01T20:41:48Z",
@@ -676,12 +481,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1695900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1695900"
   }, {
     "recordId" : "3dbe3a58-6b0b-566a-a68e-ed0adf141804",
     "systemTime" : "2024-01-01T20:36:48Z",
@@ -693,12 +493,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1695600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1695600"
   }, {
     "recordId" : "c36695ce-0ec8-59b3-8632-6674877c82c8",
     "systemTime" : "2024-01-01T20:31:47Z",
@@ -710,12 +505,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1695300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1695300"
   }, {
     "recordId" : "f40ebdab-46e2-5e5c-a034-4ecf7bc78f45",
     "systemTime" : "2024-01-01T20:26:48Z",
@@ -727,12 +517,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1695000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1695000"
   }, {
     "recordId" : "188dcaeb-087e-5b31-9127-27cb549fee85",
     "systemTime" : "2024-01-01T20:21:47Z",
@@ -744,12 +529,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1694700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1694700"
   }, {
     "recordId" : "b58fa4d9-8740-51b9-b3ec-776e12131449",
     "systemTime" : "2024-01-01T20:16:47Z",
@@ -761,12 +541,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1694400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1694400"
   }, {
     "recordId" : "9c8c09f2-7560-5f09-b1a8-3d61236165e4",
     "systemTime" : "2024-01-01T20:11:47Z",
@@ -778,12 +553,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1694100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1694100"
   }, {
     "recordId" : "6291fbca-46c4-5c7b-89c9-312187700a86",
     "systemTime" : "2024-01-01T20:06:48Z",
@@ -795,12 +565,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1693800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1693800"
   }, {
     "recordId" : "1196f9f3-786f-511d-8c2e-b1dea610a5e3",
     "systemTime" : "2024-01-01T20:01:48Z",
@@ -812,12 +577,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1693500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1693500"
   }, {
     "recordId" : "e50aaef7-2f71-509d-b893-d677ddb264f5",
     "systemTime" : "2024-01-01T19:56:47Z",
@@ -829,12 +589,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1693200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1693200"
   }, {
     "recordId" : "10ca4c9c-0243-5ecc-b436-b4324e704b39",
     "systemTime" : "2024-01-01T19:51:48Z",
@@ -846,12 +601,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1692900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1692900"
   }, {
     "recordId" : "dfaac970-5f96-539a-aa33-752d90be1da9",
     "systemTime" : "2024-01-01T19:46:47Z",
@@ -863,12 +613,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1692600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1692600"
   }, {
     "recordId" : "5dc10fee-56f5-5a62-bfe3-1f20f6045c97",
     "systemTime" : "2024-01-01T19:41:48Z",
@@ -880,12 +625,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1692300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1692300"
   }, {
     "recordId" : "772885c0-b47a-5d5e-8eed-147b67250f94",
     "systemTime" : "2024-01-01T19:36:47Z",
@@ -897,12 +637,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1692000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1692000"
   }, {
     "recordId" : "29a395e9-bbb6-5bd2-9868-ff0aa33927e7",
     "systemTime" : "2024-01-01T19:31:48Z",
@@ -914,12 +649,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1691700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1691700"
   }, {
     "recordId" : "54772a6f-fccc-5af0-91d1-9ceb5ceae745",
     "systemTime" : "2024-01-01T19:26:48Z",
@@ -931,12 +661,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1691400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1691400"
   }, {
     "recordId" : "2c7c92db-5edd-559d-9a08-66fdc969ec6d",
     "systemTime" : "2024-01-01T19:21:47Z",
@@ -948,12 +673,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1691100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1691100"
   }, {
     "recordId" : "5d53cf95-e351-52e1-b904-9403741190b4",
     "systemTime" : "2024-01-01T19:16:48Z",
@@ -965,12 +685,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1690800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1690800"
   }, {
     "recordId" : "386d2c60-d4c9-55de-9ac1-d5a105fdefa8",
     "systemTime" : "2024-01-01T19:11:48Z",
@@ -982,12 +697,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1690500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1690500"
   }, {
     "recordId" : "44fb687d-68f5-5ea9-94e5-ead664f32b23",
     "systemTime" : "2024-01-01T19:06:48Z",
@@ -999,12 +709,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1690200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1690200"
   }, {
     "recordId" : "ef88cccc-7bb0-5bd4-b7df-93b6053c8aca",
     "systemTime" : "2024-01-01T19:01:48Z",
@@ -1016,12 +721,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1689900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1689900"
   }, {
     "recordId" : "5fe4f2cd-b60f-5e8e-8136-9cec66fe3223",
     "systemTime" : "2024-01-01T18:56:48Z",
@@ -1033,12 +733,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1689600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1689600"
   }, {
     "recordId" : "aa1918d1-40e3-5fdd-a362-f73ecc922f88",
     "systemTime" : "2024-01-01T18:51:48Z",
@@ -1050,12 +745,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1689300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1689300"
   }, {
     "recordId" : "996601d0-c21a-5fba-9191-da66585df970",
     "systemTime" : "2024-01-01T18:46:48Z",
@@ -1067,12 +757,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1689000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1689000"
   }, {
     "recordId" : "c420c5bc-f07b-5733-8a3c-2b29c0edcc3a",
     "systemTime" : "2024-01-01T18:41:48Z",
@@ -1084,12 +769,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1688700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1688700"
   }, {
     "recordId" : "7313e314-fdee-532f-8b9d-dfdcaaffa78b",
     "systemTime" : "2024-01-01T18:36:48Z",
@@ -1101,12 +781,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1688400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1688400"
   }, {
     "recordId" : "40b41ba6-f78d-5c93-9b9e-87e387aac2f0",
     "systemTime" : "2024-01-01T18:31:48Z",
@@ -1118,12 +793,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1688100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1688100"
   }, {
     "recordId" : "039d90b7-3a3d-58ed-8d15-5a31f899fa35",
     "systemTime" : "2024-01-01T18:26:48Z",
@@ -1135,12 +805,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1687800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1687800"
   }, {
     "recordId" : "7c68987d-8ba5-5b4e-98e2-11266c80ba62",
     "systemTime" : "2024-01-01T18:21:48Z",
@@ -1152,12 +817,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1687500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1687500"
   }, {
     "recordId" : "21f026fe-7b3f-5501-b235-dbf14c8044c6",
     "systemTime" : "2024-01-01T18:16:48Z",
@@ -1169,12 +829,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1687200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1687200"
   }, {
     "recordId" : "249252f5-f3bc-5aa6-ae3e-739a92cf9632",
     "systemTime" : "2024-01-01T18:11:48Z",
@@ -1186,12 +841,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1686900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1686900"
   }, {
     "recordId" : "e83fb2c0-5b72-53ef-a958-7bcee36640bb",
     "systemTime" : "2024-01-01T18:06:48Z",
@@ -1203,12 +853,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1686600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1686600"
   }, {
     "recordId" : "2873ec81-5e02-57fe-9e8a-2652ee2db433",
     "systemTime" : "2024-01-01T18:01:48Z",
@@ -1220,12 +865,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1686300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1686300"
   }, {
     "recordId" : "5b9d503c-b476-5019-b459-8c8a2cce71e1",
     "systemTime" : "2024-01-01T17:56:48Z",
@@ -1237,12 +877,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1686000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1686000"
   }, {
     "recordId" : "61f703b5-81e1-50ec-b5fa-0e252384c023",
     "systemTime" : "2024-01-01T17:51:48Z",
@@ -1254,12 +889,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1685700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1685700"
   }, {
     "recordId" : "ca0839bf-95d8-52c6-bad8-1b018d70ec2b",
     "systemTime" : "2024-01-01T17:46:48Z",
@@ -1271,12 +901,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1685400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1685400"
   }, {
     "recordId" : "881cd329-408f-5025-bf0d-65049c329f73",
     "systemTime" : "2024-01-01T17:41:48Z",
@@ -1288,12 +913,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1685100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1685100"
   }, {
     "recordId" : "b613b088-588e-5a00-9193-235975792aef",
     "systemTime" : "2024-01-01T17:36:48Z",
@@ -1305,12 +925,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1684800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1684800"
   }, {
     "recordId" : "5ff1a351-9e8f-5a64-8f2b-5984a5d0f8b1",
     "systemTime" : "2024-01-01T17:31:48Z",
@@ -1322,12 +937,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1684500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1684500"
   }, {
     "recordId" : "37b36cfe-df8b-5e27-aefa-4e5ff8bd86a4",
     "systemTime" : "2024-01-01T17:26:48Z",
@@ -1339,12 +949,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1684200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1684200"
   }, {
     "recordId" : "4cf0b60e-4f40-5bdc-8d33-4b87b4065488",
     "systemTime" : "2024-01-01T17:21:48Z",
@@ -1356,12 +961,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1683900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1683900"
   }, {
     "recordId" : "77127586-4019-5c32-b01f-d7a815bef7e9",
     "systemTime" : "2024-01-01T17:16:48Z",
@@ -1373,12 +973,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1683600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1683600"
   }, {
     "recordId" : "e274606b-f487-5945-8d71-c9d6173b6340",
     "systemTime" : "2024-01-01T17:11:47Z",
@@ -1390,12 +985,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1683300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1683300"
   }, {
     "recordId" : "4f6ea10e-29ef-5413-bbfd-eef992f64942",
     "systemTime" : "2024-01-01T17:06:47Z",
@@ -1407,12 +997,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1683000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1683000"
   }, {
     "recordId" : "3e796709-6bc7-56b2-b394-9921d54666d1",
     "systemTime" : "2024-01-01T17:01:48Z",
@@ -1424,12 +1009,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1682700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1682700"
   }, {
     "recordId" : "fb0f6424-cbfc-5c1e-9d90-4b32361eee8d",
     "systemTime" : "2024-01-01T16:56:47Z",
@@ -1441,12 +1021,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1682400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1682400"
   }, {
     "recordId" : "de29f85a-7a24-50fe-9628-0da9c8e182c3",
     "systemTime" : "2024-01-01T16:51:47Z",
@@ -1458,12 +1033,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1682100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1682100"
   }, {
     "recordId" : "1adc7425-26cb-54b0-8749-06f5d000108e",
     "systemTime" : "2024-01-01T16:46:48Z",
@@ -1475,12 +1045,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1681800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1681800"
   }, {
     "recordId" : "ea3cba48-6a52-5f2a-b258-90bd52f2657a",
     "systemTime" : "2024-01-01T16:41:47Z",
@@ -1492,12 +1057,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1681500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1681500"
   }, {
     "recordId" : "0508cd4d-6579-5102-b4c8-2c5ec96bbce8",
     "systemTime" : "2024-01-01T16:36:48Z",
@@ -1509,12 +1069,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1681200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1681200"
   }, {
     "recordId" : "edfd190f-5f28-5250-aa31-ad05263e1db3",
     "systemTime" : "2024-01-01T16:31:47Z",
@@ -1526,12 +1081,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1680900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1680900"
   }, {
     "recordId" : "26afe348-505f-5977-944c-eff0ca9a0a39",
     "systemTime" : "2024-01-01T16:26:48Z",
@@ -1543,12 +1093,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1680600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1680600"
   }, {
     "recordId" : "46352b40-978a-5abe-a34d-e12a85e36b0d",
     "systemTime" : "2024-01-01T16:21:48Z",
@@ -1560,12 +1105,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1680300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1680300"
   }, {
     "recordId" : "1294d69e-cf64-559c-a930-50e0cd4b8735",
     "systemTime" : "2024-01-01T16:16:48Z",
@@ -1577,12 +1117,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1680000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1680000"
   }, {
     "recordId" : "a40ed2af-2709-51aa-8ba2-25bfdd6ac73f",
     "systemTime" : "2024-01-01T16:11:47Z",
@@ -1594,12 +1129,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1679700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1679700"
   }, {
     "recordId" : "868983c1-465a-56db-8e10-a5ac30261410",
     "systemTime" : "2024-01-01T16:06:47Z",
@@ -1611,12 +1141,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1679400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1679400"
   }, {
     "recordId" : "38c472b9-fac5-5caf-a388-faee0afa7a1f",
     "systemTime" : "2024-01-01T16:01:47Z",
@@ -1628,12 +1153,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1679100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1679100"
   }, {
     "recordId" : "c4e48792-5109-59f3-bbf5-e70fa266e8b6",
     "systemTime" : "2024-01-01T15:56:47Z",
@@ -1645,12 +1165,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1678800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1678800"
   }, {
     "recordId" : "34034dce-e9f3-526d-898b-856743e98869",
     "systemTime" : "2024-01-01T15:51:48Z",
@@ -1662,12 +1177,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1678500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1678500"
   }, {
     "recordId" : "69727c4a-dfe7-5026-b204-269fe390ea7a",
     "systemTime" : "2024-01-01T15:46:48Z",
@@ -1679,12 +1189,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1678200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1678200"
   }, {
     "recordId" : "f1cbd144-3114-5ed1-b218-240c5a94ec8f",
     "systemTime" : "2024-01-01T15:41:47Z",
@@ -1696,12 +1201,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1677900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1677900"
   }, {
     "recordId" : "6a3cf55b-85ed-5df2-884a-3482a7900efc",
     "systemTime" : "2024-01-01T15:36:48Z",
@@ -1713,12 +1213,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1677600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1677600"
   }, {
     "recordId" : "52ed59ed-f5cc-55c7-926a-8f98cc500acb",
     "systemTime" : "2024-01-01T15:31:47Z",
@@ -1730,12 +1225,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1677300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1677300"
   }, {
     "recordId" : "78d9adc0-cac7-530b-9884-7ae3b00c60f7",
     "systemTime" : "2024-01-01T15:26:47Z",
@@ -1747,12 +1237,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1677000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1677000"
   }, {
     "recordId" : "25fc9ede-4607-56c1-b06e-e8d9218c8cd9",
     "systemTime" : "2024-01-01T15:21:48Z",
@@ -1764,12 +1249,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1676700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1676700"
   }, {
     "recordId" : "1c53d0f6-fa41-5f0f-9ad4-883a15219b11",
     "systemTime" : "2024-01-01T15:16:47Z",
@@ -1781,12 +1261,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1676400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1676400"
   }, {
     "recordId" : "3cbf8b4a-029c-5d0c-9d68-56a34d89f8be",
     "systemTime" : "2024-01-01T15:11:48Z",
@@ -1798,12 +1273,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1676100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1676100"
   }, {
     "recordId" : "c71c5299-56dd-5cb0-a061-09e7a98eeb8a",
     "systemTime" : "2024-01-01T15:06:48Z",
@@ -1815,12 +1285,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1675800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1675800"
   }, {
     "recordId" : "87c77355-ead6-5105-8173-7f8f33665bd5",
     "systemTime" : "2024-01-01T15:01:48Z",
@@ -1832,12 +1297,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1675500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1675500"
   }, {
     "recordId" : "4c2512cb-5247-5927-8719-c9ff90f9de7c",
     "systemTime" : "2024-01-01T14:56:48Z",
@@ -1849,12 +1309,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1675200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1675200"
   }, {
     "recordId" : "2a7c9328-3780-58bd-9042-d8f5ff59ee5f",
     "systemTime" : "2024-01-01T14:51:48Z",
@@ -1866,12 +1321,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1674900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1674900"
   }, {
     "recordId" : "5c009006-b6f9-5789-807c-8e9fddfe1b7f",
     "systemTime" : "2024-01-01T14:46:47Z",
@@ -1883,12 +1333,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1674600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1674600"
   }, {
     "recordId" : "360d4a00-8686-5771-a30a-a9d7179e45a6",
     "systemTime" : "2024-01-01T14:41:47Z",
@@ -1900,12 +1345,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1674300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1674300"
   }, {
     "recordId" : "9b288086-cc0b-5d18-b433-f35d1004ca66",
     "systemTime" : "2024-01-01T14:36:48Z",
@@ -1917,12 +1357,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1674000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1674000"
   }, {
     "recordId" : "8227068a-b47d-54a0-a5c1-9bd45600a0b8",
     "systemTime" : "2024-01-01T14:31:48Z",
@@ -1934,12 +1369,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1673700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1673700"
   }, {
     "recordId" : "f9718b11-7d28-59db-bee9-c176f43da924",
     "systemTime" : "2024-01-01T14:26:48Z",
@@ -1951,12 +1381,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1673400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1673400"
   }, {
     "recordId" : "e9579eaa-ac9a-568f-bce9-e4fcbbb1d3af",
     "systemTime" : "2024-01-01T14:21:48Z",
@@ -1968,12 +1393,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1673100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1673100"
   }, {
     "recordId" : "c0649a93-ed6f-53c2-8722-9cac1f21bf81",
     "systemTime" : "2024-01-01T14:16:48Z",
@@ -1985,12 +1405,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1672800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1672800"
   }, {
     "recordId" : "3687b2f7-a4ca-51ff-a3f7-1c8eecd38171",
     "systemTime" : "2024-01-01T14:11:47Z",
@@ -2002,12 +1417,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1672500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1672500"
   }, {
     "recordId" : "aaf76521-8a8b-5fcd-a9bd-a49a9eb86c08",
     "systemTime" : "2024-01-01T14:06:47Z",
@@ -2019,12 +1429,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1672200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1672200"
   }, {
     "recordId" : "0c3940dd-6773-556a-87a2-9dd5c86b2bdc",
     "systemTime" : "2024-01-01T14:01:48Z",
@@ -2036,12 +1441,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1671900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1671900"
   }, {
     "recordId" : "b04c9960-bdf0-50da-a279-64072a1d098a",
     "systemTime" : "2024-01-01T13:56:48Z",
@@ -2053,12 +1453,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1671600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1671600"
   }, {
     "recordId" : "d3415e87-ec72-59a4-82d4-e4496c31a73c",
     "systemTime" : "2024-01-01T13:51:47Z",
@@ -2070,12 +1465,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1671300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1671300"
   }, {
     "recordId" : "1ba88c18-55c6-5edb-a5c4-f66974bb9345",
     "systemTime" : "2024-01-01T13:46:47Z",
@@ -2087,12 +1477,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1671000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1671000"
   }, {
     "recordId" : "db2608e3-f5e2-5d16-9a90-7c71a5376964",
     "systemTime" : "2024-01-01T13:41:48Z",
@@ -2104,12 +1489,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1670700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1670700"
   }, {
     "recordId" : "38522449-1d08-5557-b8bd-d29e096d8cfb",
     "systemTime" : "2024-01-01T13:36:48Z",
@@ -2121,12 +1501,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1670400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1670400"
   }, {
     "recordId" : "b4d1b13c-cbd8-51c2-856f-4dd06a5b26ab",
     "systemTime" : "2024-01-01T13:31:47Z",
@@ -2138,12 +1513,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1670100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1670100"
   }, {
     "recordId" : "77a56cef-17d4-5c95-b1d4-07a8bf1ff9b5",
     "systemTime" : "2024-01-01T13:26:48Z",
@@ -2155,12 +1525,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1669800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1669800"
   }, {
     "recordId" : "10954347-1b03-5807-a0b6-53b1c3f4ecd8",
     "systemTime" : "2024-01-01T13:21:48Z",
@@ -2172,12 +1537,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1669500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1669500"
   }, {
     "recordId" : "405f4f4a-93cc-5f03-9c17-7460591b0424",
     "systemTime" : "2024-01-01T13:16:48Z",
@@ -2189,12 +1549,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1669200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1669200"
   }, {
     "recordId" : "6056153a-67c7-52f3-b248-cb574834f611",
     "systemTime" : "2024-01-01T13:11:48Z",
@@ -2206,12 +1561,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1668900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1668900"
   }, {
     "recordId" : "79de848a-80f1-5262-ad81-c079edcbd2d5",
     "systemTime" : "2024-01-01T13:06:48Z",
@@ -2223,12 +1573,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1668600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1668600"
   }, {
     "recordId" : "158b2949-b63b-5dbe-9432-096d5f77aab3",
     "systemTime" : "2024-01-01T13:01:48Z",
@@ -2240,12 +1585,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1668300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1668300"
   }, {
     "recordId" : "1212ec50-426c-57e5-99e9-3390c8d07d07",
     "systemTime" : "2024-01-01T12:56:48Z",
@@ -2257,12 +1597,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1668000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1668000"
   }, {
     "recordId" : "327996c5-358a-538a-ad6f-515ae886b34d",
     "systemTime" : "2024-01-01T12:51:47Z",
@@ -2274,12 +1609,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1667700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1667700"
   }, {
     "recordId" : "70634ad7-2d14-5b3d-90c1-b01e231f416e",
     "systemTime" : "2024-01-01T12:46:48Z",
@@ -2291,12 +1621,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1667400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1667400"
   }, {
     "recordId" : "559b12e5-ecfd-5120-83c7-7332e69e02df",
     "systemTime" : "2024-01-01T12:41:48Z",
@@ -2308,12 +1633,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1667100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1667100"
   }, {
     "recordId" : "f9caf797-9687-5164-8450-dd104ff43a1e",
     "systemTime" : "2024-01-01T12:36:48Z",
@@ -2325,12 +1645,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1666800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1666800"
   }, {
     "recordId" : "9a5660d3-84f1-54c6-aad8-9134643de7df",
     "systemTime" : "2024-01-01T12:31:47Z",
@@ -2342,12 +1657,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1666500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1666500"
   }, {
     "recordId" : "770bf245-30df-5110-ae94-bb46a285e5f5",
     "systemTime" : "2024-01-01T12:26:47Z",
@@ -2359,12 +1669,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1666200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1666200"
   }, {
     "recordId" : "43b1260d-fb45-5daa-9a0c-b023f48c605f",
     "systemTime" : "2024-01-01T12:21:48Z",
@@ -2376,12 +1681,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1665900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1665900"
   }, {
     "recordId" : "ab3a0443-71c6-5c8d-8e3c-09d4db311018",
     "systemTime" : "2024-01-01T12:16:48Z",
@@ -2393,12 +1693,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1665600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1665600"
   }, {
     "recordId" : "93c7047c-bf56-5b23-acab-6a2ed5d9db39",
     "systemTime" : "2024-01-01T12:11:48Z",
@@ -2410,12 +1705,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1665300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1665300"
   }, {
     "recordId" : "014f5dc8-1546-532b-9336-1f4e9213e007",
     "systemTime" : "2024-01-01T12:06:48Z",
@@ -2427,12 +1717,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1665000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1665000"
   }, {
     "recordId" : "09f933f8-a68a-5a2a-9c6e-d5f9835b71a9",
     "systemTime" : "2024-01-01T12:01:48Z",
@@ -2444,12 +1729,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1664700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1664700"
   }, {
     "recordId" : "68b9cd13-a0d0-5206-bfc7-5e5f0a2944e3",
     "systemTime" : "2024-01-01T11:56:48Z",
@@ -2461,12 +1741,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1664400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1664400"
   }, {
     "recordId" : "2b8e4ed8-87e3-5574-aa7a-368625e85900",
     "systemTime" : "2024-01-01T11:51:47Z",
@@ -2478,12 +1753,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1664100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1664100"
   }, {
     "recordId" : "97fd404e-8ff8-5cad-b10d-f546bccbc49b",
     "systemTime" : "2024-01-01T11:46:48Z",
@@ -2495,12 +1765,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1663800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1663800"
   }, {
     "recordId" : "b71dffeb-55ae-5363-8b8f-a033177c06a7",
     "systemTime" : "2024-01-01T11:41:48Z",
@@ -2512,12 +1777,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1663500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1663500"
   }, {
     "recordId" : "5b38e58c-30f6-5482-a9c2-9c0bd34ee984",
     "systemTime" : "2024-01-01T11:36:48Z",
@@ -2529,12 +1789,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1663200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1663200"
   }, {
     "recordId" : "dd7ddf4c-f199-5f0f-9d70-8b1ce312e214",
     "systemTime" : "2024-01-01T11:31:48Z",
@@ -2546,12 +1801,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1662900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1662900"
   }, {
     "recordId" : "87299ac8-9217-508f-9a52-161dbd59cca4",
     "systemTime" : "2024-01-01T11:26:48Z",
@@ -2563,12 +1813,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1662600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1662600"
   }, {
     "recordId" : "a9431dc5-b6d6-50e9-853d-ae9130084aaf",
     "systemTime" : "2024-01-01T11:21:47Z",
@@ -2580,12 +1825,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1662300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1662300"
   }, {
     "recordId" : "3f7492e4-e425-5982-80c8-d936b9e94fd4",
     "systemTime" : "2024-01-01T11:16:48Z",
@@ -2597,12 +1837,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1662000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1662000"
   }, {
     "recordId" : "beebfb3f-c385-54e1-84a6-451fc5cbb0ed",
     "systemTime" : "2024-01-01T11:11:48Z",
@@ -2614,12 +1849,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1661700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1661700"
   }, {
     "recordId" : "84d0c13f-21ce-5b20-981b-5feee157c17f",
     "systemTime" : "2024-01-01T11:06:47Z",
@@ -2631,12 +1861,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1661400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1661400"
   }, {
     "recordId" : "a5a61eb6-38db-563b-95a4-70caaef0a79d",
     "systemTime" : "2024-01-01T11:01:48Z",
@@ -2648,12 +1873,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1661100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1661100"
   }, {
     "recordId" : "b7ded702-b359-5d05-b0bf-1742a65208d9",
     "systemTime" : "2024-01-01T10:56:48Z",
@@ -2665,12 +1885,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1660800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1660800"
   }, {
     "recordId" : "678444db-8e5c-5072-9595-be4ad0a53e55",
     "systemTime" : "2024-01-01T10:51:47Z",
@@ -2682,12 +1897,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1660500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1660500"
   }, {
     "recordId" : "6173d48b-e668-5383-8ae7-98432262f063",
     "systemTime" : "2024-01-01T10:46:47Z",
@@ -2699,12 +1909,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1660200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1660200"
   }, {
     "recordId" : "b316ea26-c3e5-580b-9e47-9702a84b6b09",
     "systemTime" : "2024-01-01T10:41:48Z",
@@ -2716,12 +1921,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1659900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1659900"
   }, {
     "recordId" : "71cf4089-bc60-5d33-bc9e-64cc3e3d058f",
     "systemTime" : "2024-01-01T10:36:48Z",
@@ -2733,12 +1933,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1659600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1659600"
   }, {
     "recordId" : "62457b9c-8bfc-5847-a85c-6c5e2dd22d0f",
     "systemTime" : "2024-01-01T10:31:48Z",
@@ -2750,12 +1945,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1659300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1659300"
   }, {
     "recordId" : "ed745874-0700-5807-b7a2-b56d25c5741c",
     "systemTime" : "2024-01-01T10:26:48Z",
@@ -2767,12 +1957,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1659000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1659000"
   }, {
     "recordId" : "3da7a76d-9fd5-58a6-b802-780a62b32d51",
     "systemTime" : "2024-01-01T10:21:48Z",
@@ -2784,12 +1969,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1658700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1658700"
   }, {
     "recordId" : "d16fe436-d0bd-5db9-920c-f0771e1b3b22",
     "systemTime" : "2024-01-01T10:16:48Z",
@@ -2801,12 +1981,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1658400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1658400"
   }, {
     "recordId" : "cd10fbae-7e67-57c9-a3ec-2c3fca5d3c30",
     "systemTime" : "2024-01-01T10:11:48Z",
@@ -2818,12 +1993,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1658100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1658100"
   }, {
     "recordId" : "e2cb59ef-1463-56c8-8c96-27469f77544f",
     "systemTime" : "2024-01-01T10:06:47Z",
@@ -2835,12 +2005,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1657800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1657800"
   }, {
     "recordId" : "721f77a9-1fc0-5f6c-a292-ae4ceefdb575",
     "systemTime" : "2024-01-01T10:01:48Z",
@@ -2852,12 +2017,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1657500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1657500"
   }, {
     "recordId" : "a0d785a7-3a45-5f2e-a979-f4a14b399e5c",
     "systemTime" : "2024-01-01T09:56:48Z",
@@ -2869,12 +2029,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1657200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1657200"
   }, {
     "recordId" : "9271a8bd-c092-5087-81ae-70b012179e7f",
     "systemTime" : "2024-01-01T09:51:48Z",
@@ -2886,12 +2041,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1656900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1656900"
   }, {
     "recordId" : "7fd722e6-85a2-5787-846d-eedfbff454b3",
     "systemTime" : "2024-01-01T09:46:47Z",
@@ -2903,12 +2053,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1656600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1656600"
   }, {
     "recordId" : "025524a6-ef0b-560e-bfff-2d076b7c3a45",
     "systemTime" : "2024-01-01T09:41:48Z",
@@ -2920,12 +2065,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1656300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1656300"
   }, {
     "recordId" : "676d2c29-cfe8-5f58-b749-7d88c1ee0c7d",
     "systemTime" : "2024-01-01T09:36:48Z",
@@ -2937,12 +2077,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1656000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1656000"
   }, {
     "recordId" : "3287827f-500f-50d4-92c4-d3ebf8550c03",
     "systemTime" : "2024-01-01T09:31:47Z",
@@ -2954,12 +2089,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1655700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1655700"
   }, {
     "recordId" : "b2284731-2297-5ef6-a238-a8e7f0ad5475",
     "systemTime" : "2024-01-01T09:26:48Z",
@@ -2971,12 +2101,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1655400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1655400"
   }, {
     "recordId" : "08de9dd3-41c6-5e68-b201-3895a64d5f82",
     "systemTime" : "2024-01-01T09:21:48Z",
@@ -2988,12 +2113,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1655100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1655100"
   }, {
     "recordId" : "32016b9f-2e73-55b4-a138-404dbda0f002",
     "systemTime" : "2024-01-01T09:16:48Z",
@@ -3005,12 +2125,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1654800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1654800"
   }, {
     "recordId" : "bfc2c7d6-71c7-538c-8837-083551b069e8",
     "systemTime" : "2024-01-01T09:11:48Z",
@@ -3022,12 +2137,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1654500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1654500"
   }, {
     "recordId" : "fb0667ee-ee0f-50c0-8a5e-cce50c5c0fa3",
     "systemTime" : "2024-01-01T09:06:48Z",
@@ -3039,12 +2149,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1654200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1654200"
   }, {
     "recordId" : "e4a86477-37ec-5bd9-98de-ca0b5e14c0c4",
     "systemTime" : "2024-01-01T09:01:48Z",
@@ -3056,12 +2161,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1653900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1653900"
   }, {
     "recordId" : "b2350cdc-c881-5287-9d66-2103e91ec6f8",
     "systemTime" : "2024-01-01T08:56:48Z",
@@ -3073,12 +2173,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1653600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1653600"
   }, {
     "recordId" : "b69a3e29-731f-5906-94e9-5318d6658668",
     "systemTime" : "2024-01-01T08:51:48Z",
@@ -3090,12 +2185,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1653300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1653300"
   }, {
     "recordId" : "3a95cdfe-e6bc-552d-96d8-a5c28c2b97b4",
     "systemTime" : "2024-01-01T08:46:48Z",
@@ -3107,12 +2197,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1653000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1653000"
   }, {
     "recordId" : "2cbcbdce-d2d3-5c84-bee4-1a7260bbb7fd",
     "systemTime" : "2024-01-01T08:41:48Z",
@@ -3124,12 +2209,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1652700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1652700"
   }, {
     "recordId" : "b707248b-0b84-5b15-b26d-bb3e3ad1ea3c",
     "systemTime" : "2024-01-01T08:36:48Z",
@@ -3141,12 +2221,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1652400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1652400"
   }, {
     "recordId" : "217e2572-a1f7-5e8b-abc5-dce9e9e9e784",
     "systemTime" : "2024-01-01T08:31:48Z",
@@ -3158,12 +2233,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1652100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1652100"
   }, {
     "recordId" : "64165c29-7305-57af-9f80-9e4a08cacdde",
     "systemTime" : "2024-01-01T08:26:48Z",
@@ -3175,12 +2245,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1651800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1651800"
   }, {
     "recordId" : "5475db8c-45f7-581a-81f5-b39db86e5e1e",
     "systemTime" : "2024-01-01T08:21:48Z",
@@ -3192,12 +2257,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1651500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1651500"
   }, {
     "recordId" : "0ccf78c1-db26-56f8-84f2-3961be12b789",
     "systemTime" : "2024-01-01T08:16:48Z",
@@ -3209,12 +2269,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1651200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1651200"
   }, {
     "recordId" : "73f5333d-a291-5fc3-80ab-54801f2857a2",
     "systemTime" : "2024-01-01T08:11:48Z",
@@ -3226,12 +2281,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1650900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1650900"
   }, {
     "recordId" : "be45f4eb-2288-5b21-bf4d-cf3db5b0eb9e",
     "systemTime" : "2024-01-01T08:06:48Z",
@@ -3243,12 +2293,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1650600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1650600"
   }, {
     "recordId" : "b8aa06ba-f38f-52fa-a707-b036375417f5",
     "systemTime" : "2024-01-01T08:01:48Z",
@@ -3260,12 +2305,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1650300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1650300"
   }, {
     "recordId" : "b22079d5-d716-55cf-9f72-fb21bb2b0d70",
     "systemTime" : "2024-01-01T07:56:48Z",
@@ -3277,12 +2317,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1650000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1650000"
   }, {
     "recordId" : "322d58f5-be0d-55c8-9206-793a0167785d",
     "systemTime" : "2024-01-01T07:51:48Z",
@@ -3294,12 +2329,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1649700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1649700"
   }, {
     "recordId" : "da5a2916-de2f-552a-ab93-af8ededc9ec4",
     "systemTime" : "2024-01-01T07:46:48Z",
@@ -3311,12 +2341,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1649400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1649400"
   }, {
     "recordId" : "276e7f9f-3227-5888-b5c7-96c42555c41d",
     "systemTime" : "2024-01-01T07:41:48Z",
@@ -3328,12 +2353,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1649100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1649100"
   }, {
     "recordId" : "9c5c4799-8c4c-508f-8b69-785bd8eab7bb",
     "systemTime" : "2024-01-01T07:36:48Z",
@@ -3345,12 +2365,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1648800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1648800"
   }, {
     "recordId" : "eec57218-887d-56df-ba1a-ed46b58c546e",
     "systemTime" : "2024-01-01T07:31:48Z",
@@ -3362,12 +2377,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1648500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1648500"
   }, {
     "recordId" : "c47cf17a-ded5-5c03-927c-055259daa2ec",
     "systemTime" : "2024-01-01T07:26:48Z",
@@ -3379,12 +2389,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1648200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1648200"
   }, {
     "recordId" : "f7c36149-de27-5c6e-a048-7554fb7c4968",
     "systemTime" : "2024-01-01T07:21:48Z",
@@ -3396,12 +2401,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1647900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1647900"
   }, {
     "recordId" : "7285c3c9-6c0b-5696-810e-604cd9034966",
     "systemTime" : "2024-01-01T07:16:48Z",
@@ -3413,12 +2413,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1647600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1647600"
   }, {
     "recordId" : "45ea60b2-8b89-5a82-b35e-eacea5af289b",
     "systemTime" : "2024-01-01T07:11:48Z",
@@ -3430,12 +2425,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1647300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1647300"
   }, {
     "recordId" : "a7b35f1d-4342-5943-9108-14e224676d22",
     "systemTime" : "2024-01-01T07:06:48Z",
@@ -3447,12 +2437,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1647000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1647000"
   }, {
     "recordId" : "31ae1bbf-a359-595b-b70a-44b3fa6d1b07",
     "systemTime" : "2024-01-01T07:01:48Z",
@@ -3464,12 +2449,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1646700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1646700"
   }, {
     "recordId" : "873b3a8a-1583-5123-af0d-c6672145f031",
     "systemTime" : "2024-01-01T06:56:48Z",
@@ -3481,12 +2461,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1646400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1646400"
   }, {
     "recordId" : "e1797c0d-2fe5-5459-8092-d0455ae3ce7c",
     "systemTime" : "2024-01-01T06:51:47Z",
@@ -3498,12 +2473,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1646100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1646100"
   }, {
     "recordId" : "85ceb027-64f7-56bb-a788-7664e9b59515",
     "systemTime" : "2024-01-01T06:46:48Z",
@@ -3515,12 +2485,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1645800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1645800"
   }, {
     "recordId" : "2116bf81-1e2b-545e-bc87-a435c50c39ee",
     "systemTime" : "2024-01-01T06:41:48Z",
@@ -3532,12 +2497,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1645500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1645500"
   }, {
     "recordId" : "f92ca6d9-84fc-5954-9264-cc29ce00e26f",
     "systemTime" : "2024-01-01T06:36:48Z",
@@ -3549,12 +2509,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1645200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1645200"
   }, {
     "recordId" : "cda93639-a9b0-555e-9efa-f09e5d9d2384",
     "systemTime" : "2024-01-01T06:31:48Z",
@@ -3566,12 +2521,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1644900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1644900"
   }, {
     "recordId" : "c5c733ad-6280-5833-a8b0-f4e8e20d502e",
     "systemTime" : "2024-01-01T06:26:48Z",
@@ -3583,12 +2533,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1644600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1644600"
   }, {
     "recordId" : "1bfb9c29-1e0f-5a99-8c18-dd1171971af2",
     "systemTime" : "2024-01-01T06:21:48Z",
@@ -3600,12 +2545,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1644300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1644300"
   }, {
     "recordId" : "6db7ee2f-1218-55e8-aa83-14e38f97a2d7",
     "systemTime" : "2024-01-01T06:16:48Z",
@@ -3617,12 +2557,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1644000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1644000"
   }, {
     "recordId" : "c34c9e35-1dcc-508f-bbc6-1988601f7825",
     "systemTime" : "2024-01-01T06:11:48Z",
@@ -3634,12 +2569,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1643700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1643700"
   }, {
     "recordId" : "0c1b7f03-1a85-5f9f-8d48-ca1352976903",
     "systemTime" : "2024-01-01T06:06:48Z",
@@ -3651,12 +2581,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1643400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1643400"
   }, {
     "recordId" : "720aa20f-0f0f-51bf-b0b3-4e0c96a31e32",
     "systemTime" : "2024-01-01T06:01:48Z",
@@ -3668,12 +2593,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1643100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1643100"
   }, {
     "recordId" : "af2349f3-d66c-55e3-8304-56a17a555101",
     "systemTime" : "2024-01-01T05:56:48Z",
@@ -3685,12 +2605,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1642800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1642800"
   }, {
     "recordId" : "7412c598-5438-50cd-b028-e895a3398f44",
     "systemTime" : "2024-01-01T05:51:48Z",
@@ -3702,12 +2617,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1642500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1642500"
   }, {
     "recordId" : "425866a2-e393-52c3-922d-762cb24575a0",
     "systemTime" : "2024-01-01T05:46:48Z",
@@ -3719,12 +2629,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1642200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1642200"
   }, {
     "recordId" : "68256984-34fe-50e7-a81b-b4a60d287fce",
     "systemTime" : "2024-01-01T05:41:48Z",
@@ -3736,12 +2641,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1641900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1641900"
   }, {
     "recordId" : "57e6c21b-3ee0-5e87-88f5-82422e0c1a81",
     "systemTime" : "2024-01-01T05:36:48Z",
@@ -3753,12 +2653,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1641600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1641600"
   }, {
     "recordId" : "7a0b92d6-d30a-5506-8927-394b143477ba",
     "systemTime" : "2024-01-01T05:31:48Z",
@@ -3770,12 +2665,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1641300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1641300"
   }, {
     "recordId" : "1e9d2732-bb9a-5906-9452-ff629015a4e9",
     "systemTime" : "2024-01-01T05:26:48Z",
@@ -3787,12 +2677,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1641000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1641000"
   }, {
     "recordId" : "b5267a78-576f-516f-910e-51b8c2eacbae",
     "systemTime" : "2024-01-01T05:21:48Z",
@@ -3804,12 +2689,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1640700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1640700"
   }, {
     "recordId" : "4917edc4-cc28-5eba-9daa-0f1639631506",
     "systemTime" : "2024-01-01T05:16:48Z",
@@ -3821,12 +2701,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1640400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1640400"
   }, {
     "recordId" : "d7bebc7b-7b08-5f16-bacf-1b7ac44ae941",
     "systemTime" : "2024-01-01T05:11:48Z",
@@ -3838,12 +2713,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1640100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1640100"
   }, {
     "recordId" : "2249c69c-9722-5a0f-957b-0e5ff1257f4e",
     "systemTime" : "2024-01-01T05:06:48Z",
@@ -3855,12 +2725,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1639800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1639800"
   }, {
     "recordId" : "891a98db-859c-530a-87df-fc86f8d97317",
     "systemTime" : "2024-01-01T05:01:48Z",
@@ -3872,12 +2737,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1639500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1639500"
   }, {
     "recordId" : "54afd222-fcee-516b-8072-dd2acfa5d893",
     "systemTime" : "2024-01-01T04:56:48Z",
@@ -3889,12 +2749,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1639200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1639200"
   }, {
     "recordId" : "a8a09352-3841-581e-bd79-867cf8190ae4",
     "systemTime" : "2024-01-01T04:51:48Z",
@@ -3906,12 +2761,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1638900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1638900"
   }, {
     "recordId" : "8d8b0061-8d8b-508d-8805-fbdd64b714d7",
     "systemTime" : "2024-01-01T04:46:48Z",
@@ -3923,12 +2773,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1638600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1638600"
   }, {
     "recordId" : "c5288584-537d-5bbd-ad46-8c6324b9f140",
     "systemTime" : "2024-01-01T04:41:48Z",
@@ -3940,12 +2785,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1638300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1638300"
   }, {
     "recordId" : "c67c60f4-f3bc-5254-a8b9-2c7af0e8c873",
     "systemTime" : "2024-01-01T04:36:48Z",
@@ -3957,12 +2797,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1638000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1638000"
   }, {
     "recordId" : "ee603d4c-dfb7-5887-aa39-531f9eed7bd1",
     "systemTime" : "2024-01-01T04:31:48Z",
@@ -3974,12 +2809,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1637700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1637700"
   }, {
     "recordId" : "ba6589df-766c-5194-ab4b-87b2bb89d5f1",
     "systemTime" : "2024-01-01T04:26:48Z",
@@ -3991,12 +2821,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1637400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1637400"
   }, {
     "recordId" : "1c346a1e-f2e0-5e7e-a87c-538f4d87a70f",
     "systemTime" : "2024-01-01T04:21:48Z",
@@ -4008,12 +2833,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1637100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1637100"
   }, {
     "recordId" : "b18bcbbc-5c9a-5a0a-8bd1-6780fe05243c",
     "systemTime" : "2024-01-01T04:16:48Z",
@@ -4025,12 +2845,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1636800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1636800"
   }, {
     "recordId" : "785e2b98-c77a-5351-8aba-70b9e4803f0a",
     "systemTime" : "2024-01-01T04:11:48Z",
@@ -4042,12 +2857,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1636500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1636500"
   }, {
     "recordId" : "a07a99ea-3e88-575a-b908-3f675b8edd27",
     "systemTime" : "2024-01-01T04:06:48Z",
@@ -4059,12 +2869,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1636200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1636200"
   }, {
     "recordId" : "65c8b026-630a-514d-ae97-d46b5d762f2e",
     "systemTime" : "2024-01-01T04:01:48Z",
@@ -4076,12 +2881,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1635900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1635900"
   }, {
     "recordId" : "1008e56d-7b52-5aed-88d4-08c8b8514a1a",
     "systemTime" : "2024-01-01T03:56:48Z",
@@ -4093,12 +2893,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1635600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1635600"
   }, {
     "recordId" : "b89e83a6-a1f4-5486-90d0-d3bace9a3912",
     "systemTime" : "2024-01-01T03:51:48Z",
@@ -4110,12 +2905,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1635300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1635300"
   }, {
     "recordId" : "c73194dd-f23e-589c-9fad-41032ef13d62",
     "systemTime" : "2024-01-01T03:46:48Z",
@@ -4127,12 +2917,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1635000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1635000"
   }, {
     "recordId" : "e52394db-0b7f-5a27-94f2-08c337faaee0",
     "systemTime" : "2024-01-01T03:41:48Z",
@@ -4144,12 +2929,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1634700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1634700"
   }, {
     "recordId" : "052eb285-9848-50d1-b870-5162203d5662",
     "systemTime" : "2024-01-01T03:36:48Z",
@@ -4161,12 +2941,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1634400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1634400"
   }, {
     "recordId" : "805a581f-1fba-55af-8204-57a1af70f422",
     "systemTime" : "2024-01-01T03:31:48Z",
@@ -4178,12 +2953,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1634100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1634100"
   }, {
     "recordId" : "b1ab771d-c4c5-5416-b7aa-dd0f37de7c7d",
     "systemTime" : "2024-01-01T03:26:48Z",
@@ -4195,12 +2965,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1633800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1633800"
   }, {
     "recordId" : "3b6b1506-2d23-522a-8032-0cee5c475d98",
     "systemTime" : "2024-01-01T03:21:48Z",
@@ -4212,12 +2977,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1633500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1633500"
   }, {
     "recordId" : "c8178902-4e7e-557a-8f09-107ddb56a65c",
     "systemTime" : "2024-01-01T03:16:48Z",
@@ -4229,12 +2989,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1633200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1633200"
   }, {
     "recordId" : "7253e717-29a5-522b-ba61-7bb8ff4d3c40",
     "systemTime" : "2024-01-01T03:11:48Z",
@@ -4246,12 +3001,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1632900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1632900"
   }, {
     "recordId" : "acb91d95-f959-548f-a609-cdf7f28fb8fa",
     "systemTime" : "2024-01-01T03:06:48Z",
@@ -4263,12 +3013,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1632600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1632600"
   }, {
     "recordId" : "b45accfd-a6ba-5e47-bc2a-7b20c0cdd017",
     "systemTime" : "2024-01-01T03:01:48Z",
@@ -4280,12 +3025,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1632300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1632300"
   }, {
     "recordId" : "ab184287-9ee7-5f00-af5b-2293e4da525c",
     "systemTime" : "2024-01-01T02:56:48Z",
@@ -4297,12 +3037,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1632000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1632000"
   }, {
     "recordId" : "75cadf36-e443-5365-8c4b-cd7bf6007f1c",
     "systemTime" : "2024-01-01T02:51:48Z",
@@ -4314,12 +3049,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1631700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1631700"
   }, {
     "recordId" : "ecdac435-4edb-54a7-87ab-3358a72105cf",
     "systemTime" : "2024-01-01T02:46:48Z",
@@ -4331,12 +3061,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1631400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1631400"
   }, {
     "recordId" : "57df01f2-cd36-521b-a67c-e3f9ddc96b9c",
     "systemTime" : "2024-01-01T02:41:48Z",
@@ -4348,12 +3073,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1631100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1631100"
   }, {
     "recordId" : "218129d7-9f1d-5737-b5c4-9abff9ae8bea",
     "systemTime" : "2024-01-01T02:36:48Z",
@@ -4365,12 +3085,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1630800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1630800"
   }, {
     "recordId" : "bba72689-ee89-568d-8eae-bf4d4f65dcaa",
     "systemTime" : "2024-01-01T02:31:48Z",
@@ -4382,12 +3097,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1630500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1630500"
   }, {
     "recordId" : "61db85ea-7dc1-5a38-849a-e9462c94eaf3",
     "systemTime" : "2024-01-01T02:26:49Z",
@@ -4399,12 +3109,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1630200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1630200"
   }, {
     "recordId" : "36293aad-8e94-5ae7-97a6-9b91b07fdd94",
     "systemTime" : "2024-01-01T02:21:48Z",
@@ -4416,12 +3121,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1629900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1629900"
   }, {
     "recordId" : "f3ff5aa5-774a-5a4e-bb8f-20284e89bf94",
     "systemTime" : "2024-01-01T02:16:48Z",
@@ -4433,12 +3133,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1629600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1629600"
   }, {
     "recordId" : "1b2a775a-043a-503f-bb04-bcc51dddcfe3",
     "systemTime" : "2024-01-01T02:11:48Z",
@@ -4450,12 +3145,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1629300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1629300"
   }, {
     "recordId" : "ea67f5b0-b5b2-531d-a92f-ed86b559a4a7",
     "systemTime" : "2024-01-01T02:06:48Z",
@@ -4467,12 +3157,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1629000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1629000"
   }, {
     "recordId" : "40d76a3b-b1e7-5d4f-8e03-ad1b84cf16b5",
     "systemTime" : "2024-01-01T02:01:48Z",
@@ -4484,12 +3169,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1628700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1628700"
   }, {
     "recordId" : "65126eff-bdf2-5be2-9abe-2191e7b44481",
     "systemTime" : "2024-01-01T01:56:48Z",
@@ -4501,12 +3181,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1628400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1628400"
   }, {
     "recordId" : "6f3dcf40-d62e-5b4f-9a14-3843af234da1",
     "systemTime" : "2024-01-01T01:51:48Z",
@@ -4518,12 +3193,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1628100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1628100"
   }, {
     "recordId" : "8c4d4821-30f9-5eba-aafa-b759e3fc0cd7",
     "systemTime" : "2024-01-01T01:46:48Z",
@@ -4535,12 +3205,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1627800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1627800"
   }, {
     "recordId" : "4e24e9af-8c9c-5640-bcc9-b8b58c31db75",
     "systemTime" : "2024-01-01T01:41:48Z",
@@ -4552,12 +3217,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1627500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1627500"
   }, {
     "recordId" : "3470918f-7159-5d21-9a99-86c9f9b4d26f",
     "systemTime" : "2024-01-01T01:36:48Z",
@@ -4569,12 +3229,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1627200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1627200"
   }, {
     "recordId" : "037609da-53c1-5b00-ab9b-5048a9208662",
     "systemTime" : "2024-01-01T01:31:49Z",
@@ -4586,12 +3241,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1626900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1626900"
   }, {
     "recordId" : "db04d875-e40b-5c9f-bcd7-1421e532956a",
     "systemTime" : "2024-01-01T01:26:48Z",
@@ -4603,12 +3253,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1626600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1626600"
   }, {
     "recordId" : "62c370ce-bbf9-57d9-8d17-3cfa27da984d",
     "systemTime" : "2024-01-01T01:21:48Z",
@@ -4620,12 +3265,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1626300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1626300"
   }, {
     "recordId" : "27bd5061-990f-5f4b-93ac-c02d67c277d7",
     "systemTime" : "2024-01-01T01:16:48Z",
@@ -4637,12 +3277,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1626000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1626000"
   }, {
     "recordId" : "eb127687-e80a-5a8d-aeb9-c64a627e64f0",
     "systemTime" : "2024-01-01T01:11:48Z",
@@ -4654,12 +3289,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1625700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1625700"
   }, {
     "recordId" : "0c90a731-ff67-5bd3-980e-1a85c7b28268",
     "systemTime" : "2024-01-01T01:06:48Z",
@@ -4671,12 +3301,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1625400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1625400"
   }, {
     "recordId" : "2fd0d722-5dd3-52d3-98d6-d83e734c9bfa",
     "systemTime" : "2024-01-01T01:01:48Z",
@@ -4688,12 +3313,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1625100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1625100"
   }, {
     "recordId" : "f829f965-fe5a-554d-b12c-7ec32c9b4270",
     "systemTime" : "2024-01-01T00:56:48Z",
@@ -4705,12 +3325,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1624800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1624800"
   }, {
     "recordId" : "6e8e3697-81f2-5e22-89ce-a1269463e830",
     "systemTime" : "2024-01-01T00:51:48Z",
@@ -4722,12 +3337,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1624500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1624500"
   }, {
     "recordId" : "9734f603-381c-52b8-accf-e6dbcf0e8402",
     "systemTime" : "2024-01-01T00:46:48Z",
@@ -4739,12 +3349,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1624200",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1624200"
   }, {
     "recordId" : "fda18c90-d72c-558b-8012-201b8a1887a6",
     "systemTime" : "2024-01-01T00:41:48Z",
@@ -4756,12 +3361,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1623900",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1623900"
   }, {
     "recordId" : "08591190-eaba-53ae-87df-aea7796077bb",
     "systemTime" : "2024-01-01T00:36:48Z",
@@ -4773,12 +3373,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1623600",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1623600"
   }, {
     "recordId" : "b05aacf9-a807-5ffb-ac26-2d023f4f267b",
     "systemTime" : "2024-01-01T00:31:48Z",
@@ -4790,12 +3385,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1623300",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1623300"
   }, {
     "recordId" : "6c04c141-8ac4-5aa5-a2f4-81a25f2fc8a0",
     "systemTime" : "2024-01-01T00:26:48Z",
@@ -4807,12 +3397,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1623000",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1623000"
   }, {
     "recordId" : "cb867d29-d011-59ed-808f-e006f8c4aa4b",
     "systemTime" : "2024-01-01T00:21:48Z",
@@ -4824,12 +3409,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1622700",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1622700"
   }, {
     "recordId" : "e4d58f17-ac67-53a9-b086-f9942ef6bcf1",
     "systemTime" : "2024-01-01T00:16:48Z",
@@ -4841,12 +3421,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1622400",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1622400"
   }, {
     "recordId" : "d343c5ae-10c4-5b54-8391-35a07055844c",
     "systemTime" : "2024-01-01T00:11:48Z",
@@ -4858,12 +3433,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1622100",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1622100"
   }, {
     "recordId" : "8cefe93a-1ab3-58a4-adaf-73b2e2031504",
     "systemTime" : "2024-01-01T00:06:48Z",
@@ -4875,12 +3445,7 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1621800",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1621800"
   }, {
     "recordId" : "3e5b81a4-0888-597d-87bc-7f64e3b076ab",
     "systemTime" : "2024-01-01T00:01:48Z",
@@ -4892,11 +3457,6 @@
     "displayDevice" : "iOS",
     "transmitterGeneration" : "g7",
     "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-    "transmitterTicks" : "1621500",
-    "device" : {
-      "transmitterId" : "243c7f5d61f3baf09efcd20f1607ece87f3705adb849a99aa21ed0c538b528ea",
-      "transmitterGeneration" : "g7",
-      "displayDevice" : "iOS"
-    }
+    "transmitterTicks" : "1621500"
   } ]
 }
