@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glucose Tracker</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Glucose Tracker</h1>
+        <input id="shlInput" type="text" placeholder="Enter SMART Health Link">
+        <button id="processButton">Process SHL</button>
+        <div id="result"></div>
+        <div id="debug"></div>
+    </div>
+
+    <script type="module">
+        import * as shlinker from 'https://cdn.jsdelivr.net/npm/shlinker/dist/shlinker.js';
+
+        let shlink;
+        function init() {
+            document.getElementById('processButton').addEventListener('click', processSHL);
+        }
+
+        async function processSHL() {
+            const shlInput = document.getElementById('shlInput').value;
+            const resultDiv = document.getElementById('result');
+            const debugDiv = document.getElementById('debug');
+            
+            try {
+                shlink = await shlinker.parse(shlInput);
+                const retrievedData = await shlinker.retrieve(shlink);
+                const observations = extractGlucoseObservations(retrievedData);
+                resultDiv.innerHTML = `Extracted ${observations.length} glucose observations.`;
+                google.script.run.withSuccessHandler(onSuccess).withFailureHandler(onFailure)
+                    .processObservations(observations);
+            } catch (error) {
+                resultDiv.innerHTML = `Error: ${error.message}`;
+                debugDiv.innerHTML += `Error stack: ${error.stack}<br>`;
+            }
+        }
+
+        // Extract glucose observations from the FHIR Bundle
+        function extractGlucoseObservations(data) {
+            const debugDiv = document.getElementById('debug');
+            
+            if (!data.files || data.files.length === 0) {
+                debugDiv.innerHTML += 'No files found in data<br>';
+                return [];
+            }
+            
+            const fhirBundles = data.files
+                .filter(file => file.mimeType === "application/fhir+json")
+                .map(file => file.contentJson)
+                .filter(bundle => bundle);
+
+            if (fhirBundles.length === 0) {
+                return [];
+            }
+            
+            const observations = fhirBundles.flatMap(bundle => 
+                (bundle.entry || [])
+                    .filter(entry => entry?.resource?.resourceType === 'Observation')
+                    .filter(entry => entry?.resource?.valueQuantity)
+                    .filter(entry => entry?.resource?.effectiveDateTime)
+                    .map(entry => ({
+                        time: entry.resource.effectiveDateTime,
+                        code: entry.resource.code.coding.find(coding => coding.system === 'http://loinc.org')?.code,
+                        value: entry.resource.valueQuantity.value,
+                        unit:  entry.resource.valueQuantity.unit
+                    }))
+            );
+            
+            return observations;
+        }
+
+        function onSuccess() {
+            document.getElementById('result').innerHTML += '<br>Data successfully sent to Google Sheets!';
+        }
+
+        function onFailure(error) {
+            document.getElementById('result').innerHTML += `<br>Error sending data to Google Sheets: ${error.message}`;
+            document.getElementById('debug').innerHTML += `Error stack: ${error.stack}<br>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
