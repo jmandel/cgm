@@ -35,7 +35,7 @@ function extractCGMData(bundle: FHIRBundle) {
     ) {
       const observation = entry.resource;
       const glucoseValue = observation.valueQuantity!.value;
-      const unit = observation.valueQuantity!.unit;
+      const unit = observation.valueQuantity!.code;
       const timestamp = new Date(observation.effectiveDateTime!);
 
       cgmData.push({

@@ -1,4 +1,4 @@
-import { FHIRBundle, FHIRDiagnosticReport, FHIRObservation} from '../agp-calc';
+import { FHIRBundle, FHIRDiagnosticReport, FHIRObservation, DEFAULT_PATIENT_DISPLAY } from '../agp-calc';
 import { v4 as uuidv4 } from 'uuid';
 import renderToAttachment from '../render-pdf';
 
@@ -22,6 +22,9 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
       resourceType: 'DiagnosticReport',
       id: uuidv4(),
       status: 'final',
+      subject: {
+        display: DEFAULT_PATIENT_DISPLAY
+      },
       category: [
         {
           coding: [
@@ -35,17 +38,17 @@ export async function generateDiagnosticReport(bundle: FHIRBundle): Promise<FHIR
       code: {
         coding: [
           {
-            system: 'http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary',
+            system: 'http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary',
             code: 'cgm-summary',
-            display: "CGM Summary"
+            display: "CGM Summary Report"
           },
         ],
       },
       effectivePeriod,
       issued: new Date().toISOString(),
-      result: cgmSummaryObs.resource.hasMember!.map((member) => ({
-        reference: member.reference,
-      })),
+      result: [{
+        reference: cgmSummaryObs.fullUrl
+      }],
       presentedForm: [
         await renderToAttachment({
           ...bundle,

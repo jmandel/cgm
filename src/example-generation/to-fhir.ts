@@ -35,7 +35,13 @@ export const csvToFhir = (filePath: string): Promise<FHIRBundle> => {
   return new Promise((resolve, reject) => {
     const bundle: FHIRBundle = {
       resourceType: "Bundle",
-      type: "collection",
+      type: "batch",
+      meta: {
+        tag: [{
+          system: "http://hl7.org/uv/cgm/CodeSystem/cgm",
+          code: "cgm-data-submission-bundle"
+        }]
+      },
       entry: [],
     };
 

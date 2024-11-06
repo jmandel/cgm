@@ -83,6 +83,9 @@ export interface FHIRObservation {
     }>;
   }>;
   component?: Array<Partial<FHIRObservation>>;
+  subject?: {
+    display: string;
+  };
 }
 
 export interface FHIRDiagnosticReport {
@@ -116,6 +119,9 @@ export interface FHIRDiagnosticReport {
     data: string;
     title: string;
   }>;
+  subject?: {
+    display: string;
+  };
 }
 
 export interface FHIRBundle {
@@ -132,7 +138,7 @@ export interface FHIRBundle {
   }>;
 }
 
-
+export const DEFAULT_PATIENT_DISPLAY = "Example Patient";
 
 export const convertGlucoseValue = (value: number, fromUnit: string, toUnit: string): number => {
   if (fromUnit === toUnit) return value;
@@ -269,6 +275,7 @@ const createMemberObservation = (
   display: string,
   value: number,
   unit: string,
+  ucumCode: string,
   startDate: moment.Moment,
   endDate: moment.Moment,
   loincCode?: string,
@@ -277,6 +284,9 @@ const createMemberObservation = (
   resourceType: "Observation",
   id: uuidv4(),
   status: "final",
+  subject: {
+    display: DEFAULT_PATIENT_DISPLAY
+  },
   category: [
     {
       coding: [
@@ -291,7 +301,7 @@ const createMemberObservation = (
   code: {
     coding: [
       {
-        system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+        system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
         code,
         display,
       },
@@ -314,7 +324,7 @@ const createMemberObservation = (
     value,
     unit,
     system: "http://unitsofmeasure.org",
-    code: unit,
+    code: ucumCode,
   },
 });
 
@@ -330,7 +340,7 @@ export const generateCGMSummaryBundle = ({
     meta: {
       tag: [
         {
-          system: "http://argo.run/cgm/CodeSystem/cgm",
+          system: "http://hl7.org/uv/cgm/CodeSystem/cgm",
           code: "cgm-data-submission-bundle",
         }
       ]
@@ -353,7 +363,16 @@ export const generateCGMSummaryBundle = ({
           obs.effectiveDateTime &&
           moment(obs.effectiveDateTime).isBetween(startDate, endDate, "day", "[]")
         );
-      }) as { fullUrl: string; resource: FHIRObservation }[];
+      }).map(e => ({
+        fullUrl: e.fullUrl,
+        resource: {
+          ...e.resource,
+          valueQuantity: {
+            ...(e.resource as FHIRObservation).valueQuantity,
+            unit: (e.resource as FHIRObservation).valueQuantity!.code.toLowerCase()
+          },
+          subject: (e.resource as FHIRObservation).subject ?? {display: DEFAULT_PATIENT_DISPLAY}}
+      })) as { fullUrl: string; resource: FHIRObservation }[];
 
   if (analysisPeriod.length === 0) {
     throw new Error("At least one analysis period must be provided");
@@ -413,6 +432,9 @@ export const generateCGMSummaryBundle = ({
       resourceType: "Observation",
       id: uuidv4(),
       status: "final",
+      subject: {
+        display: DEFAULT_PATIENT_DISPLAY
+      },
       category: [
         {
           coding: [
@@ -427,13 +449,14 @@ export const generateCGMSummaryBundle = ({
       code: {
         coding: [
           {
-            system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+            system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
             code: "cgm-summary",
-            display: "CGM Summary",
-          }, {
-            system: "http://loinc.org",
-            code: "104643-2"
+            display: "CGM Summary Report",
           },
+          // {
+          //   system: "http://loinc.org",
+          //   code: "104643-2"
+          // }
         ],
       },
       effectivePeriod: {
@@ -447,6 +470,7 @@ export const generateCGMSummaryBundle = ({
       "mean-glucose-mass-per-volume",
       "Mean Glucose (Mass Per Volume)",
       agpMetrics.glucoseStatistics.mean,
+      targetUnit.toLowerCase(),
       targetUnit,
       startDate,
       endDate,
@@ -458,6 +482,9 @@ export const generateCGMSummaryBundle = ({
       resourceType: "Observation",
       id: uuidv4(),
       status: "final",
+      subject: {
+        display: DEFAULT_PATIENT_DISPLAY
+      },
       category: [
         {
           coding: [
@@ -472,10 +499,10 @@ export const generateCGMSummaryBundle = ({
       code: {
         coding: [
           {
-            system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+            system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
             code: "times-in-ranges",
-            display: "Times in Ranges",
-          },
+            display: "Times in Glucose Ranges",
+          }
         ],
       },
       effectivePeriod: {
@@ -487,14 +514,14 @@ export const generateCGMSummaryBundle = ({
           code: {
             coding: [
               {
-                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
                 code: "time-in-very-low",
-                display: "Time in Very Low Range",
+                display: "Time in Very Low Range (%)",
               },
-              {
-                system: "http://loinc.org",
-                code: "104642-4"
-              }
+              // {
+              //   system: "http://loinc.org",
+              //   code: "104642-4"
+              // }
             ],
           },
           valueQuantity: {
@@ -508,14 +535,14 @@ export const generateCGMSummaryBundle = ({
           code: {
             coding: [
               {
-                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
                 code: "time-in-low",
-                display: "Time in Low Range",
+                display: "Time in Low Range (%)",
               },
-              {
-                system: "http://loinc.org",
-                code: "104641-6"
-              }
+              // {
+              //   system: "http://loinc.org",
+              //   code: "104641-6"
+              // }
             ],
           },
           valueQuantity: {
@@ -529,16 +556,15 @@ export const generateCGMSummaryBundle = ({
           code: {
             coding: [
               {
-                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
                 code: "time-in-target",
-                display: "Time in Target Range",
+                display: "Time in Target Range (%)",
               },
               {
                 system: "http://loinc.org",
                 code: "97510-2",
-                display:
-                  "Glucose measurements in range out of Total glucose measurements during reporting period",
-              },
+                display: "Glucose measurements in range out of Total glucose measurements during reporting period",
+              }
             ],
           },
           valueQuantity: {
@@ -552,14 +578,14 @@ export const generateCGMSummaryBundle = ({
           code: {
             coding: [
               {
-                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
                 code: "time-in-high",
-                display: "Time in High Range",
+                display: "Time in High Range (%)",
               },
-              {
-                system: "http://loinc.org",
-                code: "104640-8"
-              }
+              // {
+              //   system: "http://loinc.org",
+              //   code: "104640-8"
+              // }
             ],
           },
           valueQuantity: {
@@ -573,14 +599,14 @@ export const generateCGMSummaryBundle = ({
           code: {
             coding: [
               {
-                system: "http://argo.run/cgm/CodeSystem/cgm-summary-codes-temporary",
+                system: "http://hl7.org/uv/cgm/CodeSystem/cgm-summary-codes-temporary",
                 code: "time-in-very-high",
-                display: "Time in Very High Range",
+                display: "Time in Very High Range (%)",
               },
-              {
-                system: "http://loinc.org",
-                code: "104639-0"
-              }
+              // {
+              //   system: "http://loinc.org",
+              //   code: "104639-0"
+              // }
             ],
           },
           valueQuantity: {
@@ -599,6 +625,7 @@ export const generateCGMSummaryBundle = ({
         "Glucose Management Indicator (GMI)",
         agpMetrics.glucoseStatistics.gmi,
         "%",
+        "%",
         startDate,
         endDate,
         "97506-0",
@@ -609,6 +636,7 @@ export const generateCGMSummaryBundle = ({
         "Coefficient of Variation (CV)",
         agpMetrics.glucoseStatistics.cv,
         "%",
+        "%",
         startDate,
         endDate,
         "104638-2"
@@ -618,18 +646,20 @@ export const generateCGMSummaryBundle = ({
         "Days of Wear",
         agpMetrics.totalDays,
         "days",
+        "d",
         startDate,
         endDate,
-        "104636-6"
+        // "104636-6"
       ),
       createMemberObservation(
         "sensor-active-percentage",
         "Sensor Active Percentage",
         agpMetrics.sensorActivePercentage,
         "%",
+        "%",
         startDate,
         endDate,
-        "104637-4"
+        // "104637-4"
       ),
     ];
 
